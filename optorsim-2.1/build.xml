@@ -84,7 +84,11 @@
   <target name="func-test" depends="dist">
       <exec executable="bin/OptorSimTests.sh" failonerror="true"/>
   </target>    
-
+  
+  <target name="Simulate" depends="dist">
+      <exec executable="OptorSim.bat" failonerror="true"/>
+  </target> 
+  
   <target name="clean">
     <delete dir="${build}"/>
   </target>
