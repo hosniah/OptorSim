@@ -20,6 +20,7 @@ abstract public class OptimiserFactory {
     private static final int LFU_OPTIMISER = 3;
     private static final int ECO_MODEL_OPTIMISER = 4;
     private static final int ECO_MODEL_OPTIMISER_ZIPF_BASED = 5;
+    private static final int TRIAR_OPTIMISER                = 6;
 
     /**
      * Returns an Optimisable instance based on the parameters input
@@ -47,6 +48,9 @@ abstract public class OptimiserFactory {
 	    
 	case ECO_MODEL_OPTIMISER_ZIPF_BASED:
 	    return new EcoZipfModelOptimiser(site);
+           
+        case TRIAR_OPTIMISER:
+            return new TriAROptimiser(site);
 
 	default:
 	    System.out.println("You have picked a non-existent optimiser, please try again.");
@@ -85,6 +89,8 @@ abstract public class OptimiserFactory {
 	    return "Economic Model, Binomial Prediction Function";
 	case ECO_MODEL_OPTIMISER_ZIPF_BASED:
 	    return "Economic Model, Zipf Prediction Function";
+        case TRIAR_OPTIMISER:
+            return "Datamining based, uses Triadic association rules to retrieve correlated files";
 	}
 	
 	return "Unknown optimiser:"+params.getOptimiser();

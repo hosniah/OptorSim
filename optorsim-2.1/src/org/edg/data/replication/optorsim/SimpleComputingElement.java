@@ -169,17 +169,18 @@ public class SimpleComputingElement implements ComputingElement {
      * ResourceBroker.
      */
     public void run() {
-
+        
+                System.out.print("++++++++++++++ Debug the Job Queue\t");
+            System.out.println(_inputJobHandler.toString());
+        System.out.print("++++++++++++++ End of Debug\t");  
+        
         // Boost our priority
         Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
         Double execTime;
-		OptorSimParameters params = OptorSimParameters.getInstance();
-
-    	_runnable = true;
-		
+	OptorSimParameters params = OptorSimParameters.getInstance();
+    	_runnable = true;		
 		// to keep thread running
-		for( GridJob job=null; job != null || _imAlive; ) {
-				
+		for( GridJob job=null; job != null || _imAlive; ) {				
 		    _active=false;
 		    job=_inputJobHandler.get();  // This potentially blocks
 		    
@@ -187,87 +188,64 @@ public class SimpleComputingElement implements ComputingElement {
 		    if( job == null)
 			continue;
 				
-		    job.started();
-	
-		    OptorSimOut.println(_ceName+"> starting to process "+job+" (queue length now "+
-				       _inputJobHandler.getQueueSize()+")");
-		    _active=true;	    
-
+		    job.started();	
+		    OptorSimOut.println(_ceName+"> starting to process "+job+" (queue length now "+ _inputJobHandler.getQueueSize()+")");
+		    _active=true;
 		    // Install our optimiser
 		    Optimisable replicaOptimiser = OptimiserFactory.getOptimisable( _site);
-
-		    AccessPatternGenerator accessPatternGenerator 
-			= AccessPatternGeneratorFactory.getAPGenerator(job);
-			
-		    String[] logicalfilenames = new String[1];
-					
-		    List filesAccessed  = new LinkedList();		
-					
+		    AccessPatternGenerator accessPatternGenerator = AccessPatternGeneratorFactory.getAPGenerator(job);			
+		    String[] logicalfilenames = new String[1];					
+		    List filesAccessed        = new LinkedList();							
 		    for( String lfn = accessPatternGenerator.getNextFile();
 			 lfn != null; 
-			 lfn = accessPatternGenerator.getNextFile()) {
-			
-				filesAccessed.add(lfn);
-				
+			 lfn = accessPatternGenerator.getNextFile()) {			
+				filesAccessed.add(lfn);				
 				// Pack the logical file name into the expected structure:		
 				logicalfilenames[0] = lfn;
 				float[] fileFractions = new float[1];
 				fileFractions[0] = (float)1.0;
-
-					// Use optimiser to locate best replica of this file
-				DataFile[] files = replicaOptimiser.getBestFile(logicalfilenames, 
-									     		fileFractions);
+				// Use optimiser to locate best replica of this file
+				DataFile[] files = replicaOptimiser.getBestFile(logicalfilenames, fileFractions);
 				if( files.length != 1) {
 					System.out.println( "ASSERT FAILED: CE, getBestFile return array with wrong number of entries: "+  files.length  +" != 1");
 					continue; // skip to next file
 				}
 
 				if(files[0] == null) {
-					System.out.println( _ceName + "> ERROR getBestFile returned"+
-						" null for "+logicalfilenames[0]);
+					System.out.println( _ceName + "> ERROR getBestFile returned null for "+logicalfilenames[0]);
 					continue; // skip to next file
 				}
-
 				StorageElement fileSE = files[0].se();
 				GridSite fileSite = fileSE.getGridSite();
-
 				// Special case.  If file is remote, then simulate the remoteIO, unPin and move on to next file.
 				if( _site != fileSite) {
-					simulateRemoteIO( files[0], fileFractions[0]);
-
-					// log this as an access on the close SE (if it exists!)
-					if(_site.hasSEs())
-						_site.getCloseSE().accessFile(files[0]);
-
+				    simulateRemoteIO( files[0], fileFractions[0]);
+				    // log this as an access on the close SE (if it exists!)
+				    if(_site.hasSEs())
+					_site.getCloseSE().accessFile(files[0]);
 					if(_workerNodes != 0) {
-						execTime = new Double((job.getLatency() + job.getLinearFactor()*files[0].size())/(_workerNodes*_workerCapacity));
-						_time.gtSleep(execTime.longValue());
+					    execTime = new Double((job.getLatency() + job.getLinearFactor()*files[0].size())/(_workerNodes*_workerCapacity));
+					    _time.gtSleep(execTime.longValue());
 					}
 					files[0].releasePin();
 					_remoteReads++;
 					continue;
+				} else {
+				    fileSE.accessFile(files[0]);
+				    _localReads++;
 				}
-				else {
-					fileSE.accessFile(files[0]);
-					_localReads++;
-				}
-
 				// process the file
 				if(_workerNodes != 0) {
 					execTime = new Double((job.getLatency() + job.getLinearFactor()*files[0].size())/(_workerNodes*_workerCapacity));
 	//				System.out.println(this.toString()+"> processing file...");
 					_time.gtSleep(execTime.longValue());
-				}
-				
-				files[0].releasePin();
-										
+				}				
+				files[0].releasePin();										
 				//A while loop the ce enters when paused by gui
                 while(_paused){
                     _time.gtWait(this);
                 }
-
 		    } // for each datafile in job
-
 		    // statistics logging
 		    long duration = _time.getTimeMillis() - job.timeStarted();
 		    long durationWithQueue = _time.getTimeMillis() - job.timeScheduled();
@@ -286,6 +264,8 @@ public class SimpleComputingElement implements ComputingElement {
 			
 		} // while there are jobs left to run	     
 		_runnable = false;
+                OptorSimOut.println("*************************"+_jobFiles.toString());
+                
     } // run
 
 

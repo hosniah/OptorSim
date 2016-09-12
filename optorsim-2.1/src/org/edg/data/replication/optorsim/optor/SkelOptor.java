@@ -178,15 +178,13 @@ public class SkelOptor implements Optimisable {
     }
 
 
-    public void initFilePrefetch(String[]  lfn,
-				 ComputingElement ce)
+    public void initFilePrefetch(String[]  lfn, ComputingElement ce)
     {
 		System.out.println("initFilePrefetch");
     }
 
     
-    public void cancelFilePrefetch(String[] lfn,
-				   ComputingElement CE)
+    public void cancelFilePrefetch(String[] lfn, ComputingElement CE)
     {
 		System.out.println("cancelFilePrefetch");
     }

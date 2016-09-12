@@ -106,7 +106,7 @@ public class WorkerNode implements Runnable {
 			 lfn = accessPatternGenerator.getNextFile()) {
             	
             	filesAccessed.add(lfn);
-
+                
             	// Pack the logical file name into the expected structure:
             	_logicalfilenames[0] = lfn;
             	float[] fileFractions = new float[1];

@@ -1,5 +1,7 @@
 package org.edg.data.replication.optorsim;
 
+import java.util.Arrays;
+import static java.util.Collections.list;
 import org.edg.data.replication.optorsim.auctions.AuctionThreadPool;
 import org.edg.data.replication.optorsim.infrastructure.ComputingElement;
 import org.edg.data.replication.optorsim.infrastructure.GridContainer;
@@ -62,18 +64,16 @@ abstract public class SkelResourceBroker implements ResourceBroker {
      * more are submitted.
      */
     public void run() {
-
+       // System.out.print("++++++++++++++ Debug the Job Queue\t");
+        //    System.out.println(Arrays.toString(_jobQueue.toArray()));
+        // System.out.print("++++++++++++++ End of Debug\t");  
+        
         System.out.println("Simulation starting "+_time.getDate());
-
         // If we've been told to wait, do so:
-		checkIfPaused();
-
+	checkIfPaused();
         List jobsToProcess = new LinkedList();
-
         while (_iAmAlive || !_jobQueue.isEmpty()) {
-
             standBy();
-
             // take all the jobs in the queue and process them outside the
             // synchronisation block so we don't block the users submitting more
             synchronized( _jobQueue) {
@@ -82,26 +82,21 @@ abstract public class SkelResourceBroker implements ResourceBroker {
                     _jobQueue.clear();
                 }
             }
-
             for( Iterator i = jobsToProcess.iterator(); i.hasNext();) {
                 GridJob job = (GridJob) i.next();
                 ComputingElement ce;
-
                 for(;;) {
-      //          	System.out.println("ResourceBroker> looking for free CE...");
+      //            System.out.println("ResourceBroker> looking for free CE...");
                     ce = findCE( job, OptimiserFactory.getOptimisable());
-
                     if( ce != null)
                     break;
-
                     // if we can't schedule to any CE wait and try again
                     // TODO: find a better way to do this. Would rather wait
                     // until a CE becomes free.
     //                System.out.println(this.toString()+"> waiting for a free CE...");
                     _time.gtSleep( _params.getJobDelay());
                 }
-                OptorSimOut.println("ResourceBroker> Submitting job "+job+
-	                                 " to " + ce);
+                OptorSimOut.println("ResourceBroker> Submitting job "+job+" to " + ce);
                 // submit the job
                 ce.getJobHandler().put( job);
                 checkIfPaused();

@@ -26,7 +26,7 @@ import org.edg.data.replication.optorsim.time.GridTimeFactory;
  */
 public class AccessHistoryStorageElement extends SimpleStorageElement {
 
-	private TreeMap _accessHistory = new TreeMap();
+	public TreeMap _accessHistory = new TreeMap();
     private GridTime _time = GridTimeFactory.getGridTime();
 
 	/**
