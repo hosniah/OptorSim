@@ -9,6 +9,8 @@ import org.edg.data.replication.optorsim.time.GridTime;
 import org.edg.data.replication.optorsim.time.GridTimeFactory;
 
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * The ComputingElement runs a thread which executes the GridJobs
@@ -172,10 +174,11 @@ public class SimpleComputingElement implements ComputingElement {
      * ResourceBroker.
      */
     public void run() {
-        Logger logger = new Logger();
-                System.out.print("++++++++++++++ Debug the Job Queue\t");
-            System.out.println(_inputJobHandler.toString());
-        System.out.print("++++++++++++++ End of Debug\t");  
+
+        String listString = "============ Job Files acesss traces ============ \n";
+        //System.out.print("++++++++++++++ Debug the Job Queue\t");
+        //System.out.println(_inputJobHandler.toString());
+        //System.out.print("++++++++++++++ End of Debug\t");  
         
         // Boost our priority
         Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
@@ -204,8 +207,8 @@ public class SimpleComputingElement implements ComputingElement {
 			 lfn = accessPatternGenerator.getNextFile()) {	
                                 //System.out.print("++++++++++++++ accessPatternGenerator: => Job="+ job+" : File="+lfn+" \t"); 
                                 
-                                logger.log("++++++++++++++ accessPatternGenerator: => Job="+ job+" : File="+lfn+" \t");
-                                                  
+                                  listString += "++++++++++++++ accessPatternGenerator: => Job="+ job+" : File="+lfn+" \n";
+                             
 				filesAccessed.add(lfn);				
 				// Pack the logical file name into the expected structure:		
 				logicalfilenames[0]   = lfn;
@@ -272,7 +275,15 @@ public class SimpleComputingElement implements ComputingElement {
 		} // while there are jobs left to run	     
 		_runnable = false;
                // debugJobFiles();
-                
+    
+            FileWriter writer = null;
+    try {
+        writer = new FileWriter("OptorDebug.txt");
+        writer.write(listString);
+        writer.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }   
     } // run
 
 
@@ -321,14 +332,5 @@ public class SimpleComputingElement implements ComputingElement {
 		_imAlive = false;
     }
     
-    
-    
-    public class Logger {
-        public  void log(String message) throws IOException { 
-          PrintWriter out = new PrintWriter(new FileWriter("output.txt", true), true);
-          out.write(message);
-          out.close();
-        }
-    }
 }
 
