@@ -1,5 +1,8 @@
 package org.edg.data.replication.optorsim;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import org.edg.data.replication.optorsim.optor.*;
 import org.edg.data.replication.optorsim.infrastructure.*;
 import org.edg.data.replication.optorsim.time.GridTime;
@@ -169,7 +172,7 @@ public class SimpleComputingElement implements ComputingElement {
      * ResourceBroker.
      */
     public void run() {
-        
+        Logger logger = new Logger();
                 System.out.print("++++++++++++++ Debug the Job Queue\t");
             System.out.println(_inputJobHandler.toString());
         System.out.print("++++++++++++++ End of Debug\t");  
@@ -198,10 +201,14 @@ public class SimpleComputingElement implements ComputingElement {
 		    List filesAccessed        = new LinkedList();							
 		    for( String lfn = accessPatternGenerator.getNextFile();
 			 lfn != null; 
-			 lfn = accessPatternGenerator.getNextFile()) {			
+			 lfn = accessPatternGenerator.getNextFile()) {	
+                                //System.out.print("++++++++++++++ accessPatternGenerator: => Job="+ job+" : File="+lfn+" \t"); 
+                                
+                                logger.log("++++++++++++++ accessPatternGenerator: => Job="+ job+" : File="+lfn+" \t");
+                                                  
 				filesAccessed.add(lfn);				
 				// Pack the logical file name into the expected structure:		
-				logicalfilenames[0] = lfn;
+				logicalfilenames[0]   = lfn;
 				float[] fileFractions = new float[1];
 				fileFractions[0] = (float)1.0;
 				// Use optimiser to locate best replica of this file
@@ -264,11 +271,19 @@ public class SimpleComputingElement implements ComputingElement {
 			
 		} // while there are jobs left to run	     
 		_runnable = false;
-                OptorSimOut.println("*************************"+_jobFiles.toString());
+               // debugJobFiles();
                 
     } // run
 
 
+    protected void debugJobFiles() {
+        Iterator<Map.Entry<String, String>> i = _jobFiles.entrySet().iterator(); 
+        while(i.hasNext()){
+            String key = i.next().getKey();
+            System.out.println("*************************"+key+", "+_jobFiles.get(key));
+        } 
+    }
+    
     /**
      * A routine used by the CE to simulate remote IO. The GridContainer's copy() method is
      * used to block the equivalent amount of time.
@@ -305,4 +320,15 @@ public class SimpleComputingElement implements ComputingElement {
     public void shutDownCE(){
 		_imAlive = false;
     }
+    
+    
+    
+    public class Logger {
+        public  void log(String message) throws IOException { 
+          PrintWriter out = new PrintWriter(new FileWriter("output.txt", true), true);
+          out.write(message);
+          out.close();
+        }
+    }
 }
+
