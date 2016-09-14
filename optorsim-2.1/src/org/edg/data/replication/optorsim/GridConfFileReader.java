@@ -91,13 +91,10 @@ public class GridConfFileReader{
         StorageElementFactory seFactory = StorageElementFactory.getInstance();
 
         for(i=0;i< _numSites; i++) {
-
             GridSite gsite = new GridSite();
-
             workerNodes = ((Integer)_ceFlag.get(i)).intValue();
             wnCapacity = ((Float)_ceCapacity.get(i)).floatValue();
             numSE = ((Long)((Vector)_seFlag.get(i)).get(0)).intValue();
-
             if(workerNodes > 0) {
                 if (params.getComputingElement()==1)
                     new SimpleComputingElement( gsite, workerNodes, wnCapacity);

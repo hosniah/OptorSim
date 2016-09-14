@@ -207,7 +207,7 @@ public class SimpleComputingElement implements ComputingElement {
 			 lfn = accessPatternGenerator.getNextFile()) {	
                                 //System.out.print("++++++++++++++ accessPatternGenerator: => Job="+ job+" : File="+lfn+" \t"); 
                                 
-                                  listString += "++++++++++++++ accessPatternGenerator: => Job="+ job+" : File="+lfn+" \n";
+                                listString += "++++++++++++++ accessPatternGenerator: => Job="+ job+" : File="+lfn+" \n";
                              
 				filesAccessed.add(lfn);				
 				// Pack the logical file name into the expected structure:		

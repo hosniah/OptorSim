@@ -34,6 +34,36 @@
     </fileset>
   </path>
 
+
+
+
+
+
+<target name="javadocs" depends="build" description="generates javadoc and also UML Diagram">
+    <mkdir dir="${docdir}/javadoc"/> 
+    <javadoc sourcepath="${src}" packagenames="org.edg.data.*" destdir="${docdir}/javadoc"  private="true">           
+        <doclet name="org.umlgraph.doclet.UmlGraphDoc"  path="lib/UMLGraph.jar">                
+            <param name="-attributes" />                
+            <param name="-operations" />                
+            <param name="-qualify" />                
+            <param name="-types" />                
+            <param name="-visibility" />            
+        </doclet>          
+    </javadoc>  
+         
+  <!--  <apply executable="dot" dest="doc" parallel="false">    
+        <arg value="-Tpng"/>    
+        <arg value="-o"/>     
+        <targetfile/>     
+        <srcfile/>     
+        <fileset dir="${docdir}" includes="*.dot"/>     
+        <mapper type="glob" from="*.dot" to="*.png"/>  
+    </apply>
+    -->
+</target>
+
+
+
   <target name="prepare" depends="init">
     <mkdir dir="${build}/classes"/>
     <mkdir dir="${jardir}"/>
