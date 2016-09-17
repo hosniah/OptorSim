@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/hosniah/Desktop/custom-optorsim-2.1/optorsim-2.1/</file>
-            <file>file:/C:/Users/hosniah/Desktop/custom-optorsim-2.1/optorsim-2.1/src/org/edg/data/replication/optorsim/optor/ReplicatingOptimiser.java</file>
-            <file>file:/C:/Users/hosniah/Desktop/custom-optorsim-2.1/optorsim-2.1/src/org/edg/data/replication/optorsim/reptorsim/ReplicaManager.java</file>
-            <file>file:/C:/Users/hosniah/Desktop/custom-optorsim-2.1/optorsim-2.1/src/org/edg/data/replication/optorsim/optor/AccessHistoryStorageElement.java</file>
-            <file>file:/C:/Users/hosniah/Desktop/custom-optorsim-2.1/optorsim-2.1/src/org/edg/data/replication/optorsim/optor/SkelOptor.java</file>
-            <file>file:/C:/Users/hosniah/Desktop/custom-optorsim-2.1/optorsim-2.1/src/org/edg/data/replication/optorsim/OptorSimMain.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

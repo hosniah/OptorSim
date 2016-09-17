@@ -1,5 +1,9 @@
 package org.edg.data.replication.optorsim;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import org.edg.data.replication.optorsim.infrastructure.OptorSimParameters;
 
 /**
@@ -30,6 +34,15 @@ public abstract class OptorSimOut {
 		  OptorSimGUI.addLine(newText);
 	   }
 		System.out.println(newText);
+                //log traces to a text file
+                try(FileWriter fw = new FileWriter("sim_traces", true);
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    PrintWriter out = new PrintWriter(bw))
+                {
+                    out.println(newText);
+                } catch (IOException e) {
+                    //exception handling left as an exercise for the reader
+                }
 	}
  
 }
