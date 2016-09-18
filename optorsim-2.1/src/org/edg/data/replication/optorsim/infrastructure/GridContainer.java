@@ -502,6 +502,11 @@ FileTransfer
         allStats.put("remoteReads", new Long(remoteReads));
         allStats.put("ENU", new Float((float)(_replications+remoteReads)/(float)(localReads+remoteReads)));
 
+        allStats.put("=== DM - Total number of Sites: ",numberOfSites());
+        // allStats.put("=== DM - Total number of Tasks: ",);
+        // allStats.put("=== DM - Total number of Files: ",);
+
+        
 			// Return the head node.
 		return new Statistics( this, allStats, subStats);
 	}

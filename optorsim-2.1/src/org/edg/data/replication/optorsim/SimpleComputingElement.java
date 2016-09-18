@@ -1,5 +1,6 @@
 package org.edg.data.replication.optorsim;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -60,11 +61,14 @@ public class SimpleComputingElement implements ComputingElement {
 	protected int _workerNodes = 0;
 	protected float _workerCapacity = 0;
 	protected GridTime _time;
+        public OptorSimParameters grid_params;
 	
     public SimpleComputingElement( GridSite site,  int workerNodes, float capacity) {
 					
 		OptorSimParameters params = OptorSimParameters.getInstance();
-
+                
+                this.grid_params = params;
+                
         _time = GridTimeFactory.getGridTime();
 		_site = site;
 		_workerNodes = workerNodes;
@@ -174,8 +178,21 @@ public class SimpleComputingElement implements ComputingElement {
      * ResourceBroker.
      */
     public void run() {
+        String listString = "";
+       // String listString = "============ Job Files acesss traces ============ \n";
+        
+        /* little hack for binding Data mining bx since Trias need numerical extraction context */
+        /* @see OptorSimParameters class */
 
-        String listString = "============ Job Files acesss traces ============ \n";
+             
+            /*
+                 a.addAll(Arrays.asList( new String[100]));  // add n number of strings, actually null . here n is 100, but you will have to decide the ideal value of this, depending upon your requirement.
+                 a.add(7,"hello");
+                 a.add(2,"hi");
+                 a.add(1,"hi2");
+             */
+        
+        
         //System.out.print("++++++++++++++ Debug the Job Queue\t");
         //System.out.println(_inputJobHandler.toString());
         //System.out.print("++++++++++++++ End of Debug\t");  
@@ -206,14 +223,18 @@ public class SimpleComputingElement implements ComputingElement {
 			 lfn != null; 
 			 lfn = accessPatternGenerator.getNextFile()) {	
                                 //System.out.print("++++++++++++++ accessPatternGenerator: => Job="+ job+" : File="+lfn+" \t"); 
-                                
-                                listString += "++++++++++++++ accessPatternGenerator: => Job="+ job+" : File="+lfn+" \n";
-                             
+                                                            
 				filesAccessed.add(lfn);				
 				// Pack the logical file name into the expected structure:		
 				logicalfilenames[0]   = lfn;
 				float[] fileFractions = new float[1];
 				fileFractions[0] = (float)1.0;
+                                
+                                
+                                /* 
+                                 * Here the important stuff (getBestFile)
+                                 *
+                                 */
 				// Use optimiser to locate best replica of this file
 				DataFile[] files = replicaOptimiser.getBestFile(logicalfilenames, fileFractions);
 				if( files.length != 1) {
@@ -239,11 +260,38 @@ public class SimpleComputingElement implements ComputingElement {
 					}
 					files[0].releasePin();
 					_remoteReads++;
+                                                                            listString += job+" "+lfn+" "+fileSite+"\n";
+                                        //listString += "++++++++++++++ Remote Read: => Job="+ job+" : File="+lfn+" From site "+fileSite+" .\n";
+             if (!this.grid_params._sim_listofFiles.contains(lfn)){
+                this.grid_params.visitFile(lfn);
+             }
+             if (!this.grid_params._sim_listofSites.contains(fileSite.toString())){                                                                                         
+                this.grid_params.visitSite(fileSite.toString());
+             }
+             if (!this.grid_params._sim_listofTasks.contains(job.name())){                                                                                                      
+                this.grid_params.visitTask(job.name());
+             } 
+             listString += this.grid_params._sim_listofTasks.indexOf(job.name())+" "+this.grid_params._sim_listofFiles.indexOf(lfn)+" "+this.grid_params._sim_listofSites.indexOf(fileSite.toString())+" \n";
+
 					continue;
 				} else {
 				    fileSE.accessFile(files[0]);
+                                                                        listString += job.name()+" "+lfn+" "+fileSite+"\n";
+            if (!this.grid_params._sim_listofFiles.contains(lfn)){
+                this.grid_params.visitFile(lfn);
+            }
+            if (!this.grid_params._sim_listofSites.contains(fileSite.toString())){            
+                this.grid_params.visitSite(fileSite.toString());
+            }
+            if (!this.grid_params._sim_listofTasks.contains(job.name())){            
+                this.grid_params.visitTask(job.name());
+            }
+             listString += this.grid_params._sim_listofTasks.indexOf(job.name())+" "+this.grid_params._sim_listofFiles.indexOf(lfn)+" "+this.grid_params._sim_listofSites.indexOf(fileSite.toString())+" \n";
+
+                                                          // listString += "************** Local Read: => Job="+ job+" : File="+lfn+" From site "+fileSite+" .\n";
 				    _localReads++;
 				}
+      
 				// process the file
 				if(_workerNodes != 0) {
 					execTime = new Double((job.getLatency() + job.getLinearFactor()*files[0].size())/(_workerNodes*_workerCapacity));
@@ -275,15 +323,19 @@ public class SimpleComputingElement implements ComputingElement {
 		} // while there are jobs left to run	     
 		_runnable = false;
                // debugJobFiles();
-    
-            FileWriter writer = null;
-    try {
-        writer = new FileWriter("OptorDebug.txt");
-        writer.write(listString);
-        writer.close();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }   
+
+               String result = "************* tasks : "+this.grid_params._sim_listofTasks.size()+" \n************* files : "+this.grid_params._sim_listofFiles.size()+" \n************* Sites : "+this.grid_params._sim_listofSites.size();
+
+                
+                try(FileWriter fw = new FileWriter("OptorDebug.txt", true);
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    PrintWriter out = new PrintWriter(bw))
+                {
+                    out.println(listString);
+                    out.println(result);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }                
     } // run
 
 

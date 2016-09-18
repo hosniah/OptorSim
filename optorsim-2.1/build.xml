@@ -50,16 +50,16 @@
             <param name="-visibility" />            
         </doclet>          
     </javadoc>  
-         
-  <!--  <apply executable="dot" dest="doc" parallel="false">    
+   <!--        
+    <apply executable="dot" dest="doc" parallel="false">    
         <arg value="-Tpng"/>    
         <arg value="-o"/>     
         <targetfile/>     
         <srcfile/>     
-        <fileset dir="${docdir}" includes="*.dot"/>     
+        <fileset dir="${docdir}/javadoc" includes="*.dot"/>     
         <mapper type="glob" from="*.dot" to="*.png"/>  
     </apply>
-    -->
+  -->
 </target>
 
 
