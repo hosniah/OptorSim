@@ -18,9 +18,7 @@ import java.util.Properties;
 public class OptorSimParameters {
 
     private Properties _table;
-    public ArrayList<String> _sim_listofTasks;
-    public ArrayList<String> _sim_listofFiles;
-    public ArrayList<String> _sim_listofSites;
+
     private static OptorSimParameters _optorSimParametersInstance = null;
     private static String _parametersFilename = null;
 
@@ -50,12 +48,7 @@ public class OptorSimParameters {
     private OptorSimParameters () {
 
 	_table = new Properties();
-     
-            /* little hack for binding Data mining bx since Trias need numerical extraction context */
 
-        _sim_listofTasks = new ArrayList<String>(); //Create empty list
-        _sim_listofFiles = new ArrayList<String>(); //Create empty list
-        _sim_listofSites = new ArrayList<String>(); //Create empty list
         
 	try {
 	    FileInputStream fin = new FileInputStream( _parametersFilename);
@@ -69,18 +62,6 @@ public class OptorSimParameters {
 	}
     }
 
-    public void visitFile(String file){
-        this._sim_listofFiles.add(file);
-    }
-
-    public void visitSite(String site){
-        this._sim_listofSites.add(site);
-    }
-
-    public void visitTask(String task){
-        this._sim_listofTasks.add(task);
-    }
-    
     /**
      * Gets the grid configuration file name.
      * */

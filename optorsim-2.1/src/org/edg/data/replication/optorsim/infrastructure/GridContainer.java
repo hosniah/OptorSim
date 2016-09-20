@@ -1,5 +1,9 @@
 package org.edg.data.replication.optorsim.infrastructure;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 // TODO: more imports from unaccessible packages...
@@ -465,6 +469,49 @@ FileTransfer
     }
 
     
+    
+    public void logDataMiningStatistics(){
+        String result = "";
+        
+        ArrayList<String> sim_listofTasks = new ArrayList<String>();
+        ArrayList<String> sim_listofFiles = new ArrayList<String>(); 
+        ArrayList<String> sim_listofSites = new ArrayList<String>();
+        
+        for(Enumeration eSites = allGridSites(); eSites.hasMoreElements();) {
+            GridSite site = (GridSite)eSites.nextElement();
+            result += "************* tasks : "+site._sim_listofTasks.size()+" \n************* files : "+site._sim_listofFiles.size()+" \n************* Sites : "+site._sim_listofSites.size()+"\n\n\n";
+            // Append sites data to DM grid statistics
+            for (Object x : site._sim_listofTasks){
+                if (!sim_listofTasks.contains(x))
+                   sim_listofTasks.add((String) x);
+            }
+            
+            for (Object x : site._sim_listofFiles){
+                if (!sim_listofFiles.contains(x))
+                   sim_listofFiles.add((String) x);
+            }      
+            
+            for (Object x : site._sim_listofSites){
+                if (!sim_listofSites.contains(x))
+                   sim_listofSites.add((String) x);
+            }    
+        }
+            result += "================\n";
+            result += "================\n";
+            result += "================ tasks : "+sim_listofTasks.size()+" \n ================ files : "+sim_listofFiles.size()+" \n================ Sites : "+sim_listofSites.size()+"\n\n\n";
+            
+            result += "||||==== DM - Total number of Sites: "+numberOfSites();
+            
+        try(FileWriter fw = new FileWriter("dataMining.log", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+        {
+            out.println(result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }        
+    }
+    
 	/**
 	 * Request a statistics tree for the current state of the simulation.
 	 * @return The head statistic (for GridContainer).
@@ -473,25 +520,27 @@ FileTransfer
 		Map allStats = new HashMap();
 		Set subStats = new HashSet();
 		float totalJobTime = 0;
-        float ceUsage = 0;
-        long remoteReads = 0, localReads = 0;
+                float ceUsage = 0;
+                long remoteReads = 0, localReads = 0;
 
-			// Build up the Set of child statistics
+                logDataMiningStatistics();
+                
+	         // Build up the Set of child statistics
 		for(Enumeration eSites = allGridSites(); eSites.hasMoreElements();) {
 			GridSite site = (GridSite)eSites.nextElement();
 			Statistics siteStats = site.getStatistics();
 			subStats.add( siteStats);
 			float jobTime = ((Float)siteStats.getStatistic("totalJobTime")).floatValue();
-            float siteCEUsage = ((Float)siteStats.getStatistic("ceUsage")).floatValue();
-            long siteLocalReads = ((Long)siteStats.getStatistic("localReads")).longValue();
-            long siteRemoteReads = ((Long)siteStats.getStatistic("remoteReads")).longValue();
+                        float siteCEUsage = ((Float)siteStats.getStatistic("ceUsage")).floatValue();
+                        long siteLocalReads = ((Long)siteStats.getStatistic("localReads")).longValue();
+                        long siteRemoteReads = ((Long)siteStats.getStatistic("remoteReads")).longValue();
 
-//			if( totalJobTime < jobTime)
-//				totalJobTime = jobTime; 
-			totalJobTime += jobTime;
-            ceUsage += siteCEUsage;
-            localReads += siteLocalReads;
-            remoteReads += siteRemoteReads;
+            //			if( totalJobTime < jobTime)
+            //				totalJobTime = jobTime; 
+                       totalJobTime += jobTime;
+                        ceUsage += siteCEUsage;
+                        localReads += siteLocalReads;
+                        remoteReads += siteRemoteReads;
 		}
 		
 			// Add our own statistics.
@@ -502,7 +551,7 @@ FileTransfer
         allStats.put("remoteReads", new Long(remoteReads));
         allStats.put("ENU", new Float((float)(_replications+remoteReads)/(float)(localReads+remoteReads)));
 
-        allStats.put("=== DM - Total number of Sites: ",numberOfSites());
+      
         // allStats.put("=== DM - Total number of Tasks: ",);
         // allStats.put("=== DM - Total number of Files: ",);
 

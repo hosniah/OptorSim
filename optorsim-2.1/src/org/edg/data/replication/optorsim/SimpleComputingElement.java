@@ -64,20 +64,17 @@ public class SimpleComputingElement implements ComputingElement {
         public OptorSimParameters grid_params;
 	
     public SimpleComputingElement( GridSite site,  int workerNodes, float capacity) {
-					
-		OptorSimParameters params = OptorSimParameters.getInstance();
-                
-                this.grid_params = params;
-                
+	OptorSimParameters params = OptorSimParameters.getInstance();
+
         _time = GridTimeFactory.getGridTime();
-		_site = site;
-		_workerNodes = workerNodes;
-		_workerCapacity = capacity;
-		_CEId = ++_LastCEId;
-		_ceName = "CE"+_CEId+"@"+_site;
-		_inputJobHandler = new JobHandler( params.getMaxQueueSize());
-		_imAlive = true;
-		_site.registerCE( this);
+        _site = site;
+        _workerNodes = workerNodes;
+        _workerCapacity = capacity;
+        _CEId = ++_LastCEId;
+        _ceName = "CE"+_CEId+"@"+_site;
+        _inputJobHandler = new JobHandler( params.getMaxQueueSize());
+        _imAlive = true;
+        _site.registerCE( this);
         _startRunning = _time.getTimeMillis();
     }
     
@@ -115,7 +112,7 @@ public class SimpleComputingElement implements ComputingElement {
      * @return The site this CE is on.
      */
     public GridSite getSite() {
-		return _site;
+	return _site;
     }
 
 		
@@ -180,19 +177,7 @@ public class SimpleComputingElement implements ComputingElement {
     public void run() {
         String listString = "";
        // String listString = "============ Job Files acesss traces ============ \n";
-        
-        /* little hack for binding Data mining bx since Trias need numerical extraction context */
-        /* @see OptorSimParameters class */
-
-             
-            /*
-                 a.addAll(Arrays.asList( new String[100]));  // add n number of strings, actually null . here n is 100, but you will have to decide the ideal value of this, depending upon your requirement.
-                 a.add(7,"hello");
-                 a.add(2,"hi");
-                 a.add(1,"hi2");
-             */
-        
-        
+         
         //System.out.print("++++++++++++++ Debug the Job Queue\t");
         //System.out.println(_inputJobHandler.toString());
         //System.out.print("++++++++++++++ End of Debug\t");  
@@ -260,35 +245,35 @@ public class SimpleComputingElement implements ComputingElement {
 					}
 					files[0].releasePin();
 					_remoteReads++;
-                                                                            listString += job+" "+lfn+" "+fileSite+"\n";
+                                        listString += job+" "+lfn+" "+fileSite+"\n";
                                         //listString += "++++++++++++++ Remote Read: => Job="+ job+" : File="+lfn+" From site "+fileSite+" .\n";
-             if (!this.grid_params._sim_listofFiles.contains(lfn)){
-                this.grid_params.visitFile(lfn);
+             if (!this.getSite()._sim_listofFiles.contains(lfn)){
+                this.getSite().visitFile(lfn);
              }
-             if (!this.grid_params._sim_listofSites.contains(fileSite.toString())){                                                                                         
-                this.grid_params.visitSite(fileSite.toString());
+             if (!this.getSite()._sim_listofSites.contains(fileSite.toString())){                                                                                         
+                this.getSite().visitSite(fileSite.toString());
              }
-             if (!this.grid_params._sim_listofTasks.contains(job.name())){                                                                                                      
-                this.grid_params.visitTask(job.name());
+             if (!this.getSite()._sim_listofTasks.contains(job.name())){                                                                                                      
+                this.getSite().visitTask(job.name());
              } 
-             listString += this.grid_params._sim_listofTasks.indexOf(job.name())+" "+this.grid_params._sim_listofFiles.indexOf(lfn)+" "+this.grid_params._sim_listofSites.indexOf(fileSite.toString())+" \n";
+             listString += this.getSite()._sim_listofTasks.indexOf(job.name())+" "+this.getSite()._sim_listofFiles.indexOf(lfn)+" "+this.getSite()._sim_listofSites.indexOf(fileSite.toString())+" \n";
 
 					continue;
 				} else {
 				    fileSE.accessFile(files[0]);
-                                                                        listString += job.name()+" "+lfn+" "+fileSite+"\n";
-            if (!this.grid_params._sim_listofFiles.contains(lfn)){
-                this.grid_params.visitFile(lfn);
+                                     listString += job.name()+" "+lfn+" "+fileSite+"\n";
+            if (!this.getSite()._sim_listofFiles.contains(lfn)){
+                this.getSite().visitFile(lfn);
             }
-            if (!this.grid_params._sim_listofSites.contains(fileSite.toString())){            
-                this.grid_params.visitSite(fileSite.toString());
+            if (!this.getSite()._sim_listofSites.contains(fileSite.toString())){            
+                this.getSite().visitSite(fileSite.toString());
             }
-            if (!this.grid_params._sim_listofTasks.contains(job.name())){            
-                this.grid_params.visitTask(job.name());
+            if (!this.getSite()._sim_listofTasks.contains(job.name())){            
+                this.getSite().visitTask(job.name());
             }
-             listString += this.grid_params._sim_listofTasks.indexOf(job.name())+" "+this.grid_params._sim_listofFiles.indexOf(lfn)+" "+this.grid_params._sim_listofSites.indexOf(fileSite.toString())+" \n";
+            listString += this.getSite()._sim_listofTasks.indexOf(job.name())+" "+this.getSite()._sim_listofFiles.indexOf(lfn)+" "+this.getSite()._sim_listofSites.indexOf(fileSite.toString())+" \n";
 
-                                                          // listString += "************** Local Read: => Job="+ job+" : File="+lfn+" From site "+fileSite+" .\n";
+            // listString += "************** Local Read: => Job="+ job+" : File="+lfn+" From site "+fileSite+" .\n";
 				    _localReads++;
 				}
       
@@ -324,7 +309,8 @@ public class SimpleComputingElement implements ComputingElement {
 		_runnable = false;
                // debugJobFiles();
 
-               String result = "************* tasks : "+this.grid_params._sim_listofTasks.size()+" \n************* files : "+this.grid_params._sim_listofFiles.size()+" \n************* Sites : "+this.grid_params._sim_listofSites.size();
+
+               String result = "************* tasks : "+this.getSite()._sim_listofTasks.size()+" \n************* files : "+this.getSite()._sim_listofFiles.size()+" \n************* Sites : "+this.getSite()._sim_listofSites.size();
 
                 
                 try(FileWriter fw = new FileWriter("OptorDebug.txt", true);
@@ -335,7 +321,7 @@ public class SimpleComputingElement implements ComputingElement {
                     out.println(result);
                 } catch (IOException e) {
                     e.printStackTrace();
-                }                
+                }           
     } // run
 
 

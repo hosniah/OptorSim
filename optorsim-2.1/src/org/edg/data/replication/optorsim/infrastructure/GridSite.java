@@ -26,6 +26,10 @@ public class GridSite {
 	private Set _neighbourSites = null;
 	private List _acceptableJobs = new Vector();
 	private OptorSimParameters _params = OptorSimParameters.getInstance();
+        
+        public ArrayList<String> _sim_listofTasks;
+        public ArrayList<String> _sim_listofFiles;
+        public ArrayList<String> _sim_listofSites;
 	
 	private static int _lastSiteID=0;
 	private int _routedFiles = 0;
@@ -37,9 +41,25 @@ public class GridSite {
 	 */
 	public GridSite() {
 		_siteID = _lastSiteID++;
-
+     
+            /* little hack for binding Data mining bx since Trias need numerical extraction context */
+            _sim_listofTasks = new ArrayList<String>(); //Create empty list
+            _sim_listofFiles = new ArrayList<String>(); //Create empty list
+            _sim_listofSites = new ArrayList<String>(); //Create empty list
 	}
-	
+
+        public void visitFile(String file){
+            this._sim_listofFiles.add(file);
+        }
+
+        public void visitSite(String site){
+            this._sim_listofSites.add(site);
+        }
+
+        public void visitTask(String task){
+            this._sim_listofTasks.add(task);
+        }
+
 	/**
 	 * This function asks the GridContainer to find all neighbouring sites
 	 * and stores them locally for speed.
