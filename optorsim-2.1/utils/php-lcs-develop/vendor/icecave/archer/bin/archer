@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+$packageRoot = dirname(__DIR__);
+
+$matches = array();
+if (preg_match('{^(.*)/vendor/?[^/]*/?[^/]*$}', $packageRoot, $matches)) {
+    $vendorPath = $matches[1] . '/vendor';
+} else {
+    $vendorPath = $packageRoot . '/vendor';
+}
+
+require $vendorPath . '/autoload.php';
+
+putenv(sprintf('PATH=%s/bin:%s', $vendorPath, getenv('PATH')));
+
+Icecave\Archer\Support\Asplode::instance()->install();
+
+$application = new Icecave\Archer\Console\Application($packageRoot);
+$application->run();

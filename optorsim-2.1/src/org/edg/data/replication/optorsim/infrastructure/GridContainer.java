@@ -53,11 +53,11 @@ public class GridContainer {
 	
 	private GridContainer()
 	{
-		// Private constructer for this class
-		if( OptorSimParameters.getInstance().useRandomSeed())
-			_randGen = new Random();
-		else
-			_randGen = new Random(100L);
+            // Private constructer for this class
+            if( OptorSimParameters.getInstance().useRandomSeed())
+                _randGen = new Random();
+            else
+                _randGen = new Random(100L);
 	}
 	
 	
@@ -68,8 +68,8 @@ public class GridContainer {
 	 * @return the Bandwidth object connecting both sites, or null if there isn't one
 	 */
 	public Bandwidth networkSegment( GridSite siteA, GridSite siteB) {
-		GridSitePair gsp = new GridSitePair( siteA, siteB);
-		return (Bandwidth) _bandwidth.get( gsp);
+	    GridSitePair gsp = new GridSitePair( siteA, siteB);
+	    return (Bandwidth) _bandwidth.get( gsp);
 	}
 	
 	/**
@@ -79,7 +79,7 @@ public class GridContainer {
 	 * the two sites, or null if they have no direct connection
 	 */
 	public Bandwidth networkSegment( GridSitePair gsp) {
-		return (Bandwidth) _bandwidth.get(gsp);
+	    return (Bandwidth) _bandwidth.get(gsp);
 	}
 		
 	/**
@@ -453,7 +453,7 @@ FileTransfer
 		FileTransfer ft = FileTransferFactory.getFileTransfer();
 	    ft.transferFile(fromSite, toSite, fromFile.size());
 		fromFile.se().accessFile(fromFile);
-	    // clone file and add file to SE unless no replication is possible.
+	    // clone file and add   to SE unless no replication is possible.
 	    DataFile replica = fromFile.cloneFile();
 	    toSE.addPreReservedFile( replica);
 
@@ -467,9 +467,7 @@ FileTransfer
 
 	    return replica;
     }
-
-    
-    
+        
     public void logDataMiningStatistics(){
         String result = "";
         
@@ -594,13 +592,12 @@ FileTransfer
 		fromFile.releasePin();
 		
 	}
-	
-	
-	/**
+		
+/**
 	 * Returns the total number of known CEs.
 	 * @return an integer representing total number of CEs
 	 */
-	public int countCEs(){
+    public int countCEs(){
 		return _totalNumberOfCEs;
 	}
 	

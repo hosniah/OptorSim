@@ -1,0 +1,15 @@
+language: php
+
+php: {php-versions}
+
+{matrix}
+env:
+  global:
+    - ARCHER_PUBLISH_VERSION={php-publish-version}
+    {token-env}
+
+install:
+  - ./.travis.install
+
+script:
+  - ./vendor/bin/archer travis:build

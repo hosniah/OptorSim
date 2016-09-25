@@ -112,7 +112,7 @@
   </target>
 
   <target name="func-test" depends="dist">
-      <exec executable="bin/OptorSimTests.sh" failonerror="true"/>
+      <exec executable="bin/OptorSimTests.sh" failonerror="false"/>
   </target>    
   
   <target name="Simulate" depends="dist">
