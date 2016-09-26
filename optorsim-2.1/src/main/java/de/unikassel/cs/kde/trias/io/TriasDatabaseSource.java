@@ -33,7 +33,8 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import de.unikassel.cs.kde.trias.model.Context;
 import de.unikassel.cs.kde.trias.model.Triple;
@@ -47,7 +48,7 @@ import de.unikassel.cs.kde.trias.model.Triple;
  */
 public class TriasDatabaseSource {
 
-	private static final Logger log = Logger.getLogger(TriasDatabaseSource.class);
+        private static final Logger LOGGER = Logger.getLogger( TriasDatabaseSource.class.getName() );
 
 	private String query;
 	private Object[] arguments;
@@ -60,7 +61,7 @@ public class TriasDatabaseSource {
 		 */
 		Class.forName ("com.mysql.jdbc.Driver").newInstance ();
 		conn = DriverManager.getConnection (dbURL, dbUser, dbPass);
-		log.info("Database connection established");
+		LOGGER.log( Level.FINE,"Database connection established");
 
 		if (conn != null) {
 			return conn;

@@ -35,7 +35,8 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -55,7 +56,7 @@ import de.unikassel.cs.kde.trias.model.Triple;
  */
 public class RDFReaderWriter implements TriasReader, TriasWriter {
 
-	private static final Logger log = Logger.getLogger(RDFReaderWriter.class);
+        private static final Logger LOGGER = Logger.getLogger( RDFReaderWriter.class.getName() );
 
 	private final BufferedWriter writer;
 

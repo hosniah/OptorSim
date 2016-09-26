@@ -31,7 +31,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeSet;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import de.unikassel.cs.kde.trias.io.TriasWriter;
 import de.unikassel.cs.kde.trias.progress.DummyProgressLogger;
@@ -52,7 +53,8 @@ public class Trias {
 	 * all non fixed-size arrays store in their first row their actual size (except multidimensional arrays)
 	 */
 
-	private static Logger log = Logger.getLogger(Trias.class);
+	//private static Logger log = Logger.getLogger(Trias.class);
+        private static final Logger LOGGER = Logger.getLogger( Trias.class.getName() );
 
 	private final static int U = Dimension.U.intValue();
 	private final static int T = Dimension.T.intValue();
@@ -146,7 +148,7 @@ public class Trias {
 		 * outer Next Closure
 		 */
 
-		log.debug("-------------- NEXT CLOSURE -------------- " + 
+		LOGGER.log( Level.FINE, "-------------- NEXT CLOSURE -------------- " + 
 				minSupportPerDimension[U] + " " + 
 				minSupportPerDimension[T] + " " + 
 				minSupportPerDimension[R]);
@@ -170,7 +172,7 @@ public class Trias {
 		/*
 		 *  Compute the hull of the empty set.
 		 */
-		log.debug("computing the hull of the empty set");
+		LOGGER.log( Level.FINE,"computing the hull of the empty set");
 		pl.logStep(ProgressStep.START);
 		if (minSupportPerDimension[U] == 0 && trOffsets.length < numberOfItemsPerDimension[T] * numberOfItemsPerDimension[R]) {
 			// special case for tri-concept ({}, T, R)
@@ -190,7 +192,7 @@ public class Trias {
 		/*   
 		 * stop, when extent contains all elements (uOffsets[0]) or when i does not change any more
 		 */
-		log.debug("starting outer next closure loop");
+		LOGGER.log( Level.FINE,"starting outer next closure loop");
 		/*
 		 * Used to track changes of i. If i did not change, then i = lastI at the 
 		 * beginning of the next loop.
@@ -199,7 +201,7 @@ public class Trias {
 		while (extent[0] < uOffsets[0] && lastI != i) {
 			pl.logStep(ProgressStep.OUTER);
 
-			//log.debug("i = " + uRemember[i] + ", lastI = " + uRemember[lastI]);
+			//LOGGER.log( Level.FINE,"i = " + uRemember[i] + ", lastI = " + uRemember[lastI]);
 			lastI = i;
 
 			/*
@@ -236,12 +238,12 @@ public class Trias {
 						/*
 						 * inner NEXT CLOSURE
 						 */
-						if (log.isDebugEnabled()) log.debug("starting inner next closure with extent " + toString(extent));
+						 LOGGER.log( Level.FINE,"starting inner next closure with extent " + toString(extent));
 						innerNextClosure(extent, outerIntent);
 
 					} // uminsup if 
 					i = uOrder[uOffsets[numberOfItemsPerDimension[U]]]; // re-start with largest element
-					log.debug("starting again with largest element: i = " + uRemember[i]);
+					LOGGER.log( Level.FINE,"starting again with largest element: i = " + uRemember[i]);
 				} // aLti if
 				else {
 					if (uRemember[i] > 1) i = uOrder[uOffsets[uRemember[i] - 1]]; // decrement i
@@ -263,7 +265,7 @@ public class Trias {
 	 * @throws IOException
 	 */
 	private void innerNextClosure(int[] extent, int[] relationI) throws IOException {
-		if (log.isDebugEnabled()) log.debug("inner next closure for concept (" + toString(extent) + ", " + relationToString(relationI) + ")");
+		LOGGER.log( Level.FINE,"inner next closure for concept (" + toString(extent) + ", " + relationToString(relationI) + ")");
 		/* *******************************************************************************
 		 * pre-processing
 		 */
@@ -358,7 +360,7 @@ public class Trias {
 			}
 		}
 
-		log.debug("inner next closure finished preprocessing, really starts now");
+		LOGGER.log( Level.FINE,"inner next closure finished preprocessing, really starts now");
 		/* ********************************************************************************
 		 * inner next closure starts here
 		 */
@@ -386,7 +388,7 @@ public class Trias {
 			intent = prime (trListe, rOrder, rOffsets, tOrder, tOffsets, rRemember, modus, tComparator);  // {}''
 
 			if (intent[0] >= minSupportPerDimension[T] && checkCondition(extent, intent, modus, trListe, tupelMap)) {
-				if (log.isDebugEnabled()) log.debug("   empty set hull: " + toString(extent, intent, modus, trListe));
+				 LOGGER.log( Level.FINE,"   empty set hull: " + toString(extent, intent, modus, trListe));
 				writeTriples(trListe, extent, intent, modus);
 			}
 		}
@@ -396,7 +398,7 @@ public class Trias {
 		while (intent[0] < tOffsets[0] && lastJ != j) { // stop, if intent contains all elements from T (e.g. B == T)
 			pl.logStep(ProgressStep.INNER);
 			lastJ = j;
-			log.debug("   j = " + tRemember[j] + ", lastJ = " + tRemember[lastJ]);
+			LOGGER.log( Level.FINE,"   j = " + tRemember[j] + ", lastJ = " + tRemember[lastJ]);
 
 			// build next hull
 			aPlusI = aPlusI (tOrder, rOrder, trListe, T, tOffsets, rOffsets, tRemember, rRemember, rComparator, tComparator, intent, j);
@@ -408,8 +410,8 @@ public class Trias {
 				// B'' (= C')
 				aPlusI = prime(trListe, rOrder, rOffsets, tOrder, tOffsets, rRemember, modus, tComparator);
 
-				if (log.isDebugEnabled()) log.debug("   before aPlusI check: " + toString(extent, intent, modus, trListe));
-				if (log.isDebugEnabled()) log.debug("   before aPlusI check: " + toString(extent, aPlusI, modus, trListe));
+				  LOGGER.log( Level.FINE,"   before aPlusI check: " + toString(extent, intent, modus, trListe));
+				  LOGGER.log( Level.FINE,"   before aPlusI check: " + toString(extent, aPlusI, modus, trListe));
 
 
 				if (aLtI (trListe, T, intent, aPlusI, j)) {
@@ -421,9 +423,9 @@ public class Trias {
 
 						pl.logStep(ProgressStep.INNER_SUCCESS);
 
-						if (log.isDebugEnabled()) log.debug("   inner concept: (" + toString(intent, trListe, true) + ", " + toString(modus, trListe, false) + ")");
+						  LOGGER.log( Level.FINE,"   inner concept: (" + toString(intent, trListe, true) + ", " + toString(modus, trListe, false) + ")");
 
-						if (log.isDebugEnabled()) log.debug("   outer concept: " + toString(extent, intent, modus, trListe));
+						  LOGGER.log( Level.FINE,"   outer concept: " + toString(extent, intent, modus, trListe));
 
 						writeTriples(trListe, extent, intent, modus);
 					}
@@ -464,7 +466,7 @@ public class Trias {
 		}
 		// check and print
 		if (intent[0] >= minSupportPerDimension[T] && checkCondition(extent, intent, modus, emptyI, tupelMap)) {
-			if (log.isDebugEnabled()) log.debug("   empty set hull: " + toString(extent, intent, modus, emptyI));
+			  LOGGER.log( Level.FINE,"   empty set hull: " + toString(extent, intent, modus, emptyI));
 			writeTriples(emptyI, extent, intent, modus);
 		}
 		// now the same with the reverse: modus is empty ...
@@ -476,7 +478,7 @@ public class Trias {
 		}
 		// check and print
 		if (modus[0] >= minSupportPerDimension[R] && checkCondition(extent, intent, modus, emptyI, tupelMap)) {
-			if (log.isDebugEnabled()) log.debug("   empty set hull: " + toString(extent, intent, modus, emptyI));
+			  LOGGER.log( Level.FINE,"   empty set hull: " + toString(extent, intent, modus, emptyI));
 			writeTriples(emptyI, extent, intent, modus);
 		}
 	}
@@ -505,7 +507,7 @@ public class Trias {
 
 		}
 		if (trOffsetCtr > itemList.length + 1) {
-			log.fatal("trOffsetCtr should never be larger than N+1");
+			LOGGER.log( Level.SEVERE,"trOffsetCtr should never be larger than N+1");
 			throw new RuntimeException("trOffsetCtr should never be larger than N+1");
 		}
 		trOffsets[trOffsetCtr] = itemList.length;     // sets offset after last value
@@ -557,7 +559,7 @@ public class Trias {
 		int[] trPermutation = {T,R,U};
 		Arrays.sort(trOrder, new IntArrayComparator(itemList, trPermutation));
 
-		log.debug("sorted by U and by TxR");
+		LOGGER.log( Level.FINE,"sorted by U and by TxR");
 	}
 
 	private void initializePermutations() {
@@ -567,7 +569,7 @@ public class Trias {
 			uOrder[i]  = i; 
 			trOrder[i] = i; 
 		}
-		log.debug("initialized permutations");
+		LOGGER.log( Level.FINE,"initialized permutations");
 	}
 
 
@@ -586,7 +588,7 @@ public class Trias {
 
 		if (isBxCContainedInA) {
 			if (! isAContainedInBxC) { 
-				log.fatal("################ GROSSER FEHLER!");
+				LOGGER.log( Level.SEVERE,"################ GROSSER FEHLER!");
 				throw new RuntimeException("################ GROSSER FEHLER!");
 			}
 			return true;
@@ -599,7 +601,7 @@ public class Trias {
 	 * note that this depends entirely on the correct structure of utrListe and trListe
 	 */
 	private void writeTriples(final int[][] trListe, final int[] extent, final int[] intent, final int[] modus) throws IOException {
-		log.debug("found concept " + toString(extent, intent, modus, trListe));
+		LOGGER.log( Level.FINE,"found concept " + toString(extent, intent, modus, trListe));
 
 		final int[] mappedExtent = new int[extent[0]]; for (int k=1; k<=extent[0]; k++) mappedExtent[k-1] = itemList[extent[k]][U];
 		final int[] mappedIntent = new int[intent[0]]; for (int k=1; k<=intent[0]; k++) mappedIntent[k-1] = trListe.length != 0 ? itemList[trListe[intent[k]][0]][T] : k; 

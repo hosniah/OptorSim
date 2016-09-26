@@ -60,7 +60,7 @@ import java.util.regex.Pattern;
  */
 public class TriasRunner {
 
-    private static final String PROPERTIES_FILE_NAME = "trias.properties";
+    private static final String PROPERTIES_FILE_NAME  = "trias.properties";
     private static final String TRICONCEPTS_FILE_NAME = "concepts";
     private static int gridFilesCount;
 
@@ -69,21 +69,15 @@ public class TriasRunner {
             final Trias trias = new Trias();
             TriasConfigurator config;
 
-            //if (args.length > 0) {
-                    /*
-                     * use command line arguments for configuration
-                     */
-                 //   config = new TriasCommandLineArgumentsConfigurator(args);
-           // } else {
-                    final InputStream resourceAsStream = TriasRunner.class.getClassLoader().getResourceAsStream(PROPERTIES_FILE_NAME);
-                    if (resourceAsStream == null) {
-                            System.err.println("Could not find file '" + PROPERTIES_FILE_NAME + "' for configuration.");
-                            System.exit(1);
-                    }
+            final InputStream resourceAsStream = TriasRunner.class.getClassLoader().getResourceAsStream(PROPERTIES_FILE_NAME);
+            if (resourceAsStream == null) {
+                    System.err.println("Could not find file '" + PROPERTIES_FILE_NAME + "' for configuration.");
+                    System.exit(1);
+            }
 
-                    final Properties prop = new Properties();
-                    prop.load(resourceAsStream);
-                    config = new TriasPropertiesConfigurator(prop);
+            final Properties prop = new Properties();
+            prop.load(resourceAsStream);
+            config = new TriasPropertiesConfigurator(prop);
 
           //  }
             System.err.println(config.usage());

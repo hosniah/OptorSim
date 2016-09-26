@@ -29,7 +29,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import de.unikassel.cs.kde.trias.model.Graph;
 import de.unikassel.cs.kde.trias.model.GraphEdge;
@@ -43,9 +44,8 @@ import de.unikassel.cs.kde.trias.model.TriConcept;
  * 
  */
 public class TriNeighborhoodFinder<T extends Comparable<T>> {
-
-	private static final Logger log = Logger.getLogger(TriNeighborhoodFinder.class);
-
+        private static final Logger LOGGER = Logger.getLogger( TriNeighborhoodFinder.class.getName() );
+	
 	public HashSet<HashSet<TriConcept<T>>> findNeighborhoods(final Graph<TriConcept<T>> graph) {
 		HashSet<HashSet<TriConcept<T>>> neighborhoods = new HashSet<HashSet<TriConcept<T>>>();
 
@@ -96,7 +96,7 @@ public class TriNeighborhoodFinder<T extends Comparable<T>> {
 			mergeCtr++;
 			final HashSet<HashSet<TriConcept<T>>> merged = merge(neighborhoods);
 			
-			log.debug("|merged| = " + merged.size() + ", |neighborhoods| = " + neighborhoods.size());
+			LOGGER.log( Level.FINE, "|merged| = " + merged.size() + ", |neighborhoods| = " + neighborhoods.size());
 
 			if (merged.size() < neighborhoods.size()) {
 				neighborhoods = merged;
@@ -104,12 +104,12 @@ public class TriNeighborhoodFinder<T extends Comparable<T>> {
 			}
 		}
 
-		log.info("needed " + mergeCtr + " merges");
+		LOGGER.log( Level.FINE, "needed " + mergeCtr + " merges");
 		
 		/*
 		 * TODO: add singleton vertices
 		 */
-		log.error("not implemented yet: adding singletons");
+		LOGGER.log( Level.FINE, "not implemented yet: adding singletons");
 		
 		
 		return neighborhoods;
@@ -141,7 +141,7 @@ public class TriNeighborhoodFinder<T extends Comparable<T>> {
 				/*
 				 * merge
 				 */
-				log.debug("    merging " + neighborhoods.size() + " / " + set.size() + " / " + set2.size());
+				LOGGER.log( Level.FINE, "    merging " + neighborhoods.size() + " / " + set.size() + " / " + set2.size());
 				merge = true;
 				break a;
 			}
@@ -171,9 +171,9 @@ public class TriNeighborhoodFinder<T extends Comparable<T>> {
 		while (iterator.hasNext()) {
 			final Set<TriConcept<T>> set2 = iterator.next();
 			if (set.equals(set2)) {
-				log.debug("pre:  " + neighborhoods.size());
+				LOGGER.log( Level.FINE, "pre:  " + neighborhoods.size());
 				iterator.remove();
-				log.debug("post:  " + neighborhoods.size());
+				LOGGER.log( Level.FINE, "post:  " + neighborhoods.size());
 				return true;
 			}
 		}

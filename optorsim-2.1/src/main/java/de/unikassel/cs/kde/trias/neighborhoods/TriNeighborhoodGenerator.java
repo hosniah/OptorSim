@@ -30,7 +30,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import de.unikassel.cs.kde.trias.model.Graph;
 import de.unikassel.cs.kde.trias.model.GraphEdge;
@@ -52,8 +53,7 @@ public class TriNeighborhoodGenerator<T extends Comparable<T>> {
 	 */
 	private static final int DIMS = 3;
 
-
-	private static final Logger log = Logger.getLogger(TriNeighborhoodGenerator.class);
+        private static final Logger LOGGER = Logger.getLogger( TriNeighborhoodGenerator.class.getName() );
 
 	private TriConcept<T>[] concepts;
 
@@ -104,19 +104,19 @@ public class TriNeighborhoodGenerator<T extends Comparable<T>> {
 		/*
 		 * get sortings for all three dimensions
 		 */
-		log.info("Sorting " + concepts.length + " concepts");
+		LOGGER.log( Level.FINE,"Sorting " + concepts.length + " concepts");
 		sortings = getSortings(concepts);
 		/*
 		 * merge tri-concepts into neighborhoods, which have the same extent
 		 */
-		log.info("Merging by extent");
+		LOGGER.log( Level.FINE,"Merging by extent");
 		mergeFirstDim(inverseNeighborMap, neighborMap, graph);
-		log.info("Merging by intent");
+		LOGGER.log( Level.FINE,"Merging by intent");
 		mergeDim(inverseNeighborMap, neighborMap, graph, 1);
-		log.info("Merging by modus");
+		LOGGER.log( Level.FINE,"Merging by modus");
 		mergeDim(inverseNeighborMap, neighborMap, graph, 2);
 
-		log.info(neighborMap.size() + " elements in neighbor map");
+		LOGGER.log( Level.FINE,neighborMap.size() + " elements in neighbor map");
 		
 		return graph;
 	}
@@ -164,7 +164,7 @@ public class TriNeighborhoodGenerator<T extends Comparable<T>> {
 			 * an item which should be ignored ...
 			 */
 			if (!isValidConcept(triConcept)) {
-				log.info("ignoring concept " + triConcept);
+				LOGGER.log( Level.FINE,"ignoring concept " + triConcept);
 				continue;
 			}
 
@@ -340,10 +340,10 @@ public class TriNeighborhoodGenerator<T extends Comparable<T>> {
 		this.ignoreExtent = ignoreExtent;
 		this.ignoreIntent = ignoreIntent;
 		this.ignoreModus = ignoreModus;
-		log.info("ignore sizes: " + ignoreExtent.length + ", " + ignoreIntent.length + ", " + ignoreModus.length);
-		log.info("ignore.extent: " + Arrays.toString(ignoreExtent));
-		log.info("ignore.intent: " + Arrays.toString(ignoreIntent));
-		log.info("ignore.modus: " + Arrays.toString(ignoreModus));
+		LOGGER.log( Level.FINE,"ignore sizes: " + ignoreExtent.length + ", " + ignoreIntent.length + ", " + ignoreModus.length);
+		LOGGER.log( Level.FINE,"ignore.extent: " + Arrays.toString(ignoreExtent));
+		LOGGER.log( Level.FINE,"ignore.intent: " + Arrays.toString(ignoreIntent));
+		LOGGER.log( Level.FINE,"ignore.modus: " + Arrays.toString(ignoreModus));
 	}
 
 }

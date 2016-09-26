@@ -30,7 +30,8 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Properties;
 
-import org.apache.log4j.Logger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import de.unikassel.cs.kde.trias.Trias;
 import de.unikassel.cs.kde.trias.io.ModelReaderWriter;
@@ -51,7 +52,7 @@ public class TriNeighborhoodRunner {
 
 	private static final String ARRAY_DELIM = ",";
 
-	private static final Logger log = Logger.getLogger(TriNeighborhoodRunner.class);
+	private static final Logger log = Logger.getLogger(TriNeighborhoodRunner.class.getName() );
 
 	private final Properties prop = new Properties();
 

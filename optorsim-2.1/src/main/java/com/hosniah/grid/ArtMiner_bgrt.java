@@ -21,7 +21,6 @@ import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  *
  * @author hosniah
@@ -80,11 +79,8 @@ public class ArtMiner_bgrt {
         } catch (IOException ex) {
             Logger.getLogger(TriasRunner.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-             
+                    
      //   System.out.println(mapcolumn);
-
-
        return multimap;
     }
 

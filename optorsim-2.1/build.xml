@@ -23,21 +23,20 @@
   <property name="docdir" value="doc"/>
   <property name="releasedir" value="release"/>
   <property name="version" value="2.1"/>
+  <property name="properties" value="src/main/resources"/>
   <property environment="env"/>
 
-  <path id="classpath">
+<path id="classpath">
     <fileset dir="lib">
       <include name="*.jar"/>
     </fileset>
     <fileset dir="external-lib">
       <include name="*.jar"/>
     </fileset>
-  </path>
-
-
-
-
-
+    <fileset dir="${properties}">
+      <include name="log4j.properties"/>
+    </fileset>    
+</path>
 
 <target name="javadocs" depends="build" description="generates javadoc and also UML Diagram">
     <mkdir dir="${docdir}/javadoc"/> 
