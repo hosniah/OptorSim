@@ -598,3 +598,1469 @@ CE9@Site8> starting to process jpsijob_37 (queue length now 3)
 CE9@Site8> starting to process jpsijob_51 (queue length now 2)
 CE9@Site8> starting to process highptlepjob_83 (queue length now 1)
 CE9@Site8> starting to process incmuonjob_93 (queue length now 0)
+Users> Submitted job 1 of 100 to RB at Wed Sep 28 00:00:02 WAT 2016
+ResourceBroker> Submitting job highptphotjob_1 to CE16@Site16
+CE16@Site16> starting to process highptphotjob_1 (queue length now 0)
+ResourceBroker> Submitting job highptlepjob_2 to CE17@Site17
+Users> Submitted job 2 of 100 to RB at Wed Sep 28 00:00:05 WAT 2016
+CE17@Site17> starting to process highptlepjob_2 (queue length now 0)
+Users> Submitted job 3 of 100 to RB at Wed Sep 28 00:00:07 WAT 2016
+ResourceBroker> Submitting job zbbbarjob_3 to CE9@Site8
+CE9@Site8> starting to process zbbbarjob_3 (queue length now 0)
+ResourceBroker> Submitting job incelecjob_4 to CE16@Site16
+Users> Submitted job 4 of 100 to RB at Wed Sep 28 00:00:10 WAT 2016
+Users> Submitted job 5 of 100 to RB at Wed Sep 28 00:00:12 WAT 2016
+ResourceBroker> Submitting job highptlepjob_5 to CE17@Site17
+Users> Submitted job 6 of 100 to RB at Wed Sep 28 00:00:15 WAT 2016
+ResourceBroker> Submitting job jpsijob_6 to CE9@Site8
+CE9@Site8> starting to process jpsijob_6 (queue length now 0)
+Users> Submitted job 7 of 100 to RB at Wed Sep 28 00:00:17 WAT 2016
+ResourceBroker> Submitting job jpsijob_7 to CE9@Site8
+ResourceBroker> Submitting job incelecjob_8 to CE17@Site17
+Users> Submitted job 8 of 100 to RB at Wed Sep 28 00:00:20 WAT 2016
+CE17@Site17> starting to process highptlepjob_5 (queue length now 1)
+Users> Submitted job 9 of 100 to RB at Wed Sep 28 00:00:22 WAT 2016
+ResourceBroker> Submitting job jpsijob_9 to CE17@Site17
+CE17@Site17> starting to process incelecjob_8 (queue length now 1)
+ResourceBroker> Submitting job highptlepjob_10 to CE6@Site5
+Users> Submitted job 10 of 100 to RB at Wed Sep 28 00:00:25 WAT 2016
+CE6@Site5> starting to process highptlepjob_10 (queue length now 0)
+Users> Submitted job 11 of 100 to RB at Wed Sep 28 00:00:27 WAT 2016
+ResourceBroker> Submitting job highptlepjob_11 to CE12@Site11
+CE12@Site11> starting to process highptlepjob_11 (queue length now 0)
+Users> Submitted job 12 of 100 to RB at Wed Sep 28 00:00:30 WAT 2016
+ResourceBroker> Submitting job jpsijob_12 to CE16@Site16
+Users> Submitted job 13 of 100 to RB at Wed Sep 28 00:00:32 WAT 2016
+ResourceBroker> Submitting job jpsijob_13 to CE16@Site16
+Users> Submitted job 14 of 100 to RB at Wed Sep 28 00:00:35 WAT 2016
+ResourceBroker> Submitting job highptphotjob_14 to CE16@Site16
+Users> Submitted job 15 of 100 to RB at Wed Sep 28 00:00:37 WAT 2016
+ResourceBroker> Submitting job jpsijob_15 to CE17@Site17
+Users> Submitted job 16 of 100 to RB at Wed Sep 28 00:00:40 WAT 2016
+ResourceBroker> Submitting job highptlepjob_16 to CE12@Site11
+Users> Submitted job 17 of 100 to RB at Wed Sep 28 00:00:42 WAT 2016
+ResourceBroker> Submitting job incmuonjob_17 to CE9@Site8
+Users> Submitted job 18 of 100 to RB at Wed Sep 28 00:00:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_18 to CE6@Site5
+Users> Submitted job 19 of 100 to RB at Wed Sep 28 00:00:47 WAT 2016
+ResourceBroker> Submitting job jpsijob_19 to CE17@Site17
+Users> Submitted job 20 of 100 to RB at Wed Sep 28 00:00:50 WAT 2016
+ResourceBroker> Submitting job jpsijob_20 to CE12@Site11
+Users> Submitted job 21 of 100 to RB at Wed Sep 28 00:00:52 WAT 2016
+ResourceBroker> Submitting job highptlepjob_21 to CE7@Site6
+CE7@Site6> starting to process highptlepjob_21 (queue length now 0)
+Users> Submitted job 22 of 100 to RB at Wed Sep 28 00:00:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_22 to CE17@Site17
+Users> Submitted job 23 of 100 to RB at Wed Sep 28 00:00:57 WAT 2016
+ResourceBroker> Submitting job highptphotjob_23 to CE16@Site16
+Users> Submitted job 24 of 100 to RB at Wed Sep 28 00:01:00 WAT 2016
+ResourceBroker> Submitting job highptphotjob_24 to CE17@Site17
+Users> Submitted job 25 of 100 to RB at Wed Sep 28 00:01:02 WAT 2016
+ResourceBroker> Submitting job highptlepjob_25 to CE7@Site6
+Users> Submitted job 26 of 100 to RB at Wed Sep 28 00:01:05 WAT 2016
+ResourceBroker> Submitting job jpsijob_26 to CE9@Site8
+Users> Submitted job 27 of 100 to RB at Wed Sep 28 00:01:07 WAT 2016
+ResourceBroker> Submitting job jpsijob_27 to CE10@Site9
+CE10@Site9> starting to process jpsijob_27 (queue length now 0)
+Users> Submitted job 28 of 100 to RB at Wed Sep 28 00:01:10 WAT 2016
+ResourceBroker> Submitting job incmuonjob_28 to CE9@Site8
+Users> Submitted job 29 of 100 to RB at Wed Sep 28 00:01:12 WAT 2016
+ResourceBroker> Submitting job highptphotjob_29 to CE16@Site16
+Users> Submitted job 30 of 100 to RB at Wed Sep 28 00:01:15 WAT 2016
+ResourceBroker> Submitting job highptlepjob_30 to CE10@Site9
+Users> Submitted job 31 of 100 to RB at Wed Sep 28 00:01:17 WAT 2016
+ResourceBroker> Submitting job incelecjob_31 to CE12@Site11
+Users> Submitted job 32 of 100 to RB at Wed Sep 28 00:01:20 WAT 2016
+ResourceBroker> Submitting job jpsijob_32 to CE12@Site11
+CE12@Site11> starting to process highptlepjob_16 (queue length now 3)
+CE12@Site11> starting to process jpsijob_20 (queue length now 2)
+Users> Submitted job 33 of 100 to RB at Wed Sep 28 00:01:22 WAT 2016
+ResourceBroker> Submitting job jpsijob_33 to CE12@Site11
+Users> Submitted job 34 of 100 to RB at Wed Sep 28 00:01:25 WAT 2016
+ResourceBroker> Submitting job incelecjob_34 to CE7@Site6
+Users> Submitted job 35 of 100 to RB at Wed Sep 28 00:01:27 WAT 2016
+ResourceBroker> Submitting job jpsijob_35 to CE17@Site17
+ResourceBroker> Submitting job highptlepjob_36 to CE10@Site9
+Users> Submitted job 36 of 100 to RB at Wed Sep 28 00:01:30 WAT 2016
+Users> Submitted job 37 of 100 to RB at Wed Sep 28 00:01:32 WAT 2016
+ResourceBroker> Submitting job highptlepjob_37 to CE6@Site5
+Users> Submitted job 38 of 100 to RB at Wed Sep 28 00:01:35 WAT 2016
+ResourceBroker> Submitting job highptlepjob_38 to CE10@Site9
+Users> Submitted job 39 of 100 to RB at Wed Sep 28 00:01:37 WAT 2016
+ResourceBroker> Submitting job jpsijob_39 to CE9@Site8
+Users> Submitted job 40 of 100 to RB at Wed Sep 28 00:01:40 WAT 2016
+ResourceBroker> Submitting job jpsijob_40 to CE16@Site16
+CE9@Site8> starting to process jpsijob_7 (queue length now 4)
+Users> Submitted job 41 of 100 to RB at Wed Sep 28 00:01:42 WAT 2016
+ResourceBroker> Submitting job jpsijob_41 to CE9@Site8
+Users> Submitted job 42 of 100 to RB at Wed Sep 28 00:01:45 WAT 2016
+ResourceBroker> Submitting job incmuonjob_42 to CE9@Site8
+Users> Submitted job 43 of 100 to RB at Wed Sep 28 00:01:47 WAT 2016
+ResourceBroker> Submitting job incmuonjob_43 to CE17@Site17
+CE17@Site17> starting to process jpsijob_9 (queue length now 6)
+Users> Submitted job 44 of 100 to RB at Wed Sep 28 00:01:50 WAT 2016
+ResourceBroker> Submitting job highptlepjob_44 to CE6@Site5
+Users> Submitted job 45 of 100 to RB at Wed Sep 28 00:01:52 WAT 2016
+ResourceBroker> Submitting job jpsijob_45 to CE17@Site17
+Users> Submitted job 46 of 100 to RB at Wed Sep 28 00:01:55 WAT 2016
+ResourceBroker> Submitting job incmuonjob_46 to CE17@Site17
+Users> Submitted job 47 of 100 to RB at Wed Sep 28 00:01:57 WAT 2016
+ResourceBroker> Submitting job jpsijob_47 to CE6@Site5
+Users> Submitted job 48 of 100 to RB at Wed Sep 28 00:02:00 WAT 2016
+ResourceBroker> Submitting job jpsijob_48 to CE17@Site17
+Users> Submitted job 49 of 100 to RB at Wed Sep 28 00:02:02 WAT 2016
+ResourceBroker> Submitting job jpsijob_49 to CE12@Site11
+Users> Submitted job 50 of 100 to RB at Wed Sep 28 00:02:05 WAT 2016
+ResourceBroker> Submitting job highptlepjob_50 to CE17@Site17
+Users> Submitted job 51 of 100 to RB at Wed Sep 28 00:02:07 WAT 2016
+ResourceBroker> Submitting job jpsijob_51 to CE17@Site17
+ResourceBroker> Submitting job incelecjob_52 to CE10@Site9
+Users> Submitted job 52 of 100 to RB at Wed Sep 28 00:02:10 WAT 2016
+Users> Submitted job 53 of 100 to RB at Wed Sep 28 00:02:12 WAT 2016
+ResourceBroker> Submitting job highptlepjob_53 to CE7@Site6
+Users> Submitted job 54 of 100 to RB at Wed Sep 28 00:02:15 WAT 2016
+ResourceBroker> Submitting job incmuonjob_54 to CE17@Site17
+Users> Submitted job 55 of 100 to RB at Wed Sep 28 00:02:17 WAT 2016
+ResourceBroker> Submitting job incmuonjob_55 to CE9@Site8
+Users> Submitted job 56 of 100 to RB at Wed Sep 28 00:02:20 WAT 2016
+ResourceBroker> Submitting job jpsijob_56 to CE17@Site17
+ResourceBroker> Submitting job highptlepjob_57 to CE17@Site17
+Users> Submitted job 57 of 100 to RB at Wed Sep 28 00:02:22 WAT 2016
+Users> Submitted job 58 of 100 to RB at Wed Sep 28 00:02:25 WAT 2016
+ResourceBroker> Submitting job jpsijob_58 to CE17@Site17
+Users> Submitted job 59 of 100 to RB at Wed Sep 28 00:02:27 WAT 2016
+ResourceBroker> Submitting job incmuonjob_59 to CE16@Site16
+Users> Submitted job 60 of 100 to RB at Wed Sep 28 00:02:30 WAT 2016
+ResourceBroker> Submitting job jpsijob_60 to CE12@Site11
+Users> Submitted job 61 of 100 to RB at Wed Sep 28 00:02:32 WAT 2016
+ResourceBroker> Submitting job jpsijob_61 to CE9@Site8
+Users> Submitted job 62 of 100 to RB at Wed Sep 28 00:02:35 WAT 2016
+ResourceBroker> Submitting job jpsijob_62 to CE17@Site17
+Users> Submitted job 63 of 100 to RB at Wed Sep 28 00:02:37 WAT 2016
+ResourceBroker> Submitting job incelecjob_63 to CE6@Site5
+Users> Submitted job 64 of 100 to RB at Wed Sep 28 00:02:40 WAT 2016
+ResourceBroker> Submitting job jpsijob_64 to CE17@Site17
+Users> Submitted job 65 of 100 to RB at Wed Sep 28 00:02:42 WAT 2016
+ResourceBroker> Submitting job jpsijob_65 to CE17@Site17
+Users> Submitted job 66 of 100 to RB at Wed Sep 28 00:02:45 WAT 2016
+ResourceBroker> Submitting job highptlepjob_66 to CE7@Site6
+Users> Submitted job 67 of 100 to RB at Wed Sep 28 00:02:47 WAT 2016
+ResourceBroker> Submitting job highptlepjob_67 to CE7@Site6
+Users> Submitted job 68 of 100 to RB at Wed Sep 28 00:02:50 WAT 2016
+ResourceBroker> Submitting job highptphotjob_68 to CE16@Site16
+Users> Submitted job 69 of 100 to RB at Wed Sep 28 00:02:52 WAT 2016
+ResourceBroker> Submitting job incmuonjob_69 to CE17@Site17
+Users> Submitted job 70 of 100 to RB at Wed Sep 28 00:02:55 WAT 2016
+ResourceBroker> Submitting job highptlepjob_70 to CE17@Site17
+Users> Submitted job 71 of 100 to RB at Wed Sep 28 00:02:57 WAT 2016
+ResourceBroker> Submitting job highptphotjob_71 to CE17@Site17
+Users> Submitted job 72 of 100 to RB at Wed Sep 28 00:03:00 WAT 2016
+ResourceBroker> Submitting job incmuonjob_72 to CE9@Site8
+CE6@Site5> starting to process jpsijob_18 (queue length now 4)
+Users> Submitted job 73 of 100 to RB at Wed Sep 28 00:03:02 WAT 2016
+ResourceBroker> Submitting job incelecjob_73 to CE6@Site5
+Users> Submitted job 74 of 100 to RB at Wed Sep 28 00:03:05 WAT 2016
+ResourceBroker> Submitting job zbbbarjob_74 to CE6@Site5
+Users> Submitted job 75 of 100 to RB at Wed Sep 28 00:03:07 WAT 2016
+ResourceBroker> Submitting job highptlepjob_75 to CE9@Site8
+Users> Submitted job 76 of 100 to RB at Wed Sep 28 00:03:10 WAT 2016
+ResourceBroker> Submitting job incmuonjob_76 to CE12@Site11
+Users> Submitted job 77 of 100 to RB at Wed Sep 28 00:03:12 WAT 2016
+ResourceBroker> Submitting job jpsijob_77 to CE6@Site5
+Users> Submitted job 78 of 100 to RB at Wed Sep 28 00:03:15 WAT 2016
+ResourceBroker> Submitting job highptphotjob_78 to CE16@Site16
+Users> Submitted job 79 of 100 to RB at Wed Sep 28 00:03:17 WAT 2016
+ResourceBroker> Submitting job incelecjob_79 to CE16@Site16
+Users> Submitted job 80 of 100 to RB at Wed Sep 28 00:03:20 WAT 2016
+ResourceBroker> Submitting job jpsijob_80 to CE9@Site8
+Users> Submitted job 81 of 100 to RB at Wed Sep 28 00:03:22 WAT 2016
+ResourceBroker> Submitting job highptlepjob_81 to CE10@Site9
+Users> Submitted job 82 of 100 to RB at Wed Sep 28 00:03:25 WAT 2016
+ResourceBroker> Submitting job highptphotjob_82 to CE17@Site17
+Users> Submitted job 83 of 100 to RB at Wed Sep 28 00:03:27 WAT 2016
+ResourceBroker> Submitting job jpsijob_83 to CE9@Site8
+Users> Submitted job 84 of 100 to RB at Wed Sep 28 00:03:30 WAT 2016
+ResourceBroker> Submitting job jpsijob_84 to CE9@Site8
+Users> Submitted job 85 of 100 to RB at Wed Sep 28 00:03:32 WAT 2016
+ResourceBroker> Submitting job incelecjob_85 to CE7@Site6
+Users> Submitted job 86 of 100 to RB at Wed Sep 28 00:03:35 WAT 2016
+ResourceBroker> Submitting job jpsijob_86 to CE16@Site16
+Users> Submitted job 87 of 100 to RB at Wed Sep 28 00:03:37 WAT 2016
+ResourceBroker> Submitting job jpsijob_87 to CE9@Site8
+Users> Submitted job 88 of 100 to RB at Wed Sep 28 00:03:40 WAT 2016
+ResourceBroker> Submitting job jpsijob_88 to CE16@Site16
+Users> Submitted job 89 of 100 to RB at Wed Sep 28 00:03:42 WAT 2016
+ResourceBroker> Submitting job jpsijob_89 to CE9@Site8
+Users> Submitted job 90 of 100 to RB at Wed Sep 28 00:03:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_90 to CE17@Site17
+Users> Submitted job 91 of 100 to RB at Wed Sep 28 00:03:47 WAT 2016
+ResourceBroker> Submitting job jpsijob_91 to CE17@Site17
+Users> Submitted job 92 of 100 to RB at Wed Sep 28 00:03:50 WAT 2016
+ResourceBroker> Submitting job jpsijob_92 to CE16@Site16
+Users> Submitted job 93 of 100 to RB at Wed Sep 28 00:03:52 WAT 2016
+ResourceBroker> Submitting job jpsijob_93 to CE17@Site17
+Users> Submitted job 94 of 100 to RB at Wed Sep 28 00:03:55 WAT 2016
+ResourceBroker> Submitting job highptlepjob_94 to CE10@Site9
+ResourceBroker> Submitting job highptlepjob_95 to CE10@Site9
+Users> Submitted job 95 of 100 to RB at Wed Sep 28 00:03:57 WAT 2016
+Users> Submitted job 96 of 100 to RB at Wed Sep 28 00:04:00 WAT 2016
+ResourceBroker> Submitting job highptlepjob_96 to CE6@Site5
+CE17@Site17> starting to process jpsijob_15 (queue length now 24)
+Users> Submitted job 97 of 100 to RB at Wed Sep 28 00:04:02 WAT 2016
+ResourceBroker> Submitting job highptlepjob_97 to CE17@Site17
+Users> Submitted job 98 of 100 to RB at Wed Sep 28 00:04:05 WAT 2016
+ResourceBroker> Submitting job zbbbarjob_98 to CE17@Site17
+Users> Submitted job 99 of 100 to RB at Wed Sep 28 00:04:07 WAT 2016
+ResourceBroker> Submitting job jpsijob_99 to CE17@Site17
+CE17@Site17> starting to process jpsijob_19 (queue length now 26)
+Users> Submitted job 100 of 100 to RB at Wed Sep 28 00:04:10 WAT 2016
+ResourceBroker> Submitting job highptlepjob_100 to CE10@Site9
+CE7@Site6> starting to process highptlepjob_25 (queue length now 5)
+CE9@Site8> starting to process incmuonjob_17 (queue length now 14)
+CE17@Site17> starting to process jpsijob_22 (queue length now 25)
+CE17@Site17> starting to process highptphotjob_24 (queue length now 24)
+CE7@Site6> starting to process incelecjob_34 (queue length now 4)
+CE12@Site11> starting to process incelecjob_31 (queue length now 5)
+CE16@Site16> starting to process incelecjob_4 (queue length now 13)
+CE16@Site16> starting to process jpsijob_12 (queue length now 12)
+CE6@Site5> starting to process highptlepjob_37 (queue length now 7)
+CE6@Site5> starting to process highptlepjob_44 (queue length now 6)
+CE6@Site5> starting to process jpsijob_47 (queue length now 5)
+CE12@Site11> starting to process jpsijob_32 (queue length now 4)
+CE16@Site16> starting to process jpsijob_13 (queue length now 11)
+CE16@Site16> starting to process highptphotjob_14 (queue length now 10)
+CE6@Site5> starting to process incelecjob_63 (queue length now 4)
+CE9@Site8> starting to process jpsijob_26 (queue length now 13)
+CE9@Site8> starting to process incmuonjob_28 (queue length now 12)
+CE9@Site8> starting to process jpsijob_39 (queue length now 11)
+CE9@Site8> starting to process jpsijob_41 (queue length now 10)
+CE7@Site6> starting to process highptlepjob_53 (queue length now 3)
+CE7@Site6> starting to process highptlepjob_66 (queue length now 2)
+CE7@Site6> starting to process highptlepjob_67 (queue length now 1)
+CE7@Site6> starting to process incelecjob_85 (queue length now 0)
+CE6@Site5> starting to process incelecjob_73 (queue length now 3)
+CE9@Site8> starting to process incmuonjob_42 (queue length now 9)
+CE9@Site8> starting to process incmuonjob_55 (queue length now 8)
+CE6@Site5> starting to process zbbbarjob_74 (queue length now 2)
+CE12@Site11> starting to process jpsijob_33 (queue length now 3)
+CE9@Site8> starting to process jpsijob_61 (queue length now 7)
+CE17@Site17> starting to process jpsijob_35 (queue length now 23)
+CE9@Site8> starting to process incmuonjob_72 (queue length now 6)
+CE17@Site17> starting to process incmuonjob_43 (queue length now 22)
+CE16@Site16> starting to process highptphotjob_23 (queue length now 9)
+CE12@Site11> starting to process jpsijob_49 (queue length now 2)
+CE12@Site11> starting to process jpsijob_60 (queue length now 1)
+CE9@Site8> starting to process highptlepjob_75 (queue length now 5)
+CE12@Site11> starting to process incmuonjob_76 (queue length now 0)
+CE9@Site8> starting to process jpsijob_80 (queue length now 4)
+CE9@Site8> starting to process jpsijob_83 (queue length now 3)
+CE9@Site8> starting to process jpsijob_84 (queue length now 2)
+CE9@Site8> starting to process jpsijob_87 (queue length now 1)
+CE9@Site8> starting to process jpsijob_89 (queue length now 0)
+CE6@Site5> starting to process jpsijob_77 (queue length now 1)
+CE17@Site17> starting to process jpsijob_45 (queue length now 21)
+CE17@Site17> starting to process incmuonjob_46 (queue length now 20)
+CE6@Site5> starting to process highptlepjob_96 (queue length now 0)
+CE16@Site16> starting to process highptphotjob_29 (queue length now 8)
+CE17@Site17> starting to process jpsijob_48 (queue length now 19)
+CE17@Site17> starting to process highptlepjob_50 (queue length now 18)
+CE17@Site17> starting to process jpsijob_51 (queue length now 17)
+CE17@Site17> starting to process incmuonjob_54 (queue length now 16)
+CE10@Site9> starting to process highptlepjob_30 (queue length now 7)
+CE17@Site17> starting to process jpsijob_56 (queue length now 15)
+CE16@Site16> starting to process jpsijob_40 (queue length now 7)
+CE17@Site17> starting to process highptlepjob_57 (queue length now 14)
+CE17@Site17> starting to process jpsijob_58 (queue length now 13)
+CE17@Site17> starting to process jpsijob_62 (queue length now 12)
+CE17@Site17> starting to process jpsijob_64 (queue length now 11)
+CE17@Site17> starting to process jpsijob_65 (queue length now 10)
+CE17@Site17> starting to process incmuonjob_69 (queue length now 9)
+CE10@Site9> starting to process highptlepjob_36 (queue length now 6)
+CE10@Site9> starting to process highptlepjob_38 (queue length now 5)
+CE10@Site9> starting to process incelecjob_52 (queue length now 4)
+CE17@Site17> starting to process highptlepjob_70 (queue length now 8)
+CE17@Site17> starting to process highptphotjob_71 (queue length now 7)
+CE16@Site16> starting to process incmuonjob_59 (queue length now 6)
+CE16@Site16> starting to process highptphotjob_68 (queue length now 5)
+CE17@Site17> starting to process highptphotjob_82 (queue length now 6)
+CE16@Site16> starting to process highptphotjob_78 (queue length now 4)
+CE10@Site9> starting to process highptlepjob_81 (queue length now 3)
+CE10@Site9> starting to process highptlepjob_94 (queue length now 2)
+CE16@Site16> starting to process incelecjob_79 (queue length now 3)
+CE10@Site9> starting to process highptlepjob_95 (queue length now 1)
+CE10@Site9> starting to process highptlepjob_100 (queue length now 0)
+CE16@Site16> starting to process jpsijob_86 (queue length now 2)
+CE17@Site17> starting to process jpsijob_90 (queue length now 5)
+CE17@Site17> starting to process jpsijob_91 (queue length now 4)
+CE16@Site16> starting to process jpsijob_88 (queue length now 1)
+CE17@Site17> starting to process jpsijob_93 (queue length now 3)
+CE17@Site17> starting to process highptlepjob_97 (queue length now 2)
+CE17@Site17> starting to process zbbbarjob_98 (queue length now 1)
+CE16@Site16> starting to process jpsijob_92 (queue length now 0)
+CE17@Site17> starting to process jpsijob_99 (queue length now 0)
+Users> Submitted job 1 of 100 to RB at Wed Sep 28 00:00:02 WAT 2016
+ResourceBroker> Submitting job jpsijob_1 to CE17@Site17
+CE17@Site17> starting to process jpsijob_1 (queue length now 0)
+Users> Submitted job 2 of 100 to RB at Wed Sep 28 00:00:05 WAT 2016
+ResourceBroker> Submitting job jpsijob_2 to CE16@Site16
+CE16@Site16> starting to process jpsijob_2 (queue length now 0)
+Users> Submitted job 3 of 100 to RB at Wed Sep 28 00:00:07 WAT 2016
+ResourceBroker> Submitting job incelecjob_3 to CE17@Site17
+Users> Submitted job 4 of 100 to RB at Wed Sep 28 00:00:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_4 to CE17@Site17
+ResourceBroker> Submitting job highptlepjob_5 to CE17@Site17
+Users> Submitted job 5 of 100 to RB at Wed Sep 28 00:00:12 WAT 2016
+Users> Submitted job 6 of 100 to RB at Wed Sep 28 00:00:15 WAT 2016
+ResourceBroker> Submitting job zbbbarjob_6 to CE9@Site8
+CE9@Site8> starting to process zbbbarjob_6 (queue length now 0)
+Users> Submitted job 7 of 100 to RB at Wed Sep 28 00:00:17 WAT 2016
+ResourceBroker> Submitting job incelecjob_7 to CE16@Site16
+Users> Submitted job 8 of 100 to RB at Wed Sep 28 00:00:20 WAT 2016
+ResourceBroker> Submitting job jpsijob_8 to CE9@Site8
+CE9@Site8> starting to process jpsijob_8 (queue length now 0)
+ResourceBroker> Submitting job highptlepjob_9 to CE6@Site5
+Users> Submitted job 9 of 100 to RB at Wed Sep 28 00:00:22 WAT 2016
+CE6@Site5> starting to process highptlepjob_9 (queue length now 0)
+Users> Submitted job 10 of 100 to RB at Wed Sep 28 00:00:25 WAT 2016
+ResourceBroker> Submitting job incmuonjob_10 to CE16@Site16
+Users> Submitted job 11 of 100 to RB at Wed Sep 28 00:00:27 WAT 2016
+ResourceBroker> Submitting job jpsijob_11 to CE12@Site11
+CE12@Site11> starting to process jpsijob_11 (queue length now 0)
+Users> Submitted job 12 of 100 to RB at Wed Sep 28 00:00:30 WAT 2016
+ResourceBroker> Submitting job highptlepjob_12 to CE12@Site11
+Users> Submitted job 13 of 100 to RB at Wed Sep 28 00:00:32 WAT 2016
+ResourceBroker> Submitting job jpsijob_13 to CE9@Site8
+Users> Submitted job 14 of 100 to RB at Wed Sep 28 00:00:35 WAT 2016
+ResourceBroker> Submitting job highptphotjob_14 to CE17@Site17
+Users> Submitted job 15 of 100 to RB at Wed Sep 28 00:00:37 WAT 2016
+ResourceBroker> Submitting job jpsijob_15 to CE16@Site16
+Users> Submitted job 16 of 100 to RB at Wed Sep 28 00:00:40 WAT 2016
+ResourceBroker> Submitting job incelecjob_16 to CE12@Site11
+Users> Submitted job 17 of 100 to RB at Wed Sep 28 00:00:42 WAT 2016
+ResourceBroker> Submitting job jpsijob_17 to CE16@Site16
+Users> Submitted job 18 of 100 to RB at Wed Sep 28 00:00:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_18 to CE6@Site5
+Users> Submitted job 19 of 100 to RB at Wed Sep 28 00:00:47 WAT 2016
+ResourceBroker> Submitting job incelecjob_19 to CE7@Site6
+CE7@Site6> starting to process incelecjob_19 (queue length now 0)
+Users> Submitted job 20 of 100 to RB at Wed Sep 28 00:00:50 WAT 2016
+ResourceBroker> Submitting job jpsijob_20 to CE16@Site16
+Users> Submitted job 21 of 100 to RB at Wed Sep 28 00:00:52 WAT 2016
+ResourceBroker> Submitting job highptphotjob_21 to CE16@Site16
+Users> Submitted job 22 of 100 to RB at Wed Sep 28 00:00:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_22 to CE9@Site8
+Users> Submitted job 23 of 100 to RB at Wed Sep 28 00:00:57 WAT 2016
+ResourceBroker> Submitting job highptphotjob_23 to CE17@Site17
+Users> Submitted job 24 of 100 to RB at Wed Sep 28 00:01:00 WAT 2016
+ResourceBroker> Submitting job jpsijob_24 to CE9@Site8
+Users> Submitted job 25 of 100 to RB at Wed Sep 28 00:01:02 WAT 2016
+ResourceBroker> Submitting job jpsijob_25 to CE12@Site11
+Users> Submitted job 26 of 100 to RB at Wed Sep 28 00:01:05 WAT 2016
+ResourceBroker> Submitting job jpsijob_26 to CE10@Site9
+CE10@Site9> starting to process jpsijob_26 (queue length now 0)
+Users> Submitted job 27 of 100 to RB at Wed Sep 28 00:01:07 WAT 2016
+ResourceBroker> Submitting job jpsijob_27 to CE6@Site5
+Users> Submitted job 28 of 100 to RB at Wed Sep 28 00:01:10 WAT 2016
+ResourceBroker> Submitting job highptphotjob_28 to CE16@Site16
+Users> Submitted job 29 of 100 to RB at Wed Sep 28 00:01:12 WAT 2016
+ResourceBroker> Submitting job jpsijob_29 to CE9@Site8
+Users> Submitted job 30 of 100 to RB at Wed Sep 28 00:01:15 WAT 2016
+ResourceBroker> Submitting job zbbbarjob_30 to CE7@Site6
+ResourceBroker> Submitting job jpsijob_31 to CE9@Site8
+Users> Submitted job 31 of 100 to RB at Wed Sep 28 00:01:17 WAT 2016
+Users> Submitted job 32 of 100 to RB at Wed Sep 28 00:01:20 WAT 2016
+ResourceBroker> Submitting job incelecjob_32 to CE10@Site9
+Users> Submitted job 33 of 100 to RB at Wed Sep 28 00:01:22 WAT 2016
+ResourceBroker> Submitting job highptlepjob_33 to CE12@Site11
+ResourceBroker> Submitting job highptlepjob_34 to CE17@Site17
+Users> Submitted job 34 of 100 to RB at Wed Sep 28 00:01:25 WAT 2016
+Users> Submitted job 35 of 100 to RB at Wed Sep 28 00:01:27 WAT 2016
+ResourceBroker> Submitting job jpsijob_35 to CE16@Site16
+Users> Submitted job 36 of 100 to RB at Wed Sep 28 00:01:30 WAT 2016
+ResourceBroker> Submitting job jpsijob_36 to CE12@Site11
+Users> Submitted job 37 of 100 to RB at Wed Sep 28 00:01:32 WAT 2016
+ResourceBroker> Submitting job highptlepjob_37 to CE10@Site9
+Users> Submitted job 38 of 100 to RB at Wed Sep 28 00:01:35 WAT 2016
+ResourceBroker> Submitting job highptphotjob_38 to CE17@Site17
+Users> Submitted job 39 of 100 to RB at Wed Sep 28 00:01:37 WAT 2016
+ResourceBroker> Submitting job incelecjob_39 to CE6@Site5
+Users> Submitted job 40 of 100 to RB at Wed Sep 28 00:01:40 WAT 2016
+ResourceBroker> Submitting job incelecjob_40 to CE6@Site5
+Users> Submitted job 41 of 100 to RB at Wed Sep 28 00:01:42 WAT 2016
+ResourceBroker> Submitting job highptphotjob_41 to CE16@Site16
+Users> Submitted job 42 of 100 to RB at Wed Sep 28 00:01:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_42 to CE9@Site8
+Users> Submitted job 43 of 100 to RB at Wed Sep 28 00:01:47 WAT 2016
+ResourceBroker> Submitting job jpsijob_43 to CE9@Site8
+Users> Submitted job 44 of 100 to RB at Wed Sep 28 00:01:50 WAT 2016
+ResourceBroker> Submitting job jpsijob_44 to CE9@Site8
+Users> Submitted job 45 of 100 to RB at Wed Sep 28 00:01:52 WAT 2016
+ResourceBroker> Submitting job highptphotjob_45 to CE17@Site17
+Users> Submitted job 46 of 100 to RB at Wed Sep 28 00:01:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_46 to CE9@Site8
+Users> Submitted job 47 of 100 to RB at Wed Sep 28 00:01:57 WAT 2016
+ResourceBroker> Submitting job highptphotjob_47 to CE16@Site16
+CE17@Site17> starting to process incelecjob_3 (queue length now 7)
+Users> Submitted job 48 of 100 to RB at Wed Sep 28 00:02:00 WAT 2016
+ResourceBroker> Submitting job jpsijob_48 to CE12@Site11
+Users> Submitted job 49 of 100 to RB at Wed Sep 28 00:02:02 WAT 2016
+ResourceBroker> Submitting job jpsijob_49 to CE6@Site5
+Users> Submitted job 50 of 100 to RB at Wed Sep 28 00:02:05 WAT 2016
+ResourceBroker> Submitting job jpsijob_50 to CE9@Site8
+CE6@Site5> starting to process jpsijob_18 (queue length now 4)
+Users> Submitted job 51 of 100 to RB at Wed Sep 28 00:02:07 WAT 2016
+ResourceBroker> Submitting job highptlepjob_51 to CE7@Site6
+Users> Submitted job 52 of 100 to RB at Wed Sep 28 00:02:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_52 to CE6@Site5
+Users> Submitted job 53 of 100 to RB at Wed Sep 28 00:02:12 WAT 2016
+ResourceBroker> Submitting job highptlepjob_53 to CE10@Site9
+Users> Submitted job 54 of 100 to RB at Wed Sep 28 00:02:15 WAT 2016
+ResourceBroker> Submitting job jpsijob_54 to CE12@Site11
+Users> Submitted job 55 of 100 to RB at Wed Sep 28 00:02:17 WAT 2016
+ResourceBroker> Submitting job incelecjob_55 to CE7@Site6
+Users> Submitted job 56 of 100 to RB at Wed Sep 28 00:02:20 WAT 2016
+ResourceBroker> Submitting job zbbbarjob_56 to CE9@Site8
+Users> Submitted job 57 of 100 to RB at Wed Sep 28 00:02:22 WAT 2016
+ResourceBroker> Submitting job highptlepjob_57 to CE10@Site9
+Users> Submitted job 58 of 100 to RB at Wed Sep 28 00:02:25 WAT 2016
+ResourceBroker> Submitting job jpsijob_58 to CE9@Site8
+Users> Submitted job 59 of 100 to RB at Wed Sep 28 00:02:27 WAT 2016
+ResourceBroker> Submitting job jpsijob_59 to CE9@Site8
+Users> Submitted job 60 of 100 to RB at Wed Sep 28 00:02:30 WAT 2016
+ResourceBroker> Submitting job highptlepjob_60 to CE10@Site9
+Users> Submitted job 61 of 100 to RB at Wed Sep 28 00:02:32 WAT 2016
+ResourceBroker> Submitting job jpsijob_61 to CE6@Site5
+CE16@Site16> starting to process incelecjob_7 (queue length now 9)
+Users> Submitted job 62 of 100 to RB at Wed Sep 28 00:02:35 WAT 2016
+ResourceBroker> Submitting job jpsijob_62 to CE12@Site11
+Users> Submitted job 63 of 100 to RB at Wed Sep 28 00:02:37 WAT 2016
+ResourceBroker> Submitting job incelecjob_63 to CE7@Site6
+Users> Submitted job 64 of 100 to RB at Wed Sep 28 00:02:40 WAT 2016
+ResourceBroker> Submitting job jpsijob_64 to CE9@Site8
+Users> Submitted job 65 of 100 to RB at Wed Sep 28 00:02:42 WAT 2016
+ResourceBroker> Submitting job jpsijob_65 to CE16@Site16
+Users> Submitted job 66 of 100 to RB at Wed Sep 28 00:02:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_66 to CE16@Site16
+Users> Submitted job 67 of 100 to RB at Wed Sep 28 00:02:47 WAT 2016
+ResourceBroker> Submitting job highptlepjob_67 to CE10@Site9
+Users> Submitted job 68 of 100 to RB at Wed Sep 28 00:02:50 WAT 2016
+ResourceBroker> Submitting job highptphotjob_68 to CE16@Site16
+Users> Submitted job 69 of 100 to RB at Wed Sep 28 00:02:52 WAT 2016
+ResourceBroker> Submitting job highptlepjob_69 to CE6@Site5
+Users> Submitted job 70 of 100 to RB at Wed Sep 28 00:02:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_70 to CE9@Site8
+Users> Submitted job 71 of 100 to RB at Wed Sep 28 00:02:57 WAT 2016
+ResourceBroker> Submitting job incmuonjob_71 to CE6@Site5
+Users> Submitted job 72 of 100 to RB at Wed Sep 28 00:03:00 WAT 2016
+ResourceBroker> Submitting job jpsijob_72 to CE17@Site17
+Users> Submitted job 73 of 100 to RB at Wed Sep 28 00:03:02 WAT 2016
+ResourceBroker> Submitting job jpsijob_73 to CE17@Site17
+Users> Submitted job 74 of 100 to RB at Wed Sep 28 00:03:05 WAT 2016
+ResourceBroker> Submitting job highptlepjob_74 to CE9@Site8
+Users> Submitted job 75 of 100 to RB at Wed Sep 28 00:03:07 WAT 2016
+ResourceBroker> Submitting job highptphotjob_75 to CE16@Site16
+Users> Submitted job 76 of 100 to RB at Wed Sep 28 00:03:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_76 to CE9@Site8
+Users> Submitted job 77 of 100 to RB at Wed Sep 28 00:03:12 WAT 2016
+ResourceBroker> Submitting job incmuonjob_77 to CE9@Site8
+Users> Submitted job 78 of 100 to RB at Wed Sep 28 00:03:15 WAT 2016
+ResourceBroker> Submitting job highptlepjob_78 to CE12@Site11
+Users> Submitted job 79 of 100 to RB at Wed Sep 28 00:03:17 WAT 2016
+ResourceBroker> Submitting job jpsijob_79 to CE9@Site8
+Users> Submitted job 80 of 100 to RB at Wed Sep 28 00:03:20 WAT 2016
+ResourceBroker> Submitting job highptlepjob_80 to CE12@Site11
+Users> Submitted job 81 of 100 to RB at Wed Sep 28 00:03:22 WAT 2016
+ResourceBroker> Submitting job jpsijob_81 to CE9@Site8
+CE16@Site16> starting to process incmuonjob_10 (queue length now 12)
+Users> Submitted job 82 of 100 to RB at Wed Sep 28 00:03:25 WAT 2016
+ResourceBroker> Submitting job jpsijob_82 to CE12@Site11
+Users> Submitted job 83 of 100 to RB at Wed Sep 28 00:03:27 WAT 2016
+ResourceBroker> Submitting job jpsijob_83 to CE9@Site8
+Users> Submitted job 84 of 100 to RB at Wed Sep 28 00:03:30 WAT 2016
+ResourceBroker> Submitting job jpsijob_84 to CE9@Site8
+Users> Submitted job 85 of 100 to RB at Wed Sep 28 00:03:32 WAT 2016
+ResourceBroker> Submitting job incelecjob_85 to CE10@Site9
+Users> Submitted job 86 of 100 to RB at Wed Sep 28 00:03:35 WAT 2016
+ResourceBroker> Submitting job highptphotjob_86 to CE16@Site16
+CE17@Site17> starting to process jpsijob_4 (queue length now 8)
+Users> Submitted job 87 of 100 to RB at Wed Sep 28 00:03:37 WAT 2016
+ResourceBroker> Submitting job incmuonjob_87 to CE17@Site17
+Users> Submitted job 88 of 100 to RB at Wed Sep 28 00:03:40 WAT 2016
+ResourceBroker> Submitting job highptphotjob_88 to CE17@Site17
+Users> Submitted job 89 of 100 to RB at Wed Sep 28 00:03:42 WAT 2016
+ResourceBroker> Submitting job jpsijob_89 to CE9@Site8
+Users> Submitted job 90 of 100 to RB at Wed Sep 28 00:03:45 WAT 2016
+ResourceBroker> Submitting job incelecjob_90 to CE12@Site11
+Users> Submitted job 91 of 100 to RB at Wed Sep 28 00:03:47 WAT 2016
+ResourceBroker> Submitting job incelecjob_91 to CE7@Site6
+Users> Submitted job 92 of 100 to RB at Wed Sep 28 00:03:50 WAT 2016
+ResourceBroker> Submitting job highptphotjob_92 to CE16@Site16
+Users> Submitted job 93 of 100 to RB at Wed Sep 28 00:03:52 WAT 2016
+ResourceBroker> Submitting job incmuonjob_93 to CE6@Site5
+Users> Submitted job 94 of 100 to RB at Wed Sep 28 00:03:55 WAT 2016
+ResourceBroker> Submitting job highptphotjob_94 to CE9@Site8
+Users> Submitted job 95 of 100 to RB at Wed Sep 28 00:03:57 WAT 2016
+ResourceBroker> Submitting job jpsijob_95 to CE12@Site11
+Users> Submitted job 96 of 100 to RB at Wed Sep 28 00:04:00 WAT 2016
+ResourceBroker> Submitting job jpsijob_96 to CE12@Site11
+Users> Submitted job 97 of 100 to RB at Wed Sep 28 00:04:02 WAT 2016
+ResourceBroker> Submitting job jpsijob_97 to CE6@Site5
+Users> Submitted job 98 of 100 to RB at Wed Sep 28 00:04:05 WAT 2016
+ResourceBroker> Submitting job highptlepjob_98 to CE7@Site6
+Users> Submitted job 99 of 100 to RB at Wed Sep 28 00:04:07 WAT 2016
+ResourceBroker> Submitting job highptphotjob_99 to CE17@Site17
+Users> Submitted job 100 of 100 to RB at Wed Sep 28 00:04:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_100 to CE6@Site5
+CE16@Site16> starting to process jpsijob_15 (queue length now 13)
+CE9@Site8> starting to process jpsijob_13 (queue length now 23)
+CE9@Site8> starting to process jpsijob_22 (queue length now 22)
+CE16@Site16> starting to process jpsijob_17 (queue length now 12)
+CE9@Site8> starting to process jpsijob_24 (queue length now 21)
+CE17@Site17> starting to process highptlepjob_5 (queue length now 10)
+CE9@Site8> starting to process jpsijob_29 (queue length now 20)
+CE9@Site8> starting to process jpsijob_31 (queue length now 19)
+CE9@Site8> starting to process jpsijob_42 (queue length now 18)
+CE16@Site16> starting to process jpsijob_20 (queue length now 11)
+CE9@Site8> starting to process jpsijob_43 (queue length now 17)
+CE16@Site16> starting to process highptphotjob_21 (queue length now 10)
+CE9@Site8> starting to process jpsijob_44 (queue length now 16)
+CE17@Site17> starting to process highptphotjob_14 (queue length now 9)
+CE9@Site8> starting to process jpsijob_46 (queue length now 15)
+CE9@Site8> starting to process jpsijob_50 (queue length now 14)
+CE9@Site8> starting to process zbbbarjob_56 (queue length now 13)
+CE12@Site11> starting to process highptlepjob_12 (queue length now 13)
+CE12@Site11> starting to process incelecjob_16 (queue length now 12)
+CE6@Site5> starting to process jpsijob_27 (queue length now 10)
+CE7@Site6> starting to process zbbbarjob_30 (queue length now 5)
+CE6@Site5> starting to process incelecjob_39 (queue length now 9)
+CE12@Site11> starting to process jpsijob_25 (queue length now 11)
+CE9@Site8> starting to process jpsijob_58 (queue length now 12)
+CE9@Site8> starting to process jpsijob_59 (queue length now 11)
+CE9@Site8> starting to process jpsijob_64 (queue length now 10)
+CE9@Site8> starting to process jpsijob_70 (queue length now 9)
+CE9@Site8> starting to process highptlepjob_74 (queue length now 8)
+CE6@Site5> starting to process incelecjob_40 (queue length now 8)
+CE6@Site5> starting to process jpsijob_49 (queue length now 7)
+CE9@Site8> starting to process jpsijob_76 (queue length now 7)
+CE9@Site8> starting to process incmuonjob_77 (queue length now 6)
+CE12@Site11> starting to process highptlepjob_33 (queue length now 10)
+CE12@Site11> starting to process jpsijob_36 (queue length now 9)
+CE6@Site5> starting to process jpsijob_52 (queue length now 6)
+CE6@Site5> starting to process jpsijob_61 (queue length now 5)
+CE9@Site8> starting to process jpsijob_79 (queue length now 5)
+CE9@Site8> starting to process jpsijob_81 (queue length now 4)
+CE9@Site8> starting to process jpsijob_83 (queue length now 3)
+CE9@Site8> starting to process jpsijob_84 (queue length now 2)
+CE12@Site11> starting to process jpsijob_48 (queue length now 8)
+CE9@Site8> starting to process jpsijob_89 (queue length now 1)
+CE9@Site8> starting to process highptphotjob_94 (queue length now 0)
+CE6@Site5> starting to process highptlepjob_69 (queue length now 4)
+CE6@Site5> starting to process incmuonjob_71 (queue length now 3)
+CE16@Site16> starting to process highptphotjob_28 (queue length now 9)
+CE17@Site17> starting to process highptphotjob_23 (queue length now 8)
+CE12@Site11> starting to process jpsijob_54 (queue length now 7)
+CE12@Site11> starting to process jpsijob_62 (queue length now 6)
+CE12@Site11> starting to process highptlepjob_78 (queue length now 5)
+CE12@Site11> starting to process highptlepjob_80 (queue length now 4)
+CE12@Site11> starting to process jpsijob_82 (queue length now 3)
+CE12@Site11> starting to process incelecjob_90 (queue length now 2)
+CE12@Site11> starting to process jpsijob_95 (queue length now 1)
+CE12@Site11> starting to process jpsijob_96 (queue length now 0)
+CE7@Site6> starting to process highptlepjob_51 (queue length now 4)
+CE10@Site9> starting to process incelecjob_32 (queue length now 6)
+CE7@Site6> starting to process incelecjob_55 (queue length now 3)
+CE7@Site6> starting to process incelecjob_63 (queue length now 2)
+CE16@Site16> starting to process jpsijob_35 (queue length now 8)
+CE16@Site16> starting to process highptphotjob_41 (queue length now 7)
+CE17@Site17> starting to process highptlepjob_34 (queue length now 7)
+CE17@Site17> starting to process highptphotjob_38 (queue length now 6)
+CE6@Site5> starting to process incmuonjob_93 (queue length now 2)
+CE7@Site6> starting to process incelecjob_91 (queue length now 1)
+CE16@Site16> starting to process highptphotjob_47 (queue length now 6)
+CE7@Site6> starting to process highptlepjob_98 (queue length now 0)
+CE17@Site17> starting to process highptphotjob_45 (queue length now 5)
+CE6@Site5> starting to process jpsijob_97 (queue length now 1)
+CE6@Site5> starting to process jpsijob_100 (queue length now 0)
+CE10@Site9> starting to process highptlepjob_37 (queue length now 5)
+CE16@Site16> starting to process jpsijob_65 (queue length now 5)
+CE17@Site17> starting to process jpsijob_72 (queue length now 4)
+CE16@Site16> starting to process jpsijob_66 (queue length now 4)
+CE16@Site16> starting to process highptphotjob_68 (queue length now 3)
+CE10@Site9> starting to process highptlepjob_53 (queue length now 4)
+CE10@Site9> starting to process highptlepjob_57 (queue length now 3)
+CE10@Site9> starting to process highptlepjob_60 (queue length now 2)
+CE10@Site9> starting to process highptlepjob_67 (queue length now 1)
+CE17@Site17> starting to process jpsijob_73 (queue length now 3)
+CE17@Site17> starting to process incmuonjob_87 (queue length now 2)
+CE10@Site9> starting to process incelecjob_85 (queue length now 0)
+CE16@Site16> starting to process highptphotjob_75 (queue length now 2)
+CE17@Site17> starting to process highptphotjob_88 (queue length now 1)
+CE17@Site17> starting to process highptphotjob_99 (queue length now 0)
+CE16@Site16> starting to process highptphotjob_86 (queue length now 1)
+CE16@Site16> starting to process highptphotjob_92 (queue length now 0)
+Users> Submitted job 1 of 100 to RB at Wed Sep 28 00:00:02 WAT 2016
+ResourceBroker> Submitting job highptlepjob_1 to CE16@Site16
+CE16@Site16> starting to process highptlepjob_1 (queue length now 0)
+Users> Submitted job 2 of 100 to RB at Wed Sep 28 00:00:05 WAT 2016
+ResourceBroker> Submitting job incmuonjob_2 to CE17@Site17
+CE17@Site17> starting to process incmuonjob_2 (queue length now 0)
+Users> Submitted job 3 of 100 to RB at Wed Sep 28 00:00:07 WAT 2016
+ResourceBroker> Submitting job jpsijob_3 to CE16@Site16
+Users> Submitted job 4 of 100 to RB at Wed Sep 28 00:00:10 WAT 2016
+ResourceBroker> Submitting job highptlepjob_4 to CE17@Site17
+Users> Submitted job 5 of 100 to RB at Wed Sep 28 00:00:12 WAT 2016
+ResourceBroker> Submitting job incmuonjob_5 to CE9@Site8
+CE9@Site8> starting to process incmuonjob_5 (queue length now 0)
+Users> Submitted job 6 of 100 to RB at Wed Sep 28 00:00:15 WAT 2016
+ResourceBroker> Submitting job highptphotjob_6 to CE17@Site17
+Users> Submitted job 7 of 100 to RB at Wed Sep 28 00:00:17 WAT 2016
+ResourceBroker> Submitting job incelecjob_7 to CE6@Site5
+CE6@Site5> starting to process incelecjob_7 (queue length now 0)
+Users> Submitted job 8 of 100 to RB at Wed Sep 28 00:00:20 WAT 2016
+ResourceBroker> Submitting job incmuonjob_8 to CE9@Site8
+Users> Submitted job 9 of 100 to RB at Wed Sep 28 00:00:22 WAT 2016
+ResourceBroker> Submitting job jpsijob_9 to CE16@Site16
+Users> Submitted job 10 of 100 to RB at Wed Sep 28 00:00:25 WAT 2016
+ResourceBroker> Submitting job incelecjob_10 to CE12@Site11
+CE12@Site11> starting to process incelecjob_10 (queue length now 0)
+Users> Submitted job 11 of 100 to RB at Wed Sep 28 00:00:27 WAT 2016
+ResourceBroker> Submitting job incelecjob_11 to CE12@Site11
+Users> Submitted job 12 of 100 to RB at Wed Sep 28 00:00:30 WAT 2016
+ResourceBroker> Submitting job highptlepjob_12 to CE12@Site11
+Users> Submitted job 13 of 100 to RB at Wed Sep 28 00:00:32 WAT 2016
+ResourceBroker> Submitting job jpsijob_13 to CE16@Site16
+CE16@Site16> starting to process jpsijob_3 (queue length now 2)
+Users> Submitted job 14 of 100 to RB at Wed Sep 28 00:00:35 WAT 2016
+ResourceBroker> Submitting job incmuonjob_14 to CE16@Site16
+Users> Submitted job 15 of 100 to RB at Wed Sep 28 00:00:37 WAT 2016
+ResourceBroker> Submitting job jpsijob_15 to CE12@Site11
+Users> Submitted job 16 of 100 to RB at Wed Sep 28 00:00:40 WAT 2016
+ResourceBroker> Submitting job jpsijob_16 to CE12@Site11
+Users> Submitted job 17 of 100 to RB at Wed Sep 28 00:00:42 WAT 2016
+ResourceBroker> Submitting job jpsijob_17 to CE6@Site5
+Users> Submitted job 18 of 100 to RB at Wed Sep 28 00:00:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_18 to CE9@Site8
+Users> Submitted job 19 of 100 to RB at Wed Sep 28 00:00:47 WAT 2016
+ResourceBroker> Submitting job highptlepjob_19 to CE10@Site9
+CE10@Site9> starting to process highptlepjob_19 (queue length now 0)
+Users> Submitted job 20 of 100 to RB at Wed Sep 28 00:00:50 WAT 2016
+ResourceBroker> Submitting job incmuonjob_20 to CE16@Site16
+Users> Submitted job 21 of 100 to RB at Wed Sep 28 00:00:52 WAT 2016
+ResourceBroker> Submitting job highptphotjob_21 to CE16@Site16
+Users> Submitted job 22 of 100 to RB at Wed Sep 28 00:00:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_22 to CE17@Site17
+Users> Submitted job 23 of 100 to RB at Wed Sep 28 00:00:57 WAT 2016
+ResourceBroker> Submitting job jpsijob_23 to CE9@Site8
+Users> Submitted job 24 of 100 to RB at Wed Sep 28 00:01:00 WAT 2016
+ResourceBroker> Submitting job incmuonjob_24 to CE17@Site17
+Users> Submitted job 25 of 100 to RB at Wed Sep 28 00:01:02 WAT 2016
+ResourceBroker> Submitting job jpsijob_25 to CE7@Site6
+CE7@Site6> starting to process jpsijob_25 (queue length now 0)
+Users> Submitted job 26 of 100 to RB at Wed Sep 28 00:01:05 WAT 2016
+ResourceBroker> Submitting job jpsijob_26 to CE17@Site17
+Users> Submitted job 27 of 100 to RB at Wed Sep 28 00:01:07 WAT 2016
+ResourceBroker> Submitting job jpsijob_27 to CE16@Site16
+Users> Submitted job 28 of 100 to RB at Wed Sep 28 00:01:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_28 to CE12@Site11
+Users> Submitted job 29 of 100 to RB at Wed Sep 28 00:01:12 WAT 2016
+ResourceBroker> Submitting job jpsijob_29 to CE6@Site5
+Users> Submitted job 30 of 100 to RB at Wed Sep 28 00:01:15 WAT 2016
+ResourceBroker> Submitting job jpsijob_30 to CE9@Site8
+ResourceBroker> Submitting job highptlepjob_31 to CE10@Site9
+Users> Submitted job 31 of 100 to RB at Wed Sep 28 00:01:17 WAT 2016
+Users> Submitted job 32 of 100 to RB at Wed Sep 28 00:01:20 WAT 2016
+ResourceBroker> Submitting job jpsijob_32 to CE17@Site17
+Users> Submitted job 33 of 100 to RB at Wed Sep 28 00:01:22 WAT 2016
+ResourceBroker> Submitting job incelecjob_33 to CE7@Site6
+Users> Submitted job 34 of 100 to RB at Wed Sep 28 00:01:25 WAT 2016
+ResourceBroker> Submitting job incmuonjob_34 to CE16@Site16
+Users> Submitted job 35 of 100 to RB at Wed Sep 28 00:01:27 WAT 2016
+ResourceBroker> Submitting job jpsijob_35 to CE17@Site17
+Users> Submitted job 36 of 100 to RB at Wed Sep 28 00:01:30 WAT 2016
+ResourceBroker> Submitting job zbbbarjob_36 to CE9@Site8
+Users> Submitted job 37 of 100 to RB at Wed Sep 28 00:01:32 WAT 2016
+ResourceBroker> Submitting job highptphotjob_37 to CE17@Site17
+Users> Submitted job 38 of 100 to RB at Wed Sep 28 00:01:35 WAT 2016
+ResourceBroker> Submitting job highptlepjob_38 to CE10@Site9
+Users> Submitted job 39 of 100 to RB at Wed Sep 28 00:01:37 WAT 2016
+ResourceBroker> Submitting job highptphotjob_39 to CE16@Site16
+Users> Submitted job 40 of 100 to RB at Wed Sep 28 00:01:40 WAT 2016
+ResourceBroker> Submitting job highptlepjob_40 to CE10@Site9
+Users> Submitted job 41 of 100 to RB at Wed Sep 28 00:01:42 WAT 2016
+ResourceBroker> Submitting job jpsijob_41 to CE16@Site16
+Users> Submitted job 42 of 100 to RB at Wed Sep 28 00:01:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_42 to CE9@Site8
+Users> Submitted job 43 of 100 to RB at Wed Sep 28 00:01:47 WAT 2016
+ResourceBroker> Submitting job jpsijob_43 to CE6@Site5
+Users> Submitted job 44 of 100 to RB at Wed Sep 28 00:01:50 WAT 2016
+ResourceBroker> Submitting job incmuonjob_44 to CE9@Site8
+Users> Submitted job 45 of 100 to RB at Wed Sep 28 00:01:52 WAT 2016
+ResourceBroker> Submitting job jpsijob_45 to CE9@Site8
+Users> Submitted job 46 of 100 to RB at Wed Sep 28 00:01:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_46 to CE17@Site17
+Users> Submitted job 47 of 100 to RB at Wed Sep 28 00:01:57 WAT 2016
+ResourceBroker> Submitting job jpsijob_47 to CE6@Site5
+Users> Submitted job 48 of 100 to RB at Wed Sep 28 00:02:00 WAT 2016
+ResourceBroker> Submitting job jpsijob_48 to CE16@Site16
+Users> Submitted job 49 of 100 to RB at Wed Sep 28 00:02:02 WAT 2016
+ResourceBroker> Submitting job highptlepjob_49 to CE7@Site6
+CE6@Site5> starting to process jpsijob_17 (queue length now 3)
+Users> Submitted job 50 of 100 to RB at Wed Sep 28 00:02:05 WAT 2016
+ResourceBroker> Submitting job highptphotjob_50 to CE17@Site17
+Users> Submitted job 51 of 100 to RB at Wed Sep 28 00:02:07 WAT 2016
+ResourceBroker> Submitting job jpsijob_51 to CE6@Site5
+Users> Submitted job 52 of 100 to RB at Wed Sep 28 00:02:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_52 to CE12@Site11
+CE12@Site11> starting to process incelecjob_11 (queue length now 5)
+Users> Submitted job 53 of 100 to RB at Wed Sep 28 00:02:12 WAT 2016
+ResourceBroker> Submitting job highptlepjob_53 to CE10@Site9
+Users> Submitted job 54 of 100 to RB at Wed Sep 28 00:02:15 WAT 2016
+ResourceBroker> Submitting job jpsijob_54 to CE9@Site8
+CE16@Site16> starting to process jpsijob_9 (queue length now 9)
+Users> Submitted job 55 of 100 to RB at Wed Sep 28 00:02:17 WAT 2016
+ResourceBroker> Submitting job highptlepjob_55 to CE16@Site16
+Users> Submitted job 56 of 100 to RB at Wed Sep 28 00:02:20 WAT 2016
+ResourceBroker> Submitting job jpsijob_56 to CE16@Site16
+Users> Submitted job 57 of 100 to RB at Wed Sep 28 00:02:22 WAT 2016
+ResourceBroker> Submitting job jpsijob_57 to CE16@Site16
+Users> Submitted job 58 of 100 to RB at Wed Sep 28 00:02:25 WAT 2016
+ResourceBroker> Submitting job highptphotjob_58 to CE16@Site16
+ResourceBroker> Submitting job incelecjob_59 to CE7@Site6
+Users> Submitted job 59 of 100 to RB at Wed Sep 28 00:02:27 WAT 2016
+Users> Submitted job 60 of 100 to RB at Wed Sep 28 00:02:30 WAT 2016
+ResourceBroker> Submitting job incelecjob_60 to CE10@Site9
+Users> Submitted job 61 of 100 to RB at Wed Sep 28 00:02:32 WAT 2016
+ResourceBroker> Submitting job incelecjob_61 to CE6@Site5
+CE17@Site17> starting to process highptlepjob_4 (queue length now 9)
+Users> Submitted job 62 of 100 to RB at Wed Sep 28 00:02:35 WAT 2016
+ResourceBroker> Submitting job highptphotjob_62 to CE16@Site16
+Users> Submitted job 63 of 100 to RB at Wed Sep 28 00:02:37 WAT 2016
+ResourceBroker> Submitting job highptphotjob_63 to CE17@Site17
+Users> Submitted job 64 of 100 to RB at Wed Sep 28 00:02:40 WAT 2016
+ResourceBroker> Submitting job incelecjob_64 to CE12@Site11
+Users> Submitted job 65 of 100 to RB at Wed Sep 28 00:02:42 WAT 2016
+ResourceBroker> Submitting job jpsijob_65 to CE9@Site8
+Users> Submitted job 66 of 100 to RB at Wed Sep 28 00:02:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_66 to CE9@Site8
+Users> Submitted job 67 of 100 to RB at Wed Sep 28 00:02:47 WAT 2016
+ResourceBroker> Submitting job jpsijob_67 to CE6@Site5
+Users> Submitted job 68 of 100 to RB at Wed Sep 28 00:02:50 WAT 2016
+ResourceBroker> Submitting job incmuonjob_68 to CE12@Site11
+CE17@Site17> starting to process highptphotjob_6 (queue length now 9)
+ResourceBroker> Submitting job highptlepjob_69 to CE7@Site6
+Users> Submitted job 69 of 100 to RB at Wed Sep 28 00:02:52 WAT 2016
+Users> Submitted job 70 of 100 to RB at Wed Sep 28 00:02:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_70 to CE17@Site17
+Users> Submitted job 71 of 100 to RB at Wed Sep 28 00:02:57 WAT 2016
+ResourceBroker> Submitting job highptlepjob_71 to CE10@Site9
+Users> Submitted job 72 of 100 to RB at Wed Sep 28 00:03:00 WAT 2016
+ResourceBroker> Submitting job incelecjob_72 to CE6@Site5
+Users> Submitted job 73 of 100 to RB at Wed Sep 28 00:03:02 WAT 2016
+ResourceBroker> Submitting job incmuonjob_73 to CE17@Site17
+Users> Submitted job 74 of 100 to RB at Wed Sep 28 00:03:05 WAT 2016
+ResourceBroker> Submitting job incmuonjob_74 to CE12@Site11
+Users> Submitted job 75 of 100 to RB at Wed Sep 28 00:03:07 WAT 2016
+ResourceBroker> Submitting job jpsijob_75 to CE17@Site17
+Users> Submitted job 76 of 100 to RB at Wed Sep 28 00:03:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_76 to CE9@Site8
+Users> Submitted job 77 of 100 to RB at Wed Sep 28 00:03:12 WAT 2016
+ResourceBroker> Submitting job jpsijob_77 to CE17@Site17
+Users> Submitted job 78 of 100 to RB at Wed Sep 28 00:03:15 WAT 2016
+ResourceBroker> Submitting job highptlepjob_78 to CE7@Site6
+Users> Submitted job 79 of 100 to RB at Wed Sep 28 00:03:17 WAT 2016
+ResourceBroker> Submitting job incmuonjob_79 to CE17@Site17
+Users> Submitted job 80 of 100 to RB at Wed Sep 28 00:03:20 WAT 2016
+ResourceBroker> Submitting job incmuonjob_80 to CE17@Site17
+Users> Submitted job 81 of 100 to RB at Wed Sep 28 00:03:22 WAT 2016
+ResourceBroker> Submitting job incelecjob_81 to CE6@Site5
+Users> Submitted job 82 of 100 to RB at Wed Sep 28 00:03:25 WAT 2016
+ResourceBroker> Submitting job jpsijob_82 to CE16@Site16
+CE16@Site16> starting to process jpsijob_13 (queue length now 14)
+Users> Submitted job 83 of 100 to RB at Wed Sep 28 00:03:27 WAT 2016
+ResourceBroker> Submitting job jpsijob_83 to CE16@Site16
+Users> Submitted job 84 of 100 to RB at Wed Sep 28 00:03:30 WAT 2016
+ResourceBroker> Submitting job highptphotjob_84 to CE17@Site17
+Users> Submitted job 85 of 100 to RB at Wed Sep 28 00:03:32 WAT 2016
+ResourceBroker> Submitting job incelecjob_85 to CE6@Site5
+Users> Submitted job 86 of 100 to RB at Wed Sep 28 00:03:35 WAT 2016
+ResourceBroker> Submitting job jpsijob_86 to CE16@Site16
+Users> Submitted job 87 of 100 to RB at Wed Sep 28 00:03:37 WAT 2016
+ResourceBroker> Submitting job highptphotjob_87 to CE16@Site16
+Users> Submitted job 88 of 100 to RB at Wed Sep 28 00:03:40 WAT 2016
+ResourceBroker> Submitting job jpsijob_88 to CE9@Site8
+Users> Submitted job 89 of 100 to RB at Wed Sep 28 00:03:42 WAT 2016
+ResourceBroker> Submitting job jpsijob_89 to CE6@Site5
+Users> Submitted job 90 of 100 to RB at Wed Sep 28 00:03:45 WAT 2016
+ResourceBroker> Submitting job highptlepjob_90 to CE16@Site16
+CE10@Site9> starting to process highptlepjob_31 (queue length now 5)
+Users> Submitted job 91 of 100 to RB at Wed Sep 28 00:03:47 WAT 2016
+ResourceBroker> Submitting job highptlepjob_91 to CE10@Site9
+CE10@Site9> starting to process highptlepjob_38 (queue length now 5)
+CE16@Site16> starting to process incmuonjob_14 (queue length now 17)
+CE10@Site9> starting to process highptlepjob_40 (queue length now 4)
+CE10@Site9> starting to process highptlepjob_53 (queue length now 3)
+Users> Submitted job 92 of 100 to RB at Wed Sep 28 00:03:50 WAT 2016
+ResourceBroker> Submitting job jpsijob_92 to CE10@Site9
+CE10@Site9> starting to process incelecjob_60 (queue length now 3)
+Users> Submitted job 93 of 100 to RB at Wed Sep 28 00:03:52 WAT 2016
+ResourceBroker> Submitting job highptlepjob_93 to CE10@Site9
+Users> Submitted job 94 of 100 to RB at Wed Sep 28 00:03:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_94 to CE9@Site8
+CE12@Site11> starting to process highptlepjob_12 (queue length now 7)
+Users> Submitted job 95 of 100 to RB at Wed Sep 28 00:03:57 WAT 2016
+ResourceBroker> Submitting job jpsijob_95 to CE16@Site16
+Users> Submitted job 96 of 100 to RB at Wed Sep 28 00:04:00 WAT 2016
+ResourceBroker> Submitting job jpsijob_96 to CE16@Site16
+Users> Submitted job 97 of 100 to RB at Wed Sep 28 00:04:02 WAT 2016
+ResourceBroker> Submitting job jpsijob_97 to CE16@Site16
+Users> Submitted job 98 of 100 to RB at Wed Sep 28 00:04:05 WAT 2016
+ResourceBroker> Submitting job incmuonjob_98 to CE16@Site16
+Users> Submitted job 99 of 100 to RB at Wed Sep 28 00:04:07 WAT 2016
+ResourceBroker> Submitting job highptlepjob_99 to CE10@Site9
+Users> Submitted job 100 of 100 to RB at Wed Sep 28 00:04:10 WAT 2016
+ResourceBroker> Submitting job incmuonjob_100 to CE17@Site17
+CE12@Site11> starting to process jpsijob_15 (queue length now 6)
+CE16@Site16> starting to process incmuonjob_20 (queue length now 20)
+CE16@Site16> starting to process highptphotjob_21 (queue length now 19)
+CE10@Site9> starting to process highptlepjob_71 (queue length now 4)
+CE17@Site17> starting to process jpsijob_22 (queue length now 16)
+CE10@Site9> starting to process highptlepjob_91 (queue length now 3)
+CE10@Site9> starting to process jpsijob_92 (queue length now 2)
+CE6@Site5> starting to process jpsijob_29 (queue length now 9)
+CE17@Site17> starting to process incmuonjob_24 (queue length now 15)
+CE17@Site17> starting to process jpsijob_26 (queue length now 14)
+CE6@Site5> starting to process jpsijob_43 (queue length now 8)
+CE17@Site17> starting to process jpsijob_32 (queue length now 13)
+CE17@Site17> starting to process jpsijob_35 (queue length now 12)
+CE9@Site8> starting to process incmuonjob_8 (queue length now 13)
+CE16@Site16> starting to process jpsijob_27 (queue length now 18)
+CE17@Site17> starting to process highptphotjob_37 (queue length now 11)
+CE12@Site11> starting to process jpsijob_16 (queue length now 5)
+CE16@Site16> starting to process incmuonjob_34 (queue length now 17)
+CE16@Site16> starting to process highptphotjob_39 (queue length now 16)
+CE6@Site5> starting to process jpsijob_47 (queue length now 7)
+CE6@Site5> starting to process jpsijob_51 (queue length now 6)
+CE6@Site5> starting to process incelecjob_61 (queue length now 5)
+CE12@Site11> starting to process jpsijob_28 (queue length now 4)
+CE12@Site11> starting to process jpsijob_52 (queue length now 3)
+CE12@Site11> starting to process incelecjob_64 (queue length now 2)
+CE6@Site5> starting to process jpsijob_67 (queue length now 4)
+CE6@Site5> starting to process incelecjob_72 (queue length now 3)
+CE6@Site5> starting to process incelecjob_81 (queue length now 2)
+CE6@Site5> starting to process incelecjob_85 (queue length now 1)
+CE6@Site5> starting to process jpsijob_89 (queue length now 0)
+CE17@Site17> starting to process jpsijob_46 (queue length now 10)
+CE12@Site11> starting to process incmuonjob_68 (queue length now 1)
+CE17@Site17> starting to process highptphotjob_50 (queue length now 9)
+CE7@Site6> starting to process incelecjob_33 (queue length now 4)
+CE16@Site16> starting to process jpsijob_41 (queue length now 15)
+CE16@Site16> starting to process jpsijob_48 (queue length now 14)
+CE16@Site16> starting to process highptlepjob_55 (queue length now 13)
+CE16@Site16> starting to process jpsijob_56 (queue length now 12)
+CE16@Site16> starting to process jpsijob_57 (queue length now 11)
+CE16@Site16> starting to process highptphotjob_58 (queue length now 10)
+CE17@Site17> starting to process highptphotjob_63 (queue length now 8)
+CE10@Site9> starting to process highptlepjob_93 (queue length now 1)
+CE10@Site9> starting to process highptlepjob_99 (queue length now 0)
+CE9@Site8> starting to process jpsijob_18 (queue length now 12)
+CE12@Site11> starting to process incmuonjob_74 (queue length now 0)
+CE16@Site16> starting to process highptphotjob_62 (queue length now 9)
+CE7@Site6> starting to process highptlepjob_49 (queue length now 3)
+CE17@Site17> starting to process jpsijob_70 (queue length now 7)
+CE17@Site17> starting to process incmuonjob_73 (queue length now 6)
+CE7@Site6> starting to process incelecjob_59 (queue length now 2)
+CE7@Site6> starting to process highptlepjob_69 (queue length now 1)
+CE7@Site6> starting to process highptlepjob_78 (queue length now 0)
+CE16@Site16> starting to process jpsijob_82 (queue length now 8)
+CE16@Site16> starting to process jpsijob_83 (queue length now 7)
+CE17@Site17> starting to process jpsijob_75 (queue length now 5)
+CE16@Site16> starting to process jpsijob_86 (queue length now 6)
+CE16@Site16> starting to process highptphotjob_87 (queue length now 5)
+CE17@Site17> starting to process jpsijob_77 (queue length now 4)
+CE17@Site17> starting to process incmuonjob_79 (queue length now 3)
+CE16@Site16> starting to process highptlepjob_90 (queue length now 4)
+CE16@Site16> starting to process jpsijob_95 (queue length now 3)
+CE17@Site17> starting to process incmuonjob_80 (queue length now 2)
+CE16@Site16> starting to process jpsijob_96 (queue length now 2)
+CE17@Site17> starting to process highptphotjob_84 (queue length now 1)
+CE16@Site16> starting to process jpsijob_97 (queue length now 1)
+CE16@Site16> starting to process incmuonjob_98 (queue length now 0)
+CE9@Site8> starting to process jpsijob_23 (queue length now 11)
+CE17@Site17> starting to process incmuonjob_100 (queue length now 0)
+CE9@Site8> starting to process jpsijob_30 (queue length now 10)
+CE9@Site8> starting to process zbbbarjob_36 (queue length now 9)
+CE9@Site8> starting to process jpsijob_42 (queue length now 8)
+CE9@Site8> starting to process incmuonjob_44 (queue length now 7)
+CE9@Site8> starting to process jpsijob_45 (queue length now 6)
+CE9@Site8> starting to process jpsijob_54 (queue length now 5)
+CE9@Site8> starting to process jpsijob_65 (queue length now 4)
+CE9@Site8> starting to process jpsijob_66 (queue length now 3)
+CE9@Site8> starting to process jpsijob_76 (queue length now 2)
+CE9@Site8> starting to process jpsijob_88 (queue length now 1)
+CE9@Site8> starting to process jpsijob_94 (queue length now 0)
+Users> Submitted job 1 of 100 to RB at Wed Sep 28 00:00:03 WAT 2016
+ResourceBroker> Submitting job incelecjob_1 to CE17@Site17
+CE17@Site17> starting to process incelecjob_1 (queue length now 0)
+Users> Submitted job 2 of 100 to RB at Wed Sep 28 00:00:05 WAT 2016
+ResourceBroker> Submitting job highptphotjob_2 to CE16@Site16
+CE16@Site16> starting to process highptphotjob_2 (queue length now 0)
+ResourceBroker> Submitting job incelecjob_3 to CE16@Site16
+Users> Submitted job 3 of 100 to RB at Wed Sep 28 00:00:08 WAT 2016
+Users> Submitted job 4 of 100 to RB at Wed Sep 28 00:00:10 WAT 2016
+ResourceBroker> Submitting job highptlepjob_4 to CE17@Site17
+Users> Submitted job 5 of 100 to RB at Wed Sep 28 00:00:13 WAT 2016
+ResourceBroker> Submitting job jpsijob_5 to CE9@Site8
+CE9@Site8> starting to process jpsijob_5 (queue length now 0)
+ResourceBroker> Submitting job jpsijob_6 to CE17@Site17
+Users> Submitted job 6 of 100 to RB at Wed Sep 28 00:00:15 WAT 2016
+Users> Submitted job 7 of 100 to RB at Wed Sep 28 00:00:18 WAT 2016
+ResourceBroker> Submitting job highptlepjob_7 to CE6@Site5
+CE6@Site5> starting to process highptlepjob_7 (queue length now 0)
+Users> Submitted job 8 of 100 to RB at Wed Sep 28 00:00:20 WAT 2016
+ResourceBroker> Submitting job jpsijob_8 to CE12@Site11
+CE12@Site11> starting to process jpsijob_8 (queue length now 0)
+Users> Submitted job 9 of 100 to RB at Wed Sep 28 00:00:23 WAT 2016
+ResourceBroker> Submitting job jpsijob_9 to CE16@Site16
+Users> Submitted job 10 of 100 to RB at Wed Sep 28 00:00:25 WAT 2016
+ResourceBroker> Submitting job jpsijob_10 to CE9@Site8
+Users> Submitted job 11 of 100 to RB at Wed Sep 28 00:00:28 WAT 2016
+ResourceBroker> Submitting job jpsijob_11 to CE6@Site5
+Users> Submitted job 12 of 100 to RB at Wed Sep 28 00:00:30 WAT 2016
+ResourceBroker> Submitting job highptlepjob_12 to CE12@Site11
+Users> Submitted job 13 of 100 to RB at Wed Sep 28 00:00:33 WAT 2016
+ResourceBroker> Submitting job highptlepjob_13 to CE7@Site6
+CE7@Site6> starting to process highptlepjob_13 (queue length now 0)
+Users> Submitted job 14 of 100 to RB at Wed Sep 28 00:00:35 WAT 2016
+ResourceBroker> Submitting job jpsijob_14 to CE12@Site11
+Users> Submitted job 15 of 100 to RB at Wed Sep 28 00:00:38 WAT 2016
+ResourceBroker> Submitting job jpsijob_15 to CE17@Site17
+ResourceBroker> Submitting job incelecjob_16 to CE10@Site9
+Users> Submitted job 16 of 100 to RB at Wed Sep 28 00:00:40 WAT 2016
+CE10@Site9> starting to process incelecjob_16 (queue length now 0)
+Users> Submitted job 17 of 100 to RB at Wed Sep 28 00:00:43 WAT 2016
+ResourceBroker> Submitting job highptlepjob_17 to CE7@Site6
+Users> Submitted job 18 of 100 to RB at Wed Sep 28 00:00:45 WAT 2016
+ResourceBroker> Submitting job highptlepjob_18 to CE10@Site9
+Users> Submitted job 19 of 100 to RB at Wed Sep 28 00:00:48 WAT 2016
+ResourceBroker> Submitting job incmuonjob_19 to CE9@Site8
+Users> Submitted job 20 of 100 to RB at Wed Sep 28 00:00:50 WAT 2016
+ResourceBroker> Submitting job incmuonjob_20 to CE16@Site16
+Users> Submitted job 21 of 100 to RB at Wed Sep 28 00:00:53 WAT 2016
+ResourceBroker> Submitting job highptphotjob_21 to CE17@Site17
+Users> Submitted job 22 of 100 to RB at Wed Sep 28 00:00:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_22 to CE9@Site8
+Users> Submitted job 23 of 100 to RB at Wed Sep 28 00:00:58 WAT 2016
+ResourceBroker> Submitting job jpsijob_23 to CE6@Site5
+ResourceBroker> Submitting job jpsijob_24 to CE12@Site11
+Users> Submitted job 24 of 100 to RB at Wed Sep 28 00:01:00 WAT 2016
+Users> Submitted job 25 of 100 to RB at Wed Sep 28 00:01:03 WAT 2016
+ResourceBroker> Submitting job jpsijob_25 to CE16@Site16
+Users> Submitted job 26 of 100 to RB at Wed Sep 28 00:01:05 WAT 2016
+ResourceBroker> Submitting job highptphotjob_26 to CE16@Site16
+Users> Submitted job 27 of 100 to RB at Wed Sep 28 00:01:08 WAT 2016
+ResourceBroker> Submitting job incmuonjob_27 to CE9@Site8
+Users> Submitted job 28 of 100 to RB at Wed Sep 28 00:01:10 WAT 2016
+ResourceBroker> Submitting job incmuonjob_28 to CE9@Site8
+Users> Submitted job 29 of 100 to RB at Wed Sep 28 00:01:13 WAT 2016
+ResourceBroker> Submitting job jpsijob_29 to CE6@Site5
+CE6@Site5> starting to process jpsijob_11 (queue length now 2)
+ResourceBroker> Submitting job jpsijob_30 to CE12@Site11
+Users> Submitted job 30 of 100 to RB at Wed Sep 28 00:01:15 WAT 2016
+Users> Submitted job 31 of 100 to RB at Wed Sep 28 00:01:18 WAT 2016
+ResourceBroker> Submitting job jpsijob_31 to CE6@Site5
+Users> Submitted job 32 of 100 to RB at Wed Sep 28 00:01:20 WAT 2016
+ResourceBroker> Submitting job jpsijob_32 to CE9@Site8
+Users> Submitted job 33 of 100 to RB at Wed Sep 28 00:01:23 WAT 2016
+ResourceBroker> Submitting job highptlepjob_33 to CE7@Site6
+Users> Submitted job 34 of 100 to RB at Wed Sep 28 00:01:25 WAT 2016
+ResourceBroker> Submitting job incmuonjob_34 to CE9@Site8
+Users> Submitted job 35 of 100 to RB at Wed Sep 28 00:01:28 WAT 2016
+ResourceBroker> Submitting job jpsijob_35 to CE12@Site11
+Users> Submitted job 36 of 100 to RB at Wed Sep 28 00:01:30 WAT 2016
+ResourceBroker> Submitting job zbbbarjob_36 to CE10@Site9
+Users> Submitted job 37 of 100 to RB at Wed Sep 28 00:01:33 WAT 2016
+ResourceBroker> Submitting job incmuonjob_37 to CE6@Site5
+Users> Submitted job 38 of 100 to RB at Wed Sep 28 00:01:35 WAT 2016
+ResourceBroker> Submitting job jpsijob_38 to CE9@Site8
+Users> Submitted job 39 of 100 to RB at Wed Sep 28 00:01:38 WAT 2016
+ResourceBroker> Submitting job highptlepjob_39 to CE7@Site6
+ResourceBroker> Submitting job highptlepjob_40 to CE7@Site6
+Users> Submitted job 40 of 100 to RB at Wed Sep 28 00:01:40 WAT 2016
+Users> Submitted job 41 of 100 to RB at Wed Sep 28 00:01:43 WAT 2016
+ResourceBroker> Submitting job highptphotjob_41 to CE17@Site17
+Users> Submitted job 42 of 100 to RB at Wed Sep 28 00:01:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_42 to CE9@Site8
+Users> Submitted job 43 of 100 to RB at Wed Sep 28 00:01:48 WAT 2016
+ResourceBroker> Submitting job jpsijob_43 to CE12@Site11
+Users> Submitted job 44 of 100 to RB at Wed Sep 28 00:01:50 WAT 2016
+ResourceBroker> Submitting job jpsijob_44 to CE9@Site8
+Users> Submitted job 45 of 100 to RB at Wed Sep 28 00:01:53 WAT 2016
+ResourceBroker> Submitting job jpsijob_45 to CE6@Site5
+Users> Submitted job 46 of 100 to RB at Wed Sep 28 00:01:55 WAT 2016
+ResourceBroker> Submitting job highptphotjob_46 to CE16@Site16
+Users> Submitted job 47 of 100 to RB at Wed Sep 28 00:01:58 WAT 2016
+ResourceBroker> Submitting job jpsijob_47 to CE12@Site11
+Users> Submitted job 48 of 100 to RB at Wed Sep 28 00:02:00 WAT 2016
+ResourceBroker> Submitting job incmuonjob_48 to CE9@Site8
+Users> Submitted job 49 of 100 to RB at Wed Sep 28 00:02:03 WAT 2016
+ResourceBroker> Submitting job jpsijob_49 to CE7@Site6
+Users> Submitted job 50 of 100 to RB at Wed Sep 28 00:02:05 WAT 2016
+ResourceBroker> Submitting job jpsijob_50 to CE10@Site9
+ResourceBroker> Submitting job jpsijob_51 to CE6@Site5
+Users> Submitted job 51 of 100 to RB at Wed Sep 28 00:02:08 WAT 2016
+Users> Submitted job 52 of 100 to RB at Wed Sep 28 00:02:10 WAT 2016
+ResourceBroker> Submitting job highptlepjob_52 to CE12@Site11
+CE17@Site17> starting to process highptlepjob_4 (queue length now 4)
+Users> Submitted job 53 of 100 to RB at Wed Sep 28 00:02:13 WAT 2016
+ResourceBroker> Submitting job jpsijob_53 to CE12@Site11
+Users> Submitted job 54 of 100 to RB at Wed Sep 28 00:02:15 WAT 2016
+ResourceBroker> Submitting job incmuonjob_54 to CE9@Site8
+Users> Submitted job 55 of 100 to RB at Wed Sep 28 00:02:18 WAT 2016
+ResourceBroker> Submitting job jpsijob_55 to CE6@Site5
+Users> Submitted job 56 of 100 to RB at Wed Sep 28 00:02:20 WAT 2016
+ResourceBroker> Submitting job jpsijob_56 to CE9@Site8
+Users> Submitted job 57 of 100 to RB at Wed Sep 28 00:02:23 WAT 2016
+ResourceBroker> Submitting job highptlepjob_57 to CE7@Site6
+Users> Submitted job 58 of 100 to RB at Wed Sep 28 00:02:25 WAT 2016
+ResourceBroker> Submitting job jpsijob_58 to CE12@Site11
+Users> Submitted job 59 of 100 to RB at Wed Sep 28 00:02:28 WAT 2016
+ResourceBroker> Submitting job jpsijob_59 to CE9@Site8
+Users> Submitted job 60 of 100 to RB at Wed Sep 28 00:02:30 WAT 2016
+ResourceBroker> Submitting job jpsijob_60 to CE6@Site5
+Users> Submitted job 61 of 100 to RB at Wed Sep 28 00:02:33 WAT 2016
+ResourceBroker> Submitting job jpsijob_61 to CE17@Site17
+Users> Submitted job 62 of 100 to RB at Wed Sep 28 00:02:35 WAT 2016
+ResourceBroker> Submitting job incmuonjob_62 to CE9@Site8
+Users> Submitted job 63 of 100 to RB at Wed Sep 28 00:02:38 WAT 2016
+ResourceBroker> Submitting job highptlepjob_63 to CE10@Site9
+Users> Submitted job 64 of 100 to RB at Wed Sep 28 00:02:40 WAT 2016
+ResourceBroker> Submitting job incelecjob_64 to CE12@Site11
+Users> Submitted job 65 of 100 to RB at Wed Sep 28 00:02:43 WAT 2016
+ResourceBroker> Submitting job highptlepjob_65 to CE7@Site6
+Users> Submitted job 66 of 100 to RB at Wed Sep 28 00:02:45 WAT 2016
+ResourceBroker> Submitting job incmuonjob_66 to CE9@Site8
+Users> Submitted job 67 of 100 to RB at Wed Sep 28 00:02:48 WAT 2016
+ResourceBroker> Submitting job highptphotjob_67 to CE17@Site17
+Users> Submitted job 68 of 100 to RB at Wed Sep 28 00:02:50 WAT 2016
+ResourceBroker> Submitting job incelecjob_68 to CE10@Site9
+Users> Submitted job 69 of 100 to RB at Wed Sep 28 00:02:53 WAT 2016
+ResourceBroker> Submitting job jpsijob_69 to CE12@Site11
+Users> Submitted job 70 of 100 to RB at Wed Sep 28 00:02:55 WAT 2016
+ResourceBroker> Submitting job incmuonjob_70 to CE16@Site16
+Users> Submitted job 71 of 100 to RB at Wed Sep 28 00:02:58 WAT 2016
+ResourceBroker> Submitting job jpsijob_71 to CE9@Site8
+Users> Submitted job 72 of 100 to RB at Wed Sep 28 00:03:00 WAT 2016
+ResourceBroker> Submitting job highptlepjob_72 to CE7@Site6
+Users> Submitted job 73 of 100 to RB at Wed Sep 28 00:03:03 WAT 2016
+ResourceBroker> Submitting job jpsijob_73 to CE9@Site8
+Users> Submitted job 74 of 100 to RB at Wed Sep 28 00:03:05 WAT 2016
+ResourceBroker> Submitting job jpsijob_74 to CE6@Site5
+Users> Submitted job 75 of 100 to RB at Wed Sep 28 00:03:08 WAT 2016
+ResourceBroker> Submitting job jpsijob_75 to CE12@Site11
+Users> Submitted job 76 of 100 to RB at Wed Sep 28 00:03:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_76 to CE9@Site8
+Users> Submitted job 77 of 100 to RB at Wed Sep 28 00:03:13 WAT 2016
+ResourceBroker> Submitting job jpsijob_77 to CE6@Site5
+Users> Submitted job 78 of 100 to RB at Wed Sep 28 00:03:15 WAT 2016
+ResourceBroker> Submitting job incmuonjob_78 to CE16@Site16
+Users> Submitted job 79 of 100 to RB at Wed Sep 28 00:03:18 WAT 2016
+ResourceBroker> Submitting job jpsijob_79 to CE9@Site8
+Users> Submitted job 80 of 100 to RB at Wed Sep 28 00:03:20 WAT 2016
+ResourceBroker> Submitting job incmuonjob_80 to CE9@Site8
+Users> Submitted job 81 of 100 to RB at Wed Sep 28 00:03:23 WAT 2016
+ResourceBroker> Submitting job highptphotjob_81 to CE16@Site16
+Users> Submitted job 82 of 100 to RB at Wed Sep 28 00:03:25 WAT 2016
+ResourceBroker> Submitting job jpsijob_82 to CE12@Site11
+ResourceBroker> Submitting job highptphotjob_83 to CE17@Site17
+Users> Submitted job 83 of 100 to RB at Wed Sep 28 00:03:28 WAT 2016
+Users> Submitted job 84 of 100 to RB at Wed Sep 28 00:03:30 WAT 2016
+ResourceBroker> Submitting job highptlepjob_84 to CE7@Site6
+Users> Submitted job 85 of 100 to RB at Wed Sep 28 00:03:33 WAT 2016
+ResourceBroker> Submitting job highptlepjob_85 to CE7@Site6
+Users> Submitted job 86 of 100 to RB at Wed Sep 28 00:03:35 WAT 2016
+ResourceBroker> Submitting job jpsijob_86 to CE7@Site6
+Users> Submitted job 87 of 100 to RB at Wed Sep 28 00:03:38 WAT 2016
+ResourceBroker> Submitting job highptphotjob_87 to CE6@Site5
+Users> Submitted job 88 of 100 to RB at Wed Sep 28 00:03:40 WAT 2016
+ResourceBroker> Submitting job highptlepjob_88 to CE10@Site9
+Users> Submitted job 89 of 100 to RB at Wed Sep 28 00:03:43 WAT 2016
+ResourceBroker> Submitting job jpsijob_89 to CE9@Site8
+Users> Submitted job 90 of 100 to RB at Wed Sep 28 00:03:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_90 to CE12@Site11
+Users> Submitted job 91 of 100 to RB at Wed Sep 28 00:03:48 WAT 2016
+ResourceBroker> Submitting job jpsijob_91 to CE9@Site8
+Users> Submitted job 92 of 100 to RB at Wed Sep 28 00:03:50 WAT 2016
+ResourceBroker> Submitting job jpsijob_92 to CE9@Site8
+Users> Submitted job 93 of 100 to RB at Wed Sep 28 00:03:53 WAT 2016
+ResourceBroker> Submitting job jpsijob_93 to CE12@Site11
+Users> Submitted job 94 of 100 to RB at Wed Sep 28 00:03:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_94 to CE9@Site8
+Users> Submitted job 95 of 100 to RB at Wed Sep 28 00:03:58 WAT 2016
+ResourceBroker> Submitting job jpsijob_95 to CE9@Site8
+Users> Submitted job 96 of 100 to RB at Wed Sep 28 00:04:00 WAT 2016
+ResourceBroker> Submitting job highptlepjob_96 to CE10@Site9
+CE17@Site17> starting to process jpsijob_6 (queue length now 6)
+Users> Submitted job 97 of 100 to RB at Wed Sep 28 00:04:03 WAT 2016
+ResourceBroker> Submitting job incmuonjob_97 to CE12@Site11
+Users> Submitted job 98 of 100 to RB at Wed Sep 28 00:04:05 WAT 2016
+ResourceBroker> Submitting job jpsijob_98 to CE12@Site11
+Users> Submitted job 99 of 100 to RB at Wed Sep 28 00:04:08 WAT 2016
+ResourceBroker> Submitting job jpsijob_99 to CE9@Site8
+Users> Submitted job 100 of 100 to RB at Wed Sep 28 00:04:10 WAT 2016
+ResourceBroker> Submitting job highptlepjob_100 to CE10@Site9
+CE9@Site8> starting to process jpsijob_10 (queue length now 26)
+CE7@Site6> starting to process highptlepjob_17 (queue length now 10)
+CE7@Site6> starting to process highptlepjob_33 (queue length now 9)
+CE7@Site6> starting to process highptlepjob_39 (queue length now 8)
+CE7@Site6> starting to process highptlepjob_40 (queue length now 7)
+CE7@Site6> starting to process jpsijob_49 (queue length now 6)
+CE9@Site8> starting to process incmuonjob_19 (queue length now 25)
+CE17@Site17> starting to process jpsijob_15 (queue length now 5)
+CE12@Site11> starting to process highptlepjob_12 (queue length now 17)
+CE12@Site11> starting to process jpsijob_14 (queue length now 16)
+CE6@Site5> starting to process jpsijob_23 (queue length now 10)
+CE17@Site17> starting to process highptphotjob_21 (queue length now 4)
+CE12@Site11> starting to process jpsijob_24 (queue length now 15)
+CE6@Site5> starting to process jpsijob_29 (queue length now 9)
+CE12@Site11> starting to process jpsijob_30 (queue length now 14)
+CE6@Site5> starting to process jpsijob_31 (queue length now 8)
+CE12@Site11> starting to process jpsijob_35 (queue length now 13)
+CE6@Site5> starting to process incmuonjob_37 (queue length now 7)
+CE12@Site11> starting to process jpsijob_43 (queue length now 12)
+CE12@Site11> starting to process jpsijob_47 (queue length now 11)
+CE10@Site9> starting to process highptlepjob_18 (queue length now 7)
+CE12@Site11> starting to process highptlepjob_52 (queue length now 10)
+CE12@Site11> starting to process jpsijob_53 (queue length now 9)
+CE12@Site11> starting to process jpsijob_58 (queue length now 8)
+CE9@Site8> starting to process jpsijob_22 (queue length now 24)
+CE12@Site11> starting to process incelecjob_64 (queue length now 7)
+CE9@Site8> starting to process incmuonjob_27 (queue length now 23)
+CE9@Site8> starting to process incmuonjob_28 (queue length now 22)
+CE9@Site8> starting to process jpsijob_32 (queue length now 21)
+CE9@Site8> starting to process incmuonjob_34 (queue length now 20)
+CE12@Site11> starting to process jpsijob_69 (queue length now 6)
+CE12@Site11> starting to process jpsijob_75 (queue length now 5)
+CE12@Site11> starting to process jpsijob_82 (queue length now 4)
+CE12@Site11> starting to process jpsijob_90 (queue length now 3)
+CE12@Site11> starting to process jpsijob_93 (queue length now 2)
+CE12@Site11> starting to process incmuonjob_97 (queue length now 1)
+CE10@Site9> starting to process zbbbarjob_36 (queue length now 6)
+CE6@Site5> starting to process jpsijob_45 (queue length now 6)
+CE9@Site8> starting to process jpsijob_38 (queue length now 19)
+CE9@Site8> starting to process jpsijob_42 (queue length now 18)
+CE9@Site8> starting to process jpsijob_44 (queue length now 17)
+CE9@Site8> starting to process incmuonjob_48 (queue length now 16)
+CE9@Site8> starting to process incmuonjob_54 (queue length now 15)
+CE6@Site5> starting to process jpsijob_51 (queue length now 5)
+CE9@Site8> starting to process jpsijob_56 (queue length now 14)
+CE6@Site5> starting to process jpsijob_55 (queue length now 4)
+CE9@Site8> starting to process jpsijob_59 (queue length now 13)
+CE6@Site5> starting to process jpsijob_60 (queue length now 3)
+CE9@Site8> starting to process incmuonjob_62 (queue length now 12)
+CE6@Site5> starting to process jpsijob_74 (queue length now 2)
+CE6@Site5> starting to process jpsijob_77 (queue length now 1)
+CE9@Site8> starting to process incmuonjob_66 (queue length now 11)
+CE6@Site5> starting to process highptphotjob_87 (queue length now 0)
+CE9@Site8> starting to process jpsijob_71 (queue length now 10)
+CE9@Site8> starting to process jpsijob_73 (queue length now 9)
+CE9@Site8> starting to process jpsijob_76 (queue length now 8)
+Users> Submitted job 1 of 100 to RB at Wed Sep 28 00:00:03 WAT 2016
+ResourceBroker> Submitting job incelecjob_1 to CE17@Site17
+CE17@Site17> starting to process incelecjob_1 (queue length now 0)
+Users> Submitted job 2 of 100 to RB at Wed Sep 28 00:00:05 WAT 2016
+ResourceBroker> Submitting job highptphotjob_2 to CE16@Site16
+CE16@Site16> starting to process highptphotjob_2 (queue length now 0)
+Users> Submitted job 3 of 100 to RB at Wed Sep 28 00:00:08 WAT 2016
+ResourceBroker> Submitting job incmuonjob_3 to CE9@Site8
+CE9@Site8> starting to process incmuonjob_3 (queue length now 0)
+ResourceBroker> Submitting job highptlepjob_4 to CE17@Site17
+Users> Submitted job 4 of 100 to RB at Wed Sep 28 00:00:10 WAT 2016
+ResourceBroker> Submitting job highptlepjob_5 to CE16@Site16
+Users> Submitted job 5 of 100 to RB at Wed Sep 28 00:00:13 WAT 2016
+Users> Submitted job 6 of 100 to RB at Wed Sep 28 00:00:15 WAT 2016
+ResourceBroker> Submitting job jpsijob_6 to CE16@Site16
+Users> Submitted job 7 of 100 to RB at Wed Sep 28 00:00:18 WAT 2016
+ResourceBroker> Submitting job jpsijob_7 to CE17@Site17
+Users> Submitted job 8 of 100 to RB at Wed Sep 28 00:00:20 WAT 2016
+ResourceBroker> Submitting job incmuonjob_8 to CE9@Site8
+Users> Submitted job 9 of 100 to RB at Wed Sep 28 00:00:23 WAT 2016
+ResourceBroker> Submitting job jpsijob_9 to CE6@Site5
+CE6@Site5> starting to process jpsijob_9 (queue length now 0)
+Users> Submitted job 10 of 100 to RB at Wed Sep 28 00:00:25 WAT 2016
+ResourceBroker> Submitting job highptlepjob_10 to CE12@Site11
+CE12@Site11> starting to process highptlepjob_10 (queue length now 0)
+ResourceBroker> Submitting job highptlepjob_11 to CE6@Site5
+Users> Submitted job 11 of 100 to RB at Wed Sep 28 00:00:28 WAT 2016
+Users> Submitted job 12 of 100 to RB at Wed Sep 28 00:00:30 WAT 2016
+ResourceBroker> Submitting job jpsijob_12 to CE12@Site11
+ResourceBroker> Submitting job jpsijob_13 to CE16@Site16
+Users> Submitted job 13 of 100 to RB at Wed Sep 28 00:00:33 WAT 2016
+ResourceBroker> Submitting job highptlepjob_14 to CE7@Site6
+Users> Submitted job 14 of 100 to RB at Wed Sep 28 00:00:35 WAT 2016
+CE7@Site6> starting to process highptlepjob_14 (queue length now 0)
+ResourceBroker> Submitting job incelecjob_15 to CE6@Site5
+Users> Submitted job 15 of 100 to RB at Wed Sep 28 00:00:38 WAT 2016
+Users> Submitted job 16 of 100 to RB at Wed Sep 28 00:00:40 WAT 2016
+ResourceBroker> Submitting job jpsijob_16 to CE17@Site17
+Users> Submitted job 17 of 100 to RB at Wed Sep 28 00:00:43 WAT 2016
+ResourceBroker> Submitting job incmuonjob_17 to CE9@Site8
+Users> Submitted job 18 of 100 to RB at Wed Sep 28 00:00:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_18 to CE16@Site16
+Users> Submitted job 19 of 100 to RB at Wed Sep 28 00:00:48 WAT 2016
+ResourceBroker> Submitting job jpsijob_19 to CE17@Site17
+Users> Submitted job 20 of 100 to RB at Wed Sep 28 00:00:50 WAT 2016
+ResourceBroker> Submitting job jpsijob_20 to CE9@Site8
+Users> Submitted job 21 of 100 to RB at Wed Sep 28 00:00:53 WAT 2016
+ResourceBroker> Submitting job jpsijob_21 to CE6@Site5
+Users> Submitted job 22 of 100 to RB at Wed Sep 28 00:00:55 WAT 2016
+ResourceBroker> Submitting job highptphotjob_22 to CE16@Site16
+Users> Submitted job 23 of 100 to RB at Wed Sep 28 00:00:58 WAT 2016
+ResourceBroker> Submitting job highptlepjob_23 to CE7@Site6
+Users> Submitted job 24 of 100 to RB at Wed Sep 28 00:01:00 WAT 2016
+ResourceBroker> Submitting job highptlepjob_24 to CE10@Site9
+CE10@Site9> starting to process highptlepjob_24 (queue length now 0)
+Users> Submitted job 25 of 100 to RB at Wed Sep 28 00:01:03 WAT 2016
+ResourceBroker> Submitting job zbbbarjob_25 to CE10@Site9
+CE17@Site17> starting to process highptlepjob_4 (queue length now 3)
+Users> Submitted job 26 of 100 to RB at Wed Sep 28 00:01:05 WAT 2016
+ResourceBroker> Submitting job highptphotjob_26 to CE17@Site17
+Users> Submitted job 27 of 100 to RB at Wed Sep 28 00:01:08 WAT 2016
+ResourceBroker> Submitting job incmuonjob_27 to CE9@Site8
+Users> Submitted job 28 of 100 to RB at Wed Sep 28 00:01:10 WAT 2016
+ResourceBroker> Submitting job highptlepjob_28 to CE7@Site6
+Users> Submitted job 29 of 100 to RB at Wed Sep 28 00:01:13 WAT 2016
+ResourceBroker> Submitting job jpsijob_29 to CE12@Site11
+Users> Submitted job 30 of 100 to RB at Wed Sep 28 00:01:15 WAT 2016
+ResourceBroker> Submitting job jpsijob_30 to CE7@Site6
+ResourceBroker> Submitting job jpsijob_31 to CE6@Site5
+Users> Submitted job 31 of 100 to RB at Wed Sep 28 00:01:18 WAT 2016
+CE12@Site11> starting to process jpsijob_12 (queue length now 1)
+Users> Submitted job 32 of 100 to RB at Wed Sep 28 00:01:20 WAT 2016
+ResourceBroker> Submitting job jpsijob_32 to CE9@Site8
+Users> Submitted job 33 of 100 to RB at Wed Sep 28 00:01:23 WAT 2016
+ResourceBroker> Submitting job highptlepjob_33 to CE10@Site9
+Users> Submitted job 34 of 100 to RB at Wed Sep 28 00:01:25 WAT 2016
+ResourceBroker> Submitting job jpsijob_34 to CE10@Site9
+Users> Submitted job 35 of 100 to RB at Wed Sep 28 00:01:28 WAT 2016
+ResourceBroker> Submitting job highptlepjob_35 to CE12@Site11
+Users> Submitted job 36 of 100 to RB at Wed Sep 28 00:01:30 WAT 2016
+ResourceBroker> Submitting job jpsijob_36 to CE9@Site8
+Users> Submitted job 37 of 100 to RB at Wed Sep 28 00:01:33 WAT 2016
+ResourceBroker> Submitting job highptlepjob_37 to CE12@Site11
+Users> Submitted job 38 of 100 to RB at Wed Sep 28 00:01:35 WAT 2016
+ResourceBroker> Submitting job jpsijob_38 to CE12@Site11
+Users> Submitted job 39 of 100 to RB at Wed Sep 28 00:01:38 WAT 2016
+ResourceBroker> Submitting job highptlepjob_39 to CE17@Site17
+Users> Submitted job 40 of 100 to RB at Wed Sep 28 00:01:40 WAT 2016
+ResourceBroker> Submitting job jpsijob_40 to CE16@Site16
+Users> Submitted job 41 of 100 to RB at Wed Sep 28 00:01:43 WAT 2016
+ResourceBroker> Submitting job highptlepjob_41 to CE17@Site17
+Users> Submitted job 42 of 100 to RB at Wed Sep 28 00:01:45 WAT 2016
+ResourceBroker> Submitting job highptlepjob_42 to CE17@Site17
+Users> Submitted job 43 of 100 to RB at Wed Sep 28 00:01:48 WAT 2016
+ResourceBroker> Submitting job jpsijob_43 to CE17@Site17
+Users> Submitted job 44 of 100 to RB at Wed Sep 28 00:01:50 WAT 2016
+ResourceBroker> Submitting job highptphotjob_44 to CE16@Site16
+Users> Submitted job 45 of 100 to RB at Wed Sep 28 00:01:53 WAT 2016
+ResourceBroker> Submitting job jpsijob_45 to CE9@Site8
+Users> Submitted job 46 of 100 to RB at Wed Sep 28 00:01:55 WAT 2016
+ResourceBroker> Submitting job highptlepjob_46 to CE10@Site9
+Users> Submitted job 47 of 100 to RB at Wed Sep 28 00:01:58 WAT 2016
+ResourceBroker> Submitting job highptphotjob_47 to CE17@Site17
+Users> Submitted job 48 of 100 to RB at Wed Sep 28 00:02:00 WAT 2016
+ResourceBroker> Submitting job jpsijob_48 to CE9@Site8
+Users> Submitted job 49 of 100 to RB at Wed Sep 28 00:02:03 WAT 2016
+ResourceBroker> Submitting job highptphotjob_49 to CE16@Site16
+Users> Submitted job 50 of 100 to RB at Wed Sep 28 00:02:05 WAT 2016
+ResourceBroker> Submitting job jpsijob_50 to CE9@Site8
+Users> Submitted job 51 of 100 to RB at Wed Sep 28 00:02:08 WAT 2016
+ResourceBroker> Submitting job jpsijob_51 to CE12@Site11
+Users> Submitted job 52 of 100 to RB at Wed Sep 28 00:02:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_52 to CE10@Site9
+CE17@Site17> starting to process jpsijob_7 (queue length now 8)
+Users> Submitted job 53 of 100 to RB at Wed Sep 28 00:02:13 WAT 2016
+ResourceBroker> Submitting job highptlepjob_53 to CE6@Site5
+Users> Submitted job 54 of 100 to RB at Wed Sep 28 00:02:15 WAT 2016
+ResourceBroker> Submitting job highptphotjob_54 to CE17@Site17
+Users> Submitted job 55 of 100 to RB at Wed Sep 28 00:02:18 WAT 2016
+ResourceBroker> Submitting job jpsijob_55 to CE9@Site8
+Users> Submitted job 56 of 100 to RB at Wed Sep 28 00:02:20 WAT 2016
+ResourceBroker> Submitting job highptphotjob_56 to CE17@Site17
+Users> Submitted job 57 of 100 to RB at Wed Sep 28 00:02:23 WAT 2016
+ResourceBroker> Submitting job jpsijob_57 to CE6@Site5
+Users> Submitted job 58 of 100 to RB at Wed Sep 28 00:02:25 WAT 2016
+ResourceBroker> Submitting job highptlepjob_58 to CE12@Site11
+Users> Submitted job 59 of 100 to RB at Wed Sep 28 00:02:28 WAT 2016
+ResourceBroker> Submitting job jpsijob_59 to CE9@Site8
+Users> Submitted job 60 of 100 to RB at Wed Sep 28 00:02:30 WAT 2016
+ResourceBroker> Submitting job incelecjob_60 to CE12@Site11
+Users> Submitted job 61 of 100 to RB at Wed Sep 28 00:02:33 WAT 2016
+ResourceBroker> Submitting job incelecjob_61 to CE10@Site9
+Users> Submitted job 62 of 100 to RB at Wed Sep 28 00:02:35 WAT 2016
+ResourceBroker> Submitting job incmuonjob_62 to CE9@Site8
+Users> Submitted job 63 of 100 to RB at Wed Sep 28 00:02:38 WAT 2016
+ResourceBroker> Submitting job jpsijob_63 to CE6@Site5
+Users> Submitted job 64 of 100 to RB at Wed Sep 28 00:02:40 WAT 2016
+ResourceBroker> Submitting job highptphotjob_64 to CE16@Site16
+Users> Submitted job 65 of 100 to RB at Wed Sep 28 00:02:43 WAT 2016
+ResourceBroker> Submitting job jpsijob_65 to CE9@Site8
+Users> Submitted job 66 of 100 to RB at Wed Sep 28 00:02:45 WAT 2016
+ResourceBroker> Submitting job jpsijob_66 to CE12@Site11
+Users> Submitted job 67 of 100 to RB at Wed Sep 28 00:02:48 WAT 2016
+ResourceBroker> Submitting job jpsijob_67 to CE9@Site8
+Users> Submitted job 68 of 100 to RB at Wed Sep 28 00:02:50 WAT 2016
+ResourceBroker> Submitting job jpsijob_68 to CE10@Site9
+Users> Submitted job 69 of 100 to RB at Wed Sep 28 00:02:53 WAT 2016
+ResourceBroker> Submitting job highptlepjob_69 to CE9@Site8
+Users> Submitted job 70 of 100 to RB at Wed Sep 28 00:02:55 WAT 2016
+ResourceBroker> Submitting job jpsijob_70 to CE6@Site5
+Users> Submitted job 71 of 100 to RB at Wed Sep 28 00:02:58 WAT 2016
+ResourceBroker> Submitting job incmuonjob_71 to CE9@Site8
+Users> Submitted job 72 of 100 to RB at Wed Sep 28 00:03:00 WAT 2016
+ResourceBroker> Submitting job highptlepjob_72 to CE7@Site6
+Users> Submitted job 73 of 100 to RB at Wed Sep 28 00:03:03 WAT 2016
+ResourceBroker> Submitting job jpsijob_73 to CE6@Site5
+ResourceBroker> Submitting job jpsijob_74 to CE6@Site5
+Users> Submitted job 74 of 100 to RB at Wed Sep 28 00:03:05 WAT 2016
+Users> Submitted job 75 of 100 to RB at Wed Sep 28 00:03:08 WAT 2016
+ResourceBroker> Submitting job highptlepjob_75 to CE7@Site6
+Users> Submitted job 76 of 100 to RB at Wed Sep 28 00:03:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_76 to CE6@Site5
+Users> Submitted job 77 of 100 to RB at Wed Sep 28 00:03:13 WAT 2016
+ResourceBroker> Submitting job jpsijob_77 to CE12@Site11
+Users> Submitted job 78 of 100 to RB at Wed Sep 28 00:03:15 WAT 2016
+ResourceBroker> Submitting job incmuonjob_78 to CE9@Site8
+Users> Submitted job 79 of 100 to RB at Wed Sep 28 00:03:18 WAT 2016
+ResourceBroker> Submitting job jpsijob_79 to CE6@Site5
+Users> Submitted job 80 of 100 to RB at Wed Sep 28 00:03:20 WAT 2016
+ResourceBroker> Submitting job highptlepjob_80 to CE7@Site6
+Users> Submitted job 81 of 100 to RB at Wed Sep 28 00:03:23 WAT 2016
+ResourceBroker> Submitting job incelecjob_81 to CE7@Site6
+Users> Submitted job 82 of 100 to RB at Wed Sep 28 00:03:25 WAT 2016
+ResourceBroker> Submitting job jpsijob_82 to CE9@Site8
+Users> Submitted job 83 of 100 to RB at Wed Sep 28 00:03:28 WAT 2016
+ResourceBroker> Submitting job jpsijob_83 to CE10@Site9
+Users> Submitted job 84 of 100 to RB at Wed Sep 28 00:03:30 WAT 2016
+ResourceBroker> Submitting job highptphotjob_84 to CE16@Site16
+Users> Submitted job 85 of 100 to RB at Wed Sep 28 00:03:33 WAT 2016
+ResourceBroker> Submitting job jpsijob_85 to CE6@Site5
+Users> Submitted job 86 of 100 to RB at Wed Sep 28 00:03:35 WAT 2016
+ResourceBroker> Submitting job incelecjob_86 to CE12@Site11
+Users> Submitted job 87 of 100 to RB at Wed Sep 28 00:03:38 WAT 2016
+ResourceBroker> Submitting job jpsijob_87 to CE9@Site8
+Users> Submitted job 88 of 100 to RB at Wed Sep 28 00:03:40 WAT 2016
+ResourceBroker> Submitting job jpsijob_88 to CE12@Site11
+Users> Submitted job 89 of 100 to RB at Wed Sep 28 00:03:43 WAT 2016
+ResourceBroker> Submitting job jpsijob_89 to CE6@Site5
+Users> Submitted job 90 of 100 to RB at Wed Sep 28 00:03:45 WAT 2016
+ResourceBroker> Submitting job highptphotjob_90 to CE17@Site17
+Users> Submitted job 91 of 100 to RB at Wed Sep 28 00:03:48 WAT 2016
+ResourceBroker> Submitting job highptlepjob_91 to CE7@Site6
+Users> Submitted job 92 of 100 to RB at Wed Sep 28 00:03:50 WAT 2016
+ResourceBroker> Submitting job jpsijob_92 to CE6@Site5
+Users> Submitted job 93 of 100 to RB at Wed Sep 28 00:03:53 WAT 2016
+ResourceBroker> Submitting job jpsijob_93 to CE9@Site8
+Users> Submitted job 94 of 100 to RB at Wed Sep 28 00:03:55 WAT 2016
+ResourceBroker> Submitting job highptlepjob_94 to CE7@Site6
+Users> Submitted job 95 of 100 to RB at Wed Sep 28 00:03:58 WAT 2016
+ResourceBroker> Submitting job incelecjob_95 to CE10@Site9
+Users> Submitted job 96 of 100 to RB at Wed Sep 28 00:04:00 WAT 2016
+ResourceBroker> Submitting job incmuonjob_96 to CE9@Site8
+Users> Submitted job 97 of 100 to RB at Wed Sep 28 00:04:03 WAT 2016
+ResourceBroker> Submitting job highptlepjob_97 to CE7@Site6
+Users> Submitted job 98 of 100 to RB at Wed Sep 28 00:04:05 WAT 2016
+ResourceBroker> Submitting job zbbbarjob_98 to CE6@Site5
+Users> Submitted job 99 of 100 to RB at Wed Sep 28 00:04:08 WAT 2016
+ResourceBroker> Submitting job jpsijob_99 to CE6@Site5
+Users> Submitted job 100 of 100 to RB at Wed Sep 28 00:04:10 WAT 2016
+ResourceBroker> Submitting job jpsijob_100 to CE9@Site8
+CE7@Site6> starting to process highptlepjob_23 (queue length now 9)
+CE7@Site6> starting to process highptlepjob_28 (queue length now 8)
+CE7@Site6> starting to process jpsijob_30 (queue length now 7)
+CE17@Site17> starting to process jpsijob_16 (queue length now 10)
+CE17@Site17> starting to process jpsijob_19 (queue length now 9)
+CE12@Site11> starting to process jpsijob_29 (queue length now 10)
+CE17@Site17> starting to process highptphotjob_26 (queue length now 8)
+CE9@Site8> starting to process incmuonjob_8 (queue length now 21)
+CE10@Site9> starting to process zbbbarjob_25 (queue length now 8)
+CE6@Site5> starting to process highptlepjob_11 (queue length now 16)
+CE6@Site5> starting to process incelecjob_15 (queue length now 15)
+CE9@Site8> starting to process incmuonjob_17 (queue length now 20)
+CE9@Site8> starting to process jpsijob_20 (queue length now 19)
+CE12@Site11> starting to process highptlepjob_35 (queue length now 9)
+CE12@Site11> starting to process highptlepjob_37 (queue length now 8)
+CE12@Site11> starting to process jpsijob_38 (queue length now 7)
+CE12@Site11> starting to process jpsijob_51 (queue length now 6)
+CE12@Site11> starting to process highptlepjob_58 (queue length now 5)
+CE12@Site11> starting to process incelecjob_60 (queue length now 4)
+CE6@Site5> starting to process jpsijob_21 (queue length now 14)
+CE12@Site11> starting to process jpsijob_66 (queue length now 3)
+CE12@Site11> starting to process jpsijob_77 (queue length now 2)
+CE12@Site11> starting to process incelecjob_86 (queue length now 1)
+CE6@Site5> starting to process jpsijob_31 (queue length now 13)
+CE12@Site11> starting to process jpsijob_88 (queue length now 0)
+CE6@Site5> starting to process highptlepjob_53 (queue length now 12)
+CE6@Site5> starting to process jpsijob_57 (queue length now 11)
+CE6@Site5> starting to process jpsijob_63 (queue length now 10)
+CE6@Site5> starting to process jpsijob_70 (queue length now 9)
+CE6@Site5> starting to process jpsijob_73 (queue length now 8)
+CE6@Site5> starting to process jpsijob_74 (queue length now 7)
+CE6@Site5> starting to process jpsijob_76 (queue length now 6)
+CE6@Site5> starting to process jpsijob_79 (queue length now 5)
+CE6@Site5> starting to process jpsijob_85 (queue length now 4)
+CE6@Site5> starting to process jpsijob_89 (queue length now 3)
+CE16@Site16> starting to process highptlepjob_5 (queue length now 9)
+CE6@Site5> starting to process jpsijob_92 (queue length now 2)
+CE6@Site5> starting to process zbbbarjob_98 (queue length now 1)
+CE16@Site16> starting to process jpsijob_6 (queue length now 8)
+CE10@Site9> starting to process highptlepjob_33 (queue length now 7)
+CE10@Site9> starting to process jpsijob_34 (queue length now 6)
+CE16@Site16> starting to process jpsijob_13 (queue length now 7)
+CE6@Site5> starting to process jpsijob_99 (queue length now 0)
+CE9@Site8> starting to process incmuonjob_27 (queue length now 18)
+CE16@Site16> starting to process jpsijob_18 (queue length now 6)
+CE9@Site8> starting to process jpsijob_32 (queue length now 17)
+CE9@Site8> starting to process jpsijob_36 (queue length now 16)
+CE9@Site8> starting to process jpsijob_45 (queue length now 15)
+CE16@Site16> starting to process highptphotjob_22 (queue length now 5)
+CE9@Site8> starting to process jpsijob_48 (queue length now 14)
+CE9@Site8> starting to process jpsijob_50 (queue length now 13)
+CE9@Site8> starting to process jpsijob_55 (queue length now 12)
+CE17@Site17> starting to process highptlepjob_39 (queue length now 7)
+CE9@Site8> starting to process jpsijob_59 (queue length now 11)
+CE17@Site17> starting to process highptlepjob_41 (queue length now 6)
+CE17@Site17> starting to process highptlepjob_42 (queue length now 5)
+CE17@Site17> starting to process jpsijob_43 (queue length now 4)
+CE9@Site8> starting to process incmuonjob_62 (queue length now 10)
+CE9@Site8> starting to process jpsijob_65 (queue length now 9)
+CE9@Site8> starting to process jpsijob_67 (queue length now 8)
+CE9@Site8> starting to process highptlepjob_69 (queue length now 7)
+CE17@Site17> starting to process highptphotjob_47 (queue length now 3)
+CE9@Site8> starting to process incmuonjob_71 (queue length now 6)
+CE9@Site8> starting to process incmuonjob_78 (queue length now 5)
+CE9@Site8> starting to process jpsijob_82 (queue length now 4)
+CE9@Site8> starting to process jpsijob_87 (queue length now 3)
+CE9@Site8> starting to process jpsijob_93 (queue length now 2)
+CE9@Site8> starting to process incmuonjob_96 (queue length now 1)
+CE9@Site8> starting to process jpsijob_100 (queue length now 0)
+CE7@Site6> starting to process highptlepjob_72 (queue length now 6)
+CE16@Site16> starting to process jpsijob_40 (queue length now 4)
+CE16@Site16> starting to process highptphotjob_44 (queue length now 3)
+CE7@Site6> starting to process highptlepjob_75 (queue length now 5)
+CE7@Site6> starting to process highptlepjob_80 (queue length now 4)
+CE7@Site6> starting to process incelecjob_81 (queue length now 3)
+CE17@Site17> starting to process highptphotjob_54 (queue length now 2)
+CE16@Site16> starting to process highptphotjob_49 (queue length now 2)
+CE17@Site17> starting to process highptphotjob_56 (queue length now 1)
+CE7@Site6> starting to process highptlepjob_91 (queue length now 2)
+CE7@Site6> starting to process highptlepjob_94 (queue length now 1)
+CE7@Site6> starting to process highptlepjob_97 (queue length now 0)
+CE16@Site16> starting to process highptphotjob_64 (queue length now 1)
+CE17@Site17> starting to process highptphotjob_90 (queue length now 0)
+CE16@Site16> starting to process highptphotjob_84 (queue length now 0)
+CE10@Site9> starting to process highptlepjob_46 (queue length now 5)
+CE10@Site9> starting to process jpsijob_52 (queue length now 4)
+CE10@Site9> starting to process incelecjob_61 (queue length now 3)
+CE10@Site9> starting to process jpsijob_68 (queue length now 2)
+CE10@Site9> starting to process jpsijob_83 (queue length now 1)
+CE10@Site9> starting to process incelecjob_95 (queue length now 0)

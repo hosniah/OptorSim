@@ -8,7 +8,7 @@ import org.edg.data.replication.optorsim.optor.*;
 import org.edg.data.replication.optorsim.infrastructure.*;
 import org.edg.data.replication.optorsim.time.GridTime;
 import org.edg.data.replication.optorsim.time.GridTimeFactory;
-
+import org.edg.data.replication.optorsim.reptorsim.*;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -175,6 +175,8 @@ public class SimpleComputingElement implements ComputingElement {
      * ResourceBroker.
      */
     public void run() {
+        MySQLAccess dao = new MySQLAccess();
+        
         String listString = "";
        // String listString = "============ Job Files acesss traces ============ \n";
          
@@ -246,6 +248,11 @@ public class SimpleComputingElement implements ComputingElement {
 					files[0].releasePin();
 					_remoteReads++;
                                         listString += job+" "+lfn+" "+fileSite+"\n";
+                                        try {
+                                            dao.logAccessedFile(lfn);  
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }   
                                         //listString += "++++++++++++++ Remote Read: => Job="+ job+" : File="+lfn+" From site "+fileSite+" .\n";
              if (!this.getSite()._sim_listofFiles.contains(lfn)){
                 this.getSite().visitFile(lfn);
