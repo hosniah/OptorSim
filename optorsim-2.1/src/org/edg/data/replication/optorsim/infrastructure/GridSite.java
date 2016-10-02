@@ -7,6 +7,8 @@ import org.edg.data.replication.optorsim.OptorSimOut;
 import java.util.*;
 
 import java.lang.Thread;
+import java.sql.ResultSet;
+import org.edg.data.replication.optorsim.reptorsim.MySQLAccess;
 
 /**
  * A GridSite keeps track of the CEs and SEs on a site.
@@ -30,6 +32,7 @@ public class GridSite {
         public ArrayList<String> _sim_listofTasks;
         public ArrayList<String> _sim_listofFiles;
         public ArrayList<String> _sim_listofSites;
+        public MySQLAccess dao;
 	
 	private static int _lastSiteID=0;
 	private int _routedFiles = 0;
@@ -46,19 +49,59 @@ public class GridSite {
             _sim_listofTasks = new ArrayList<String>(); //Create empty list
             _sim_listofFiles = new ArrayList<String>(); //Create empty list
             _sim_listofSites = new ArrayList<String>(); //Create empty list
+            dao = MySQLAccess.getDbCon();
+
 	}
 
         public void visitFile(String file){
             this._sim_listofFiles.add(file);
+            try {
+                this.dao.insert("Insert into gridfiles (label) values('"+file+"')");  
+            } catch (Exception e) {
+                e.printStackTrace();
+            }                       
         }
 
         public void visitSite(String site){
             this._sim_listofSites.add(site);
+            try {
+                this.dao.insert("Insert into gridsites (label) values('"+site+"')");  
+            } catch (Exception e) {
+                e.printStackTrace();
+            }             
         }
 
         public void visitTask(String task){
             this._sim_listofTasks.add(task);
+            try {            
+                this.dao.insert("Insert into gridtasks (label) values('"+task+"')");  
+            } catch (Exception e) {
+                e.printStackTrace();
+            }             
         }
+
+        public void visitTriConcept(String job,String file, String site) {
+            // retrieve job, file and site IDs before insertion
+            int file_id = 0; int site_id = 0; int job_id = 0;
+            try {            
+                ResultSet res  = this.dao.query("Select id from gridfiles where label ='"+file+"'");
+                while(res.next()) {
+                     file_id = (int) res.getObject("id");
+                }
+                ResultSet res2 = this.dao.query("Select id from gridsites where label='"+site+"'");
+                while(res2.next()) {
+                     site_id = (int) res2.getObject("id");
+                }                
+                ResultSet res3 = this.dao.query("Select id from gridtasks where label='"+job+"'");
+                while(res3.next()) {
+                    job_id = (int) res3.getObject("id");
+                }                     
+                 
+                this.dao.insert("Insert into triconcepts (id_task, id_file, id_site) values('"+job_id+"', '"+site_id+"', '"+file_id+"')");  
+            } catch (Exception e) {
+                e.printStackTrace();
+            } 
+        } 
 
 	/**
 	 * This function asks the GridContainer to find all neighbouring sites

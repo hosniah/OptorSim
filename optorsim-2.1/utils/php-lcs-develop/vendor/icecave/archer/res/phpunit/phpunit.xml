@@ -1,0 +1,25 @@
+<phpunit
+    bootstrap="bootstrap.php"
+    strict="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    mapTestClassNameToCoveredClassName="true"
+    verbose="true"
+    colors="true"
+    timeoutForSmallTests="2"
+    timeoutForMediumTests="10"
+    timeoutForLargeTests="60"
+>
+    <testsuites>
+        <testsuite>
+            <directory>../../../../../test/suite</directory>
+        </testsuite>
+    </testsuites>
+
+    <groups>
+        <exclude>
+            <group>exclude-by-default</group>
+        </exclude>
+    </groups>
+</phpunit>

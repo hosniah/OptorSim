@@ -1,14 +1,19 @@
 package org.edg.data.replication.optorsim.infrastructure;
 
+import de.unikassel.cs.kde.trias.TriasRunner;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 // TODO: more imports from unaccessible packages...
 import org.edg.data.replication.optorsim.auctions.P2P;
 import org.edg.data.replication.optorsim.auctions.P2PManager;
+import org.edg.data.replication.optorsim.reptorsim.MySQLAccess;
 
 /**
  * This class keeps track of GridSites and the replicate and copy 
@@ -34,6 +39,7 @@ public class GridContainer {
 	
 	private long _replications = 0;
 	private int _jobID = 0;
+        public MySQLAccess dao;
 
 	/**
 	 *   STATIC METHODS
@@ -53,14 +59,120 @@ public class GridContainer {
 	
 	private GridContainer()
 	{
-		// Private constructer for this class
-		if( OptorSimParameters.getInstance().useRandomSeed())
-			_randGen = new Random();
-		else
-			_randGen = new Random(100L);
+            // Private constructer for this class
+            if( OptorSimParameters.getInstance().useRandomSeed())
+                _randGen = new Random();
+            else
+                _randGen = new Random(100L);
+            
+            try {
+                processDataMiningPrefetching();
+                extractDimensionsAsTriasProperties();
+                runtTriasAlgorithm();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } 
 	}
 	
-	
+        public void runtTriasAlgorithm() {            
+                System.out.println( "                 ============= DataMining TRIAS  =============\n");
+                // start datamining right after starting all CE
+                TriasRunner dataMining = new TriasRunner();
+                try {
+                  dataMining.defaultTriasRunner();
+                } catch(Exception ex){
+                    System.out.println( " Issue during dataMining preprocessing \n"+ex.toString());
+                }
+        }
+        
+        /**
+	 * Populate DataMining input file with data retrieved from previous runtime
+         * Trias algorithme use the output file in adition to some properties we extract here
+         * From Mysql Database.
+         * 
+         * if we need to accumulate data thru periods we should not truncate trias
+         * database tables for each gridContainer instance.
+         **/
+        public void processDataMiningPrefetching() throws SQLException {
+            dao = MySQLAccess.getDbCon();
+            List data = new ArrayList();
+            try {            
+                ResultSet rs = dao.query("Select * from triconcepts");                
+                while (rs.next()) {
+                    String id_task = rs.getString("id_task");
+                    String id_file = rs.getString("id_file");
+                    String id_site = rs.getString("id_site");  
+                    data.add(id_task + " " + id_file + " " + id_site);
+                }
+                writeToFile(data, "fixture.input");
+                rs.close();                
+            } catch (Exception e) {
+                e.printStackTrace();
+            }            
+            
+        }
+
+        private static void writeToFile(java.util.List list, String path) {
+                BufferedWriter out = null;
+                try {
+                        File file = new File(path);
+                        out = new BufferedWriter(new FileWriter(file, true));
+                        for (Object s : list) {
+                                out.write((String) s);
+                                out.newLine();
+                        }
+                        out.close();
+                } catch (IOException e) {
+                }
+        }
+
+        private void extractDimensionsAsTriasProperties() {
+            dao = MySQLAccess.getDbCon();
+            List data = new ArrayList();
+            
+            data.add("trias.input  = fixture.input");
+            data.add("trias.output = concepts");
+            data.add("trias.holes = true");
+
+            
+            try {            
+                ResultSet rs = dao.query("Select count(id) as items  from triconcepts");                
+                while (rs.next()) {
+                    String numberOfTriples = rs.getString("items");
+                    data.add("trias.numberOfTriples = " + numberOfTriples);
+                }
+                                
+                ResultSet rs1 = dao.query("Select count(id) as items  from gridtasks");                
+                while (rs1.next()) {
+                    String dim0 = rs1.getString("items");
+                    data.add("trias.numberOfItemsPerDimension.0 = "+dim0);
+                }
+                
+                ResultSet rs2 = dao.query("Select count(id) as items  from gridfiles");                
+                while (rs2.next()) {
+                    String dim1 = rs2.getString("items");
+                    data.add("trias.numberOfItemsPerDimension.1 = "+dim1);
+                }
+                
+                ResultSet rs3 = dao.query("Select count(id) as items from gridsites");                
+                while (rs3.next()) {
+                    String dim2 = rs3.getString("items");
+                    data.add("trias.numberOfItemsPerDimension.2 = "+dim2);
+                }                
+
+                data.add("trias.minSupportPerDimension.0 = 2");
+                data.add("trias.minSupportPerDimension.1 = 2");
+                data.add("trias.minSupportPerDimension.2 = 2");                
+                
+                writeToFile(data, "trias.properties");
+                rs.close();                
+            } catch (Exception e) {
+                e.printStackTrace();
+            } 
+
+
+        }
+        
 	/**
 	 * Return the Bandwidth object for the segment between siteA and siteB
 	 * @param siteA First site in connection
@@ -68,8 +180,8 @@ public class GridContainer {
 	 * @return the Bandwidth object connecting both sites, or null if there isn't one
 	 */
 	public Bandwidth networkSegment( GridSite siteA, GridSite siteB) {
-		GridSitePair gsp = new GridSitePair( siteA, siteB);
-		return (Bandwidth) _bandwidth.get( gsp);
+	    GridSitePair gsp = new GridSitePair( siteA, siteB);
+	    return (Bandwidth) _bandwidth.get( gsp);
 	}
 	
 	/**
@@ -79,7 +191,7 @@ public class GridContainer {
 	 * the two sites, or null if they have no direct connection
 	 */
 	public Bandwidth networkSegment( GridSitePair gsp) {
-		return (Bandwidth) _bandwidth.get(gsp);
+	    return (Bandwidth) _bandwidth.get(gsp);
 	}
 		
 	/**
@@ -453,7 +565,7 @@ FileTransfer
 		FileTransfer ft = FileTransferFactory.getFileTransfer();
 	    ft.transferFile(fromSite, toSite, fromFile.size());
 		fromFile.se().accessFile(fromFile);
-	    // clone file and add file to SE unless no replication is possible.
+	    // clone file and add   to SE unless no replication is possible.
 	    DataFile replica = fromFile.cloneFile();
 	    toSE.addPreReservedFile( replica);
 
@@ -467,9 +579,7 @@ FileTransfer
 
 	    return replica;
     }
-
-    
-    
+        
     public void logDataMiningStatistics(){
         String result = "";
         
@@ -594,13 +704,12 @@ FileTransfer
 		fromFile.releasePin();
 		
 	}
-	
-	
-	/**
+		
+/**
 	 * Returns the total number of known CEs.
 	 * @return an integer representing total number of CEs
 	 */
-	public int countCEs(){
+    public int countCEs(){
 		return _totalNumberOfCEs;
 	}
 	

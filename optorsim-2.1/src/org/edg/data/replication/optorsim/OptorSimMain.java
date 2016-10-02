@@ -1,5 +1,7 @@
 package org.edg.data.replication.optorsim;
 
+import de.unikassel.cs.kde.trias.TriasRunner;
+import java.io.IOException;
 import org.edg.data.replication.optorsim.infrastructure.DataFile;
 import org.edg.data.replication.optorsim.infrastructure.GridContainer;
 import org.edg.data.replication.optorsim.infrastructure.JobConfFileReader;
@@ -26,6 +28,7 @@ public class OptorSimMain {
 
     private OptorSimParameters _params;
     
+    
     public OptorSimMain() {
     }
    
@@ -34,7 +37,7 @@ public class OptorSimMain {
      */
     public static void main(String[] args) {
 		OptorSimMain optorSimMainInstance = new OptorSimMain();
-
+                        
 		System.out.println( "                 ============= O P T O R S I M =============\n");
 		if(args.length!=1 && args.length!=0) {
 	    	optorSimMainInstance.usage();
@@ -80,27 +83,26 @@ public class OptorSimMain {
     /**
      * A method to start all P2PMediators, Computing Element  and Resource Broker threads
      */
-    private void run() {
-		GridContainer gc = GridContainer.getInstance();
-
-		ThreadGroup optorThreads = new ThreadGroup("optor");
+    private void run() {	
+        GridContainer gc = GridContainer.getInstance();
+        
+	ThreadGroup optorThreads = new ThreadGroup("optor");
         GridTimeFactory.setThreadGroup(optorThreads);
 
         if( _params.auctionOn()) {
             Debugger.initialise();
-			gc.startAllP2P();
+	    gc.startAllP2P();
         }
-
-		gc.startAllCEs();
-
-		// Start ResourceBroker going.
-		Thread rbThread = new Thread( optorThreads, ResourceBrokerFactory.getInstance());
-		rbThread.start();
+     
+	gc.startAllCEs();
+        
+        // Start ResourceBroker going.
+        Thread rbThread = new Thread( optorThreads, ResourceBrokerFactory.getInstance());
+        rbThread.start();
 
         // start the users submitting jobs
         Thread usersThread = new Thread( optorThreads, UsersFactory.getUsers());
         usersThread.start();
-
     }
 
     /**
