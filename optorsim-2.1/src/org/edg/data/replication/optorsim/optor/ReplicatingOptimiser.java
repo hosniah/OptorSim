@@ -68,10 +68,22 @@ abstract public class ReplicatingOptimiser extends SkelOptor {
 					
 					// Attempt to replicate file to close SE.
 					replicatedFile = rm.replicateFile( files[i], closeSE);
+                                        // @Todo - Replicate correlated files Here
+                                        /* if files[i] is in the premisse of a RAT, then replicate the conclusion 
+                                        
+                                        Using grt Mysql table:
+                                        for each RAT in BGRT, check if Files[i] is in  premisse
+                                        
+                                        correlatefiles = this.bgrt_getRATConclusion(files[i]);
+                                        for( int j = 0; j < correlatefiles.length; j++) {
+                                           replicatedFile = rm.replicateFile( correlatefiles[j], closeSE);
+                                        }
+                                           
+                                        */
 					
 					// If replication worked, store it and move on to next file (for loop)
 					if( replicatedFile != null) {
-                        files[i].releasePin();
+                                                files[i].releasePin();
 						files[i] = replicatedFile;
 						break;
 					}
