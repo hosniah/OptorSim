@@ -32,7 +32,6 @@ import java.io.InputStream;
 import java.util.Properties;
 
 import de.unikassel.cs.kde.trias.util.ConfigurationException;
-import de.unikassel.cs.kde.trias.util.TriasCommandLineArgumentsConfigurator;
 import de.unikassel.cs.kde.trias.util.TriasConfigurator;
 import de.unikassel.cs.kde.trias.util.TriasPropertiesConfigurator;
 import java.io.BufferedReader;
@@ -41,7 +40,6 @@ import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -128,7 +126,8 @@ System.out.println ("Compute Tri-concepts similarities:");
                     //String result = sites_string.substring(strLine.indexOf("{") + 1, strLine.indexOf("}"));
                    // System.out.println ("*************************"+strLine+"****************************");
                     
-                    String[] groupOfTasks     = result.split("\\s*,\\s*"); String[] triConcept_Sites = files_string.split("\\s*,\\s*");
+                    String[] groupOfTasks     = result.split("\\s*,\\s*"); 
+                    String[] triConcept_Sites = files_string.split("\\s*,\\s*");
                     String[] triConcept_Files =  sites_string.split("\\s*,\\s*");
                     //System.out.println(Arrays.toString(triConcept_Files));
                     //System.out.println(Arrays.toString(groupOfTasks));
@@ -355,7 +354,6 @@ System.out.println ("Compute Tri-concepts similarities:");
                             h.put("F"+output[1], h.get("F"+output[1]) + 1);   
                             //System.out.println(strLine);
                         }
-                   //}
                 }
             } catch (IOException ex) {
                 Logger.getLogger(TriasRunner.class.getName()).log(Level.SEVERE, null, ex);
