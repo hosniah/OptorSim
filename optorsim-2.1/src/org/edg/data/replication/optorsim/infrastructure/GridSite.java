@@ -54,29 +54,36 @@ public class GridSite {
 	}
 
         public void visitFile(String file){
-            this._sim_listofFiles.add(file);
             try {
+                if(!this._sim_listofFiles.contains(file)) {
+                    this._sim_listofFiles.add(file);
+                }
                 this.dao.insert("Insert into gridfiles (label) values('"+file+"')");  
             } catch (Exception e) {
-                e.printStackTrace();
+               // e.printStackTrace();       
+                e.toString();
             }                       
         }
 
         public void visitSite(String site){
-            this._sim_listofSites.add(site);
             try {
+                if(!this._sim_listofFiles.contains(site)) {
+                    this._sim_listofSites.add(site);
+                }
                 this.dao.insert("Insert into gridsites (label) values('"+site+"')");  
             } catch (Exception e) {
-                e.printStackTrace();
+               // e.printStackTrace();
             }             
         }
 
         public void visitTask(String task){
-            this._sim_listofTasks.add(task);
-            try {            
+            try {    
+                if(!this._sim_listofFiles.contains(task)) {
+                    this._sim_listofTasks.add(task);
+                }
                 this.dao.insert("Insert into gridtasks (label) values('"+task+"')");  
             } catch (Exception e) {
-                e.printStackTrace();
+               // e.printStackTrace();
             }             
         }
 

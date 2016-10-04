@@ -116,7 +116,7 @@ public class GridContainer {
                 BufferedWriter out = null;
                 try {
                         File file = new File(path);
-                        out = new BufferedWriter(new FileWriter(file, true));
+                        out = new BufferedWriter(new FileWriter(file, false));
                         for (Object s : list) {
                                 out.write((String) s);
                                 out.newLine();
@@ -133,7 +133,6 @@ public class GridContainer {
             data.add("trias.input  = fixture.input");
             data.add("trias.output = concepts");
             data.add("trias.holes = true");
-
             
             try {            
                 ResultSet rs = dao.query("Select count(id) as items  from triconcepts");                
@@ -160,9 +159,9 @@ public class GridContainer {
                     data.add("trias.numberOfItemsPerDimension.2 = "+dim2);
                 }                
 
-                data.add("trias.minSupportPerDimension.0 = 2");
-                data.add("trias.minSupportPerDimension.1 = 2");
-                data.add("trias.minSupportPerDimension.2 = 2");                
+                data.add("trias.minSupportPerDimension.0 = 1");
+                data.add("trias.minSupportPerDimension.1 = 1");
+                data.add("trias.minSupportPerDimension.2 = 1");                
                 
                 writeToFile(data, "trias.properties");
                 rs.close();                
