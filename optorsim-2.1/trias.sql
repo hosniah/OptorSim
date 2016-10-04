@@ -32,8 +32,12 @@ CREATE TABLE IF NOT EXISTS `bgrt` (
   `conclusion` varchar(512) NOT NULL,
   `supp_c` float NOT NULL,
   `conf_c` float NOT NULL,
+  `tasks_count` int(11) NOT NULL,
+  `sites_count` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+
 
 -- --------------------------------------------------------
 
