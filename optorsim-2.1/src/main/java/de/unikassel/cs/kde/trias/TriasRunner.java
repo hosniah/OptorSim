@@ -50,6 +50,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.edg.data.replication.optorsim.reptorsim.MySQLAccess;
 
 /**
  * 
@@ -61,7 +62,9 @@ public class TriasRunner {
     private static final String PROPERTIES_FILE_NAME  = "trias.properties";
     private static final String TRICONCEPTS_FILE_NAME = "concepts";
     private static int gridFilesCount;
+    public MySQLAccess dao;
 
+    
   //  public static void main(String[] args) throws IOException {
     public  void defaultTriasRunner() throws IOException {
             final Trias trias = new Trias();
@@ -386,7 +389,12 @@ System.out.println ("Compute Tri-concepts similarities:");
 
             if(supp_c > min_supp && conf_c > min_conf) {
                 triadic_rule.addToBGRT();
-                System.out.println("    BGRT: " + FilesOfRA1 + "->" + Arrays.toString(new_array)+"\n"); 
+                System.out.println("    BGRT: " + FilesOfRA1 + "->" + Arrays.toString(new_array)+"\n");
+                try {
+                    this.dao.insert("Insert into bgrt (premisse, conclusion, supp_c, conf_c, tasks_count, sites_count) values('"+premise+"', '"+conclusion+"', '"+supp_c+", '"+ conf_c + "', '"+ tasks.size() + "', '"+ sites.size() + "')");  
+                } catch (Exception e) {
+                  e.printStackTrace();
+                } 
             }
             // Create association rule object with parent_TC, premise, condition, support, cnfidence and BGRT attribute
         }
