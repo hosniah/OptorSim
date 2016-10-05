@@ -24,6 +24,7 @@
 
 package de.unikassel.cs.kde.trias;
 
+import com.google.common.collect.ImmutableSet;
 import com.hosniah.grid.ArtMiner_bgrt;
 import com.hosniah.grid.similarity.CosineSimilarity;
 import com.hosniah.grid.similarity.LongestCommonSubsequence;
@@ -40,6 +41,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -67,6 +69,8 @@ public class TriasRunner {
     
   //  public static void main(String[] args) throws IOException {
     public  void defaultTriasRunner() throws IOException {
+            dao = MySQLAccess.getDbCon();
+                    
             final Trias trias = new Trias();
             TriasConfigurator config;
 
@@ -110,7 +114,7 @@ public class TriasRunner {
         }
     }
 
-    public static void getTriLatticeBufferedReader() throws FileNotFoundException, Exception {
+    public  void getTriLatticeBufferedReader() throws FileNotFoundException, Exception {
 	// Open the file
 FileInputStream fstream = new FileInputStream("concepts");
 BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
@@ -151,7 +155,7 @@ System.out.println ("Compute Tri-concepts similarities:");
             }		
 	}
     
-    private static String[] bgrtGetFilesOfRA(String strLine) {
+    private  String[] bgrtGetFilesOfRA(String strLine) {
                 FileInputStream fstream = null;        
                 int cardinalOfSimilarTC = 0; 
                 String result       = strLine.substring(strLine.indexOf("{") + 1, strLine.indexOf("}"));
@@ -365,21 +369,35 @@ System.out.println ("Compute Tri-concepts similarities:");
         return h;
     }
 
-    private static void buildTriadicAssociationRules(String[] FilesOfRA, String[] tasks, String[] sites, int cardinalOfSimilarTC) {
+    private void buildTriadicAssociationRules(String[] FilesOfRA, String[] tasks, String[] sites, int cardinalOfSimilarTC) {
+        
         double min_supp = 0.4;
         double min_conf = 0.4;
         String premise;
         String conclusion;
         for (String FilesOfRA1 : FilesOfRA) {
             java.util.List<String> list = new ArrayList<String>(Arrays.asList(FilesOfRA));
+            Collections.sort(list);
             list.remove(FilesOfRA1);
             String[] new_array      = list.toArray(new String[0]);
             premise                 = FilesOfRA1;
             String conclusionString = Arrays.toString(new_array);
             conclusion              = conclusionString.substring(conclusionString.indexOf("[")+1, conclusionString.indexOf("]"));
 
-            ArtMiner_bgrt triadic_rule = new ArtMiner_bgrt(premise, conclusion, FilesOfRA, tasks, sites);
-
+            ArtMiner_bgrt triadic_rule        = new ArtMiner_bgrt(premise, conclusion, FilesOfRA, tasks, sites);            
+            java.util.List<String> tasks_list = new ArrayList<String>(Arrays.asList(tasks));
+            Collections.sort(tasks_list);
+            ImmutableSet<String> tasks_set    = ImmutableSet.copyOf(tasks_list);
+            int tasks_size                    = tasks_set.size();
+            java.util.List<String> sites_list = new ArrayList<String>(Arrays.asList(sites));
+            Collections.sort(sites_list);
+            ImmutableSet<String> sites_set    = ImmutableSet.copyOf(sites_list);
+            
+            int sites_size                    =  sites_set.size();
+            String sites_string = sites_set.toString();
+            sites_string = sites_string.substring(1);
+            sites_string = sites_string.substring(0,sites_string.length()-1);
+                    
             System.out.println(triadic_rule.frequentTriconcept + "**** \n");
             System.out.println("TAR: " + premise + " -> " + conclusion);
             // check if it belongs to BGRT, add it if YES 
@@ -391,9 +409,9 @@ System.out.println ("Compute Tri-concepts similarities:");
                 triadic_rule.addToBGRT();
                 System.out.println("    BGRT: " + FilesOfRA1 + "->" + Arrays.toString(new_array)+"\n");
                 try {
-                    this.dao.insert("Insert into bgrt (premisse, conclusion, supp_c, conf_c, tasks_count, sites_count) values('"+premise+"', '"+conclusion+"', '"+supp_c+", '"+ conf_c + "', '"+ tasks.size() + "', '"+ sites.size() + "')");  
-                } catch (Exception e) {
-                  e.printStackTrace();
+                    dao.insert("Insert into bgrt (premisse, conclusion, supp_c, conf_c, tasks_count, sites_count, rt_sites) values ('"+premise+"', '"+conclusion+"', '"+supp_c+"', '"+ conf_c + "', '"+ tasks_size + "', '"+ sites_size + "', '"+ sites_string + "');");  
+                } catch (Exception e) {                    
+                  e.toString();
                 } 
             }
             // Create association rule object with parent_TC, premise, condition, support, cnfidence and BGRT attribute

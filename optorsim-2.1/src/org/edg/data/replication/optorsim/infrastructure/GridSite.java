@@ -6,7 +6,6 @@ import org.edg.data.replication.optorsim.OptorSimOut;
 
 import java.util.*;
 
-import java.lang.Thread;
 import java.sql.ResultSet;
 import org.edg.data.replication.optorsim.reptorsim.MySQLAccess;
 

@@ -6,6 +6,7 @@ import java.util.List;
 import org.edg.data.replication.optorsim.infrastructure.DataFile;
 import org.edg.data.replication.optorsim.infrastructure.GridSite;
 import org.edg.data.replication.optorsim.infrastructure.StorageElement;
+import org.edg.data.replication.optorsim.reptorsim.ReplicaManager;
 
 /**
  * This optimiser replicates files at all times unless it is not possible

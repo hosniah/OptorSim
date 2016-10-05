@@ -59,8 +59,7 @@ abstract public class EconomicModelOptimiser extends ReplicatingOptimiser {
      * @param deleteableFiles the list of deleteable files stored on the SE.
      * @return true if the file is more valuable than existing files, false if not.
      */
-    protected boolean worthReplicating(double potentialFileWorth,
-                                       List deleteableFiles) {
+    protected boolean worthReplicating(double potentialFileWorth, List deleteableFiles) {
 
         double deleteableFilesValue = 0;
         for(Iterator i = deleteableFiles.iterator(); i.hasNext();) {
