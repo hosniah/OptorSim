@@ -24,7 +24,8 @@ public class StorageElementFactory {
 	private static final int LFU_OPTIMISER = 3;
 	private static final int ECO_MODEL_OPTIMISER = 4;
 	private static final int ECO_MODEL_OPTIMISER_ZIPF_BASED = 5;
-	
+         private static final int TRIAR_OPTIMISER                = 6;
+
 	/**
 	 * Returns the singleton instance of the StorageElementFactory, 
 	 * creating it if it has not already been instantiated.
@@ -65,7 +66,9 @@ public class StorageElementFactory {
 
 				case ECO_MODEL_OPTIMISER_ZIPF_BASED:
 					return  new EconomicZipfStorageElement( site, capacity);
-				 
+                                 case TRIAR_OPTIMISER:
+					return  new SimpleStorageElement( site, capacity);
+                                        
 				 default:
 					System.out.println("You have picked a non-existent optimiser, please try again.");
 					System.exit(1);

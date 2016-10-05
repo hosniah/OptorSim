@@ -35,7 +35,12 @@ public class TriAROptimiser extends ReplicatingOptimiser {
 
     public DataFile[] getBestFile(String[] lfns, float[] fileFraction) {
     	DataFile[] files;
+        TriARModel optimiserModel;
     	
+        //System.out.println("current optimiser site is: "+_site);
+        optimiserModel = new TriARModel(_site);
+        optimiserModel.loadSortedBgrt();
+        
     	files = super.getBestFile( lfns, fileFraction);
 
                 StorageElement closeSE = _site.getCloseSE();

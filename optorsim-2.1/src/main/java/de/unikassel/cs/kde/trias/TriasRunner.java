@@ -76,7 +76,7 @@ public class TriasRunner {
 
             // final InputStream resourceAsStream = TriasRunner.class.getClassLoader().getResourceAsStream(PROPERTIES_FILE_NAME);
             // final InputStream resourceAsStream = new FileInputStream("C:\\Users\\hosniah\\Desktop\\custom-optorsim-2.1\\OptorSim\\optorsim-2.1\\trias.properties");
-           final InputStream resourceAsStream = new FileInputStream("C:\\Users\\ahhosni\\Documents\\OptorSim\\OptorSim\\optorsim-2.1\\trias.properties");
+            final InputStream resourceAsStream = new FileInputStream("C:\\Users\\ahhosni\\Documents\\OptorSim\\OptorSim\\optorsim-2.1\\trias.properties");
             if (resourceAsStream == null) {
                     System.err.println("Could not find file '" + PROPERTIES_FILE_NAME + "' for configuration.");
                     System.exit(1);
@@ -88,7 +88,6 @@ public class TriasRunner {
 
           //  }
             System.err.println(config.usage());
-
             System.out.println(config.usage()+"****\n");
             /*
              * configure trias
