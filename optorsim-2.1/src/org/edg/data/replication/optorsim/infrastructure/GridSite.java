@@ -69,7 +69,9 @@ public class GridSite {
                 if(!this._sim_listofFiles.contains(site)) {
                     this._sim_listofSites.add(site);
                 }
-                this.dao.insert("Insert into gridsites (label) values('"+site+"')");  
+                this.dao.insert("Insert into gridsites (label) values('"+site+"')");
+                // Just a hack to avoid loss of sites when converting ids to labels
+                this.dao.insert("Insert into allvisitedsites (label) values('"+site+"')");                
             } catch (Exception e) {
                // e.printStackTrace();
             }             

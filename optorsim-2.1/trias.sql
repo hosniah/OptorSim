@@ -23,6 +23,39 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `allvisitedsites`
+--
+
+CREATE TABLE `allvisitedsites` (
+  `id` int(11) NOT NULL,
+  `label` varchar(512) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `allvisitedsites`
+--
+ALTER TABLE `allvisitedsites`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `allvisitedsites`
+--
+ALTER TABLE `allvisitedsites`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+
+
+
+
+--
 -- Structure de la table `bgrt`
 --
 

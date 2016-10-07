@@ -66,7 +66,7 @@ public class TriAROptimiser extends ReplicatingOptimiser {
 					replicatedFile = rm.replicateFile( files[i], closeSE);					
 					// If replication worked, store it and move on to next file (for loop)
 					if( replicatedFile != null) {
-                        files[i].releasePin();
+                                            files[i].releasePin();
 						files[i] = replicatedFile;
 						break;
 					}					
