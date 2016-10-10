@@ -62,7 +62,8 @@ public class SimpleComputingElement implements ComputingElement {
 	protected float _workerCapacity = 0;
 	protected GridTime _time;
         public OptorSimParameters grid_params;
-	
+        public MySQLAccess dao;
+
     public SimpleComputingElement( GridSite site,  int workerNodes, float capacity) {
 	OptorSimParameters params = OptorSimParameters.getInstance();
 
@@ -76,6 +77,7 @@ public class SimpleComputingElement implements ComputingElement {
         _imAlive = true;
         _site.registerCE( this);
         _startRunning = _time.getTimeMillis();
+        dao           = MySQLAccess.getDbCon();
     }
     
     /**
@@ -246,12 +248,30 @@ public class SimpleComputingElement implements ComputingElement {
 					}
 					files[0].releasePin();
 					_remoteReads++;
-                                        listString += job+" "+lfn+" "+fileSite+"\n";
+                                                    try {
+                                                        // Just a hack to avoid loss of sites when converting ids to labels
+                                                         // always log visited sites (even duplicate) 
+                                                         this.dao.insert("Insert into allvisitedsites (label) values('"+_site+"')"); 
+                                                    } catch (Exception e) {
+                                                       // e.printStackTrace();       
+                                                        e.toString();
+                                                    }  
+                                                    listString += job+" "+lfn+" "+fileSite+"\n";
                                        
                                         //listString += "++++++++++++++ Remote Read: => Job="+ job+" : File="+lfn+" From site "+fileSite+" .\n";
-             if (!this.getSite()._sim_listofFiles.contains(lfn)){
+            if (!this.getSite()._sim_listofFiles.contains(lfn)){
                 this.getSite().visitFile(lfn);
-             }
+            }
+            /*
+            try {
+                // Just a hack to avoid loss of sites when converting ids to labels
+                // always log visited sites (even duplicate) 
+                this.dao.insert("Insert into allvisitedsites (label) values('"+fileSite.toString()+"')");   
+            } catch (Exception e) {
+               // e.printStackTrace();       
+                e.toString();
+            }  
+            */
              if (!this.getSite()._sim_listofSites.contains(fileSite.toString())){                                                                                         
                 this.getSite().visitSite(fileSite.toString());
              }
@@ -265,10 +285,21 @@ public class SimpleComputingElement implements ComputingElement {
 					continue;
 				} else {
 				    fileSE.accessFile(files[0]);
-                                     listString += job.name()+" "+lfn+" "+fileSite+"\n";
+
+                                        try {
+                                            // Just a hack to avoid loss of sites when converting ids to labels
+                                             // always log visited sites (even duplicate) 
+                                             this.dao.insert("Insert into allvisitedsites (label) values('"+_site+"')"); 
+                                        } catch (Exception e) {
+                                           // e.printStackTrace();       
+                                            e.toString();
+                                        }  
+                                        listString += job.name()+" "+lfn+" "+fileSite+"\n";
+                                        
             if (!this.getSite()._sim_listofFiles.contains(lfn)){
                 this.getSite().visitFile(lfn);
             }
+
             if (!this.getSite()._sim_listofSites.contains(fileSite.toString())){            
                 this.getSite().visitSite(fileSite.toString());
             }
@@ -316,6 +347,7 @@ public class SimpleComputingElement implements ComputingElement {
 
 
                String result = "************* tasks : "+this.getSite()._sim_listofTasks.size()+" \n************* files : "+this.getSite()._sim_listofFiles.size()+" \n************* Sites : "+this.getSite()._sim_listofSites.size();
+
 
                 
                 try(FileWriter fw = new FileWriter("OptorDebug.txt", true);

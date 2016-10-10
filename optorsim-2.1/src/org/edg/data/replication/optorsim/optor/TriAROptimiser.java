@@ -39,6 +39,7 @@ public class TriAROptimiser extends ReplicatingOptimiser {
     	
         //System.out.println("current optimiser site is: "+_site);
         optimiserModel = new TriARModel(_site);
+        // Run Datamining algorithms first
         optimiserModel.loadSortedBgrt();
         
     	files = super.getBestFile( lfns, fileFraction);
@@ -82,6 +83,6 @@ public class TriAROptimiser extends ReplicatingOptimiser {
 				} while( replicatedFile == null);				
 			} // for
 		}
-		return files;			
+		return files;
 	}
 }

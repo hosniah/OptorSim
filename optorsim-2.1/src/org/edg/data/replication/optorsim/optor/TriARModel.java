@@ -44,8 +44,7 @@ public class TriARModel {
      
     private boolean isCurrentSiteAmongTriadicRuleSites(List<String> elephantList) {
         Iterator<Integer> it = all_site_ids.iterator();
-        while(it.hasNext())
-        {
+        while(it.hasNext()) {
             Object obj = it.next();
             //Do something with obj
             if (elephantList.contains(this.site_id)) {
