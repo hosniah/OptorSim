@@ -251,7 +251,7 @@ public class SimpleComputingElement implements ComputingElement {
                                                     try {
                                                         // Just a hack to avoid loss of sites when converting ids to labels
                                                          // always log visited sites (even duplicate) 
-                                                         this.dao.insert("Insert into allvisitedsites (label) values('"+_site+"')"); 
+                                                         this.dao.insert("Insert into allvisitedsites (label) values('"+fileSite+"')"); 
                                                     } catch (Exception e) {
                                                        // e.printStackTrace();       
                                                         e.toString();
@@ -289,7 +289,7 @@ public class SimpleComputingElement implements ComputingElement {
                                         try {
                                             // Just a hack to avoid loss of sites when converting ids to labels
                                              // always log visited sites (even duplicate) 
-                                             this.dao.insert("Insert into allvisitedsites (label) values('"+_site+"')"); 
+                                             this.dao.insert("Insert into allvisitedsites (label) values('"+fileSite+"')"); 
                                         } catch (Exception e) {
                                            // e.printStackTrace();       
                                             e.toString();
