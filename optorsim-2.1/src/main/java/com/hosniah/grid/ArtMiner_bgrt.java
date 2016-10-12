@@ -139,8 +139,15 @@ public class ArtMiner_bgrt {
         return this.conditionalTriadicSupport;        
     }
 
+    public double computeConditionalTriadicSupport4Premisse() {
+       // suppc(this.premise);
+        return 0.5;
+    }
+ 
     public double computeConditionalTriadicConfidence() {
-        this.conditionalTriadicConfidence = 1; // this.conditionalTriadicSupport /suppc(this.premise)
+        this.conditionalTriadicConfidence = 1; // 
+        double suppc_premise = computeConditionalTriadicSupport4Premisse();
+        this.conditionalTriadicConfidence = this.conditionalTriadicSupport /suppc_premise;
         return this.conditionalTriadicConfidence;        
     }
 
