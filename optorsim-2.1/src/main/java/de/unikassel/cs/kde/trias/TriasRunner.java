@@ -193,8 +193,7 @@ System.out.println ("Compute Tri-concepts similarities:");
                                         //merge files ...
                                         merged_FilesOfRA = mergeFilesOfRA(triConcept_Files , other_triConcept_Files);
                                         result_FilesOfRA = mergeFilesOfRA(result_FilesOfRA, merged_FilesOfRA); 
-                                        //@TODO: Update similar tri-concepts by merging tasks also.
-                                        
+                                        //@TODO: Update similar tri-concepts by merging tasks also.                                        
                                     }
                                 } catch (Exception ex) {
                                     Logger.getLogger(TriasRunner.class.getName()).log(Level.SEVERE, null, ex);
@@ -368,8 +367,7 @@ System.out.println ("Compute Tri-concepts similarities:");
         return h;
     }
 
-    private void buildTriadicAssociationRules(String[] FilesOfRA, String[] tasks, String[] sites, int cardinalOfSimilarTC) {
-        
+    private void buildTriadicAssociationRules(String[] FilesOfRA, String[] tasks, String[] sites, int cardinalOfSimilarTC) {        
         double min_supp = 0.4;
         double min_conf = 0.4;
         String premise;
@@ -380,6 +378,9 @@ System.out.println ("Compute Tri-concepts similarities:");
             list.remove(FilesOfRA1);
             String[] new_array      = list.toArray(new String[0]);
             premise                 = FilesOfRA1;
+
+            
+            
             String conclusionString = Arrays.toString(new_array);
             conclusion              = conclusionString.substring(conclusionString.indexOf("[")+1, conclusionString.indexOf("]"));
 
