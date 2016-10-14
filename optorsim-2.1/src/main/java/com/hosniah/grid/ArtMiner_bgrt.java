@@ -40,6 +40,7 @@ public class ArtMiner_bgrt {
     private final String[] sites;
     private final String[] filesOFRA;
 
+
     public ArtMiner_bgrt(String premise, String conclusion, String[] FilesOfRA, String[] tasks, String[] sites) {
         super();
             this.premise                      = premise;
@@ -52,6 +53,7 @@ public class ArtMiner_bgrt {
             this.extractionContext            = formatAndReduceExtractionContext();
             this.sites                        = sites;
             this.filesOFRA                    = FilesOfRA;
+            
     }
     
     public Multimap<Integer, String> formatAndReduceExtractionContext() {
@@ -81,6 +83,7 @@ public class ArtMiner_bgrt {
     }
 
     public double computeConditionalTriadicSupport(int cardinalOfSimilarTC) {  
+        this.cardinalOfSimilarTC = cardinalOfSimilarTC;
         int incidence      = 0; 
         // double support     = 0;
         int tasksGroupSize =  this.tasks.size();
@@ -128,7 +131,7 @@ public class ArtMiner_bgrt {
     public double computeConditionalTriadicSupport4Premisse() {
         // suppc(this.premise);
         /* Find similar files for premise only to make confidence computing easy
-        Premise is always one file a time:
+            Premise is always one file a time:
          */
         int incidence = 0;    
         Set keySet = this.extractionContext.keySet();
@@ -141,10 +144,10 @@ public class ArtMiner_bgrt {
                String[] file2site = occurence.split("-");
                //use sites as keys and files as values
                occurence_map.put(Integer.parseInt(file2site[1]),file2site[0]);
-            }        
-        /* Context is now formatted as
-           {S1=[F2, F3, F4], S2=[F2, F4], S3=[F3, F4], S4=[F1, F3, F5]}
-         */
+            }
+            /* Context is now formatted as
+                {S1=[F2, F3, F4], S2=[F2, F4], S3=[F3, F4], S4=[F1, F3, F5]}
+            */
             for(Collection<String> col : occurence_map.asMap().values()) {                
              //   System.out.println(col);
                 Object[] arr1 = col.toArray();
@@ -158,15 +161,11 @@ public class ArtMiner_bgrt {
                 }
             }
         }
-                   
-
-            int tasksGroupSize =  this.tasks.size();
-            formatAndReduceExtractionContext();
-            double support_premise = incidence/tasksGroupSize;
-            double suppc_premise  = support_premise/cardinalOfSimilarTC;
-            
-            
-        System.out.println("+++++++++ :"+this.premise+" --- "+suppc_premise);
+        int tasksGroupSize     =  this.tasks.size();
+        formatAndReduceExtractionContext();
+        double support_premise = incidence/tasksGroupSize;
+        double suppc_premise   = support_premise/cardinalOfSimilarTC;                        
+        System.out.println("+++++++++ :"+this.premise+" --- task size"+this.tasks.size() +" --- "+cardinalOfSimilarTC+" --- "+suppc_premise);
         return suppc_premise;
     }
  
