@@ -165,7 +165,8 @@ public class ArtMiner_bgrt {
         formatAndReduceExtractionContext();
         double support_premise = incidence/tasksGroupSize;
         double suppc_premise   = support_premise/cardinalOfSimilarTC;                        
-        System.out.println("+++++++++ :"+this.premise+" --- task size"+this.tasks.size() +" --- "+cardinalOfSimilarTC+" --- "+suppc_premise);
+        System.out.println("+++++++++ :"+this.premise+" --- task size"
+                +this.tasks.size() +" --- "+cardinalOfSimilarTC+" --- "+suppc_premise);
         return suppc_premise;
     }
  

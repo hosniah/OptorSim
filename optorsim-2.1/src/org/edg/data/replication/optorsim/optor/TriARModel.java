@@ -60,7 +60,7 @@ public class TriARModel {
     public void loadSortedBgrt() {
         try {
             ResultSet res;
-            res = this.dao.query("Select * from bgrt order by tasks_count, sites_count DESC");
+            res = this.dao.query("SELECT * FROM `bgrt` GROUP BY `premisse`, `conclusion` Order BY `tasks_count` , `sites_count`, `conf_c` DESC");
             while(res.next()) {
                 int bgrt_id         = (int) res.getObject("id");
                 String presmisse    = (String) res.getObject("premisse");
