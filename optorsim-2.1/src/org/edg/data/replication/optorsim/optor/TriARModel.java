@@ -23,6 +23,7 @@ public class TriARModel {
         this.dao            = MySQLAccess.getDbCon();
         this.bestConfidence = 0;
         RTrep        = new ArrayList<Integer>();
+        all_site_ids = new ArrayList<Integer>();
         this.site_id = getGridSiteIdByname(site.toString());
        // System.out.println("current optimiser site is: "+this.site_id);
     }
@@ -33,7 +34,7 @@ public class TriARModel {
         try {
             res = this.dao.query("Select * from allvisitedsites where label = '"+site_name+"';");
             while(res.next()) {
-                site_id       = (int) res.getObject("id"); 
+                site_id       =  (int) res.getObject("id"); 
                 this.all_site_ids.add(site_id);
             }
         } catch (Exception e) {
