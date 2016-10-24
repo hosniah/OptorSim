@@ -24,7 +24,7 @@ public class TriARModel {
     public TriARModel(GridSite site) {
         this.dao            = MySQLAccess.getDbCon();
         this.bestConfidence = 0;
-        RTrep        = new ArrayList<Integer>();
+        this.RTrep        = new ArrayList<Integer>();
         all_site_ids = new ArrayList<Integer>();
         this.site_id = 0;//getGridSiteIdByname(site.toString());
         this.current_site    = site.toString();
@@ -138,5 +138,61 @@ public class TriARModel {
             this.RTrep.add(bgrt_id);
             this.bestConfidence = triadicRuleConfidence;
         }        
+    }
+    
+    public String[] triadicAssociationToBeUsedForRep() {
+         List<String> repFilesNameas = new ArrayList<String>();
+        for (int i = 0; i < this.RTrep.size(); i++)
+        {
+            //return the conclusion of a given RAT rule
+            String RATLIST = getTriadicAssociationRuleById(this.RTrep.get(i));
+            System.out.println("\n ======= "+this.RTrep.get(i)+"============== === === === RATLIST :"+RATLIST);
+            //retrieve files names from gridfiles
+            List<String> conclusionList = Arrays.asList(RATLIST.split(",")); 
+            for (int j = 0; j < conclusionList.size(); j++)
+            {
+                System.out.println("\n ===================== === === === file :"+conclusionList.get(j));
+                String RAT = getgridFileNameById(conclusionList.get(j));
+                System.out.println("\n ===================== === === === = :"+RAT);
+
+                repFilesNameas.add(RAT);
+            }
+        }
+        String[] stringArray = repFilesNameas.toArray(new String[0]);
+        //System.out.println(" ===================== === === === = :"+stringArray);
+        return stringArray;     
+    }
+    
+    public String getTriadicAssociationRuleById(Integer idRAT){
+            String rat_rep_files = new String();
+            ResultSet res;
+            try {
+                res = this.dao.query("Select * from bgrt where id = '"+idRAT+"';");
+                while(res.next()) {
+                    String rat_conclusion = (String) res.getObject("conclusion"); 
+                    //this.all_site_ids.add(site_id);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } 
+            return rat_rep_files;    
+        
+    }
+    
+    
+    public String getgridFileNameById(String idFile){
+            String grid_file = new String();
+            ResultSet res;
+            try {
+                res = this.dao.query("Select * from gridfiles where id = '"+idFile+"';");
+                while(res.next()) {
+                     grid_file = (String) res.getObject("label"); 
+                    //this.all_site_ids.add(site_id);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } 
+            return grid_file;    
+        
     }
 }

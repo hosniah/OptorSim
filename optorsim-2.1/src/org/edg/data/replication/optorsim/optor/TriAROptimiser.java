@@ -1,5 +1,6 @@
 package org.edg.data.replication.optorsim.optor;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -36,12 +37,28 @@ public class TriAROptimiser extends ReplicatingOptimiser {
     public DataFile[] getBestFile(String[] lfns, float[] fileFraction) {
     	DataFile[] files;
         TriARModel optimiserModel;
+        
+        // please take a look to WorkerNode->run, this may be helpful for better implementtion
+        
+                // Pack the logical file name into the expected structure:
+                String[] _logicalfilenames = new String[1];
+            	_logicalfilenames[0] = lfn;
+            	float[] fileFractions = new float[1];
+            	fileFractions[0] = (float)1.0;
     	
         //System.out.println("current optimiser site is: "+_site);
         optimiserModel = new TriARModel(_site);
         // Run Datamining algorithms first
         optimiserModel.loadSortedBgrt();
-        
+        System.out.println("\nFiles ****: "+Arrays.toString(lfns));
+        /* rebuild the list of files lfns
+         *  Given the output of datamining process
+         
+        String[] tty = optimiserModel.triadicAssociationToBeUsedForRep();
+        if(tty.length > 0) {
+           lfns = optimiserModel.triadicAssociationToBeUsedForRep();
+        }
+        */
     	files = super.getBestFile( lfns, fileFraction);
 
                 StorageElement closeSE = _site.getCloseSE();
