@@ -46,6 +46,9 @@ public class SkelOptor implements Optimisable {
 		_networkClient = new NetworkClient();
     }
  
+    public void getCorrelatedBestFiles() {
+     
+    }
     /**
      * A "standard" implementation of getBestFile. It simply looks at
      * the Replica Catalogue and current network status and returns the

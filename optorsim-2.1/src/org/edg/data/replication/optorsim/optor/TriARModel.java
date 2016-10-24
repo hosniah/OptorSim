@@ -146,16 +146,18 @@ public class TriARModel {
         {
             //return the conclusion of a given RAT rule
             String RATLIST = getTriadicAssociationRuleById(this.RTrep.get(i));
-            System.out.println("\n ======= "+this.RTrep.get(i)+"============== === === === RATLIST :"+RATLIST);
-            //retrieve files names from gridfiles
-            List<String> conclusionList = Arrays.asList(RATLIST.split(",")); 
-            for (int j = 0; j < conclusionList.size(); j++)
-            {
-                System.out.println("\n ===================== === === === file :"+conclusionList.get(j));
-                String RAT = getgridFileNameById(conclusionList.get(j));
-                System.out.println("\n ===================== === === === = :"+RAT);
+            if(0 <= RATLIST.length()) {
+                //System.out.println("\n ======= "+this.RTrep.get(i)+"============== === === === RATLIST :"+RATLIST);
+                //retrieve files names from gridfiles
+                List<String> conclusionList = Arrays.asList(RATLIST.split(",")); 
+                for (int j = 0; j < conclusionList.size(); j++)
+                {
+                   // System.out.println("\n ===================== === === === file :"+conclusionList.get(j));
+                    String RAT = getgridFileNameById(conclusionList.get(j));
+                  //  System.out.println("\n ===================== === === === = :"+RAT);
 
-                repFilesNameas.add(RAT);
+                    repFilesNameas.add(RAT);
+                }
             }
         }
         String[] stringArray = repFilesNameas.toArray(new String[0]);
@@ -164,18 +166,18 @@ public class TriARModel {
     }
     
     public String getTriadicAssociationRuleById(Integer idRAT){
-            String rat_rep_files = new String();
+            String rat_conclusion = new String();
             ResultSet res;
             try {
                 res = this.dao.query("Select * from bgrt where id = '"+idRAT+"';");
                 while(res.next()) {
-                    String rat_conclusion = (String) res.getObject("conclusion"); 
+                     rat_conclusion = (String) res.getObject("conclusion"); 
                     //this.all_site_ids.add(site_id);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             } 
-            return rat_rep_files;    
+            return rat_conclusion;    
         
     }
     
@@ -188,6 +190,7 @@ public class TriARModel {
                 while(res.next()) {
                      grid_file = (String) res.getObject("label"); 
                     //this.all_site_ids.add(site_id);
+                    //System.out.println(" ===================== === === === grid_file = :"+grid_file);
                 }
             } catch (Exception e) {
                 e.printStackTrace();

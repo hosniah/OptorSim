@@ -225,7 +225,9 @@ public class SimpleComputingElement implements ComputingElement {
                                  */
 				// Use optimiser to locate best replica of this file
 				DataFile[] files = replicaOptimiser.getBestFile(logicalfilenames, fileFractions);
-				if( files.length != 1) {
+                                //replicaOptimiser.getCorrelatedBestFiles();
+
+                                if( files.length != 1) {
 					System.out.println( "ASSERT FAILED: CE, getBestFile return array with wrong number of entries: "+  files.length  +" != 1");
 					continue; // skip to next file
 				}

@@ -25,6 +25,8 @@ public class TriAROptimiser extends ReplicatingOptimiser {
 
     protected TriAROptimiser( GridSite site) {
         super(site);
+        //Mandatory to retrieve correlated files at the begining of process
+        getCorrelatedBestFiles();
     }
 
     /**
@@ -36,11 +38,11 @@ public class TriAROptimiser extends ReplicatingOptimiser {
 
     public DataFile[] getBestFile(String[] lfns, float[] fileFraction) {
     	DataFile[] files;
-        TriARModel optimiserModel;
-        
-        // please take a look to WorkerNode->run, this may be helpful for better implementtion
-        
+        /*
+        TriARModel optimiserModel;        
+        // please take a look to WorkerNode->run, this may be helpful for better implementtion        
                 // Pack the logical file name into the expected structure:
+                String lfn = "aa";
                 String[] _logicalfilenames = new String[1];
             	_logicalfilenames[0] = lfn;
             	float[] fileFractions = new float[1];
@@ -50,26 +52,22 @@ public class TriAROptimiser extends ReplicatingOptimiser {
         optimiserModel = new TriARModel(_site);
         // Run Datamining algorithms first
         optimiserModel.loadSortedBgrt();
-        System.out.println("\nFiles ****: "+Arrays.toString(lfns));
-        /* rebuild the list of files lfns
-         *  Given the output of datamining process
-         
+     //   System.out.println("\nFiles ****: "+Arrays.toString(lfns));
+  
         String[] tty = optimiserModel.triadicAssociationToBeUsedForRep();
         if(tty.length > 0) {
-           lfns = optimiserModel.triadicAssociationToBeUsedForRep();
-        }
-        */
+            
+                String[] lfns2 = optimiserModel.triadicAssociationToBeUsedForRep();
+                System.out.println("\nFiles ****: "+Arrays.toString(lfns2));
+        }*/
+        
     	files = super.getBestFile( lfns, fileFraction);
 
-                StorageElement closeSE = _site.getCloseSE();
-                
-		ReplicaManager rm = ReplicaManager.getInstance();
-		
-		 if( closeSE != null) {
-			for( int i = 0; i < files.length; i++) {
-			
-				StorageElement se = files[i].se();
-		
+                StorageElement closeSE = _site.getCloseSE();                
+		ReplicaManager rm = ReplicaManager.getInstance();		
+		if( closeSE != null) {
+			for( int i = 0; i < files.length; i++) {			
+				StorageElement se = files[i].se();		
 				// skip over any file stored on the local site
 				if( se.getGridSite() == _site)
 					continue;	
@@ -102,4 +100,38 @@ public class TriAROptimiser extends ReplicatingOptimiser {
 		}
 		return files;
 	}
+
+    public void getCorrelatedBestFiles() {
+        TriARModel optimiserModel;        
+        // please take a look to WorkerNode->run, this may be helpful for better implementtion        
+        // Pack the logical file name into the expected structure:
+    
+    	
+        //System.out.println("current optimiser site is: "+_site);
+        optimiserModel = new TriARModel(_site);
+        // Run Datamining algorithms first
+        optimiserModel.loadSortedBgrt();
+   
+        /* rebuild the list of files lfns
+         *  Given the output of datamining process
+         */
+        String[] tty = optimiserModel.triadicAssociationToBeUsedForRep();
+        if(tty.length > 0) {
+            
+                String[] lfns2 = optimiserModel.triadicAssociationToBeUsedForRep();
+                //System.out.println("|==== correlated Files to be fetched : \n "+Arrays.toString(lfns2));
+                System.out.println("\n |==== correlated Files to be fetched : ");
+                for (String s: lfns2) {           
+                    //Do your stuff here
+                    System.out.println("|============ "+s); 
+  
+                    String[] _logicalfilenames = new String[1];
+                    _logicalfilenames[0]       = s;
+                    float[] fileFractions      = new float[1];
+                    fileFractions[0] = (float)1.0;
+                    getBestFile(_logicalfilenames, fileFractions);
+                                //replicaOptimiser.getCorrelatedBestFiles();
+                }
+        }
+    }
 }
