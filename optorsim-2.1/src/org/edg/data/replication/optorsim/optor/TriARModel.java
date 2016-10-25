@@ -135,7 +135,12 @@ public class TriARModel {
         // add BGRT RAT to an arraylist
         if (triadicRuleConfidence > this.bestConfidence) {
             //Store the id of the id of Triadic rule worth replication
-            this.RTrep.add(bgrt_id);
+            //this.RTrep.add(bgrt_id);
+            
+            //OVerride RTrep to keep only the new one with highest confidence
+             this.RTrep.clear();
+             this.RTrep.add(bgrt_id);
+             
             this.bestConfidence = triadicRuleConfidence;
         }        
     }
